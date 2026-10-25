@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🏭 Content Factory — Universal Gemini Workflows</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header>
+    <h1>🏭 Content Factory</h1>
+    <p class="sub">Universal workflow runtime · Gemini 2.5&nbsp;Pro &amp; Nano Banana&nbsp;Pro</p>
+    <div id="mode-badge" class="badge"></div>
+  </header>
+
+  <main>
+    <section id="workflow-picker" class="card">
+      <h2>1 · Choose a factory</h2>
+      <div id="workflows" class="wf-list"></div>
+    </section>
+
+    <section id="inputs-section" class="card hidden">
+      <h2>2 · Fill the inputs</h2>
+      <div id="inputs"></div>
+      <label class="toggle"><input type="checkbox" id="all-pro" /> Force <b>all</b> text nodes → Gemini&nbsp;2.5&nbsp;Pro and image nodes → Nano&nbsp;Banana&nbsp;Pro</label>
+      <button id="run-btn" class="primary">▶ Run workflow</button>
+    </section>
+
+    <section id="results-section" class="card hidden">
+      <h2>3 · Results</h2>
+      <details id="trace-box"><summary>Execution trace</summary><pre id="trace"></pre></details>
+      <div id="results"></div>
+    </section>
+  </main>
+
+  <footer>MIT · runs in simulation mode without an API key · <code>/api/workflows</code> · <code>POST /api/run</code></footer>
+  <script src="/app.js"></script>
+</body>
+</html>

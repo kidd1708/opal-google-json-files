@@ -1,0 +1,28 @@
+:root { --bg:#0b1120; --card:#141c30; --acc:#7fd1ff; --txt:#dbe7ff; --mut:#8aa0c8; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: ui-sans-serif, system-ui, "Segoe UI", Roboto, sans-serif; background:var(--bg); color:var(--txt); }
+header { padding:28px 24px 10px; }
+h1 { margin:0; font-size:1.9rem; }
+.sub { color:var(--mut); margin:.4rem 0 0; }
+.badge { display:inline-block; margin-top:10px; padding:4px 12px; border-radius:999px; font-size:.8rem; background:#1e2a45; color:var(--acc); }
+main { max-width:960px; margin:0 auto; padding:16px 24px 60px; display:flex; flex-direction:column; gap:18px; }
+.card { background:var(--card); border:1px solid #22304f; border-radius:14px; padding:18px 20px; }
+.hidden { display:none; }
+.wf-list { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:12px; }
+.wf-card { border:1px solid #2b3d63; border-radius:10px; padding:14px; cursor:pointer; transition:.15s; background:#18233c; }
+.wf-card:hover { border-color:var(--acc); transform:translateY(-2px); }
+.wf-card.selected { border-color:var(--acc); background:#1d2c4d; }
+.wf-card h3 { margin:.1rem 0 .4rem; font-size:1.02rem; }
+.wf-card .meta { color:var(--mut); font-size:.78rem; }
+label.field { display:block; margin:12px 0; }
+label.field span { display:block; white-space:pre-line; font-size:.85rem; color:var(--mut); margin-bottom:6px; }
+textarea, input[type=text] { width:100%; min-height:64px; background:#0e1626; color:var(--txt); border:1px solid #2b3d63; border-radius:8px; padding:10px; font:inherit; }
+.toggle { display:flex; gap:8px; align-items:center; margin:14px 0; color:var(--mut); font-size:.9rem; }
+button.primary { background:var(--acc); color:#061018; font-weight:700; border:0; border-radius:9px; padding:12px 22px; font-size:1rem; cursor:pointer; }
+button.primary:disabled { opacity:.5; cursor:wait; }
+.result { border-left:3px solid var(--acc); margin:14px 0; padding:6px 14px; background:#101a2d; border-radius:0 10px 10px 0; overflow:auto; }
+.result h4 { margin:.3rem 0; color:var(--acc); }
+.result pre { white-space:pre-wrap; word-break:break-word; font-size:.85rem; }
+.result img { max-width:100%; border-radius:8px; margin-top:8px; }
+pre#trace { font-size:.75rem; color:var(--mut); max-height:280px; overflow:auto; }
+footer { text-align:center; color:var(--mut); font-size:.78rem; padding:20px; }
