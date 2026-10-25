@@ -1,0 +1,4976 @@
+{
+  "title": "THE ULTIMATE SOCIAL MEDIA FACTORY 3.0",
+  "description": "",
+  "version": "0.0.1",
+  "nodes": [
+    {
+      "id": "723f56ec-7081-4d5e-b47c-8c4caf06f753",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "ACA",
+        "visual": {
+          "x": 1040,
+          "y": -980
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Insert Topic"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "a22df212-93b3-46da-bff0-16da42fefda7",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "ACA PROMPT",
+        "visual": {
+          "x": 1040,
+          "y": -860
+        },
+        "userModified": true,
+        "expected_output": [
+          {
+            "list": true,
+            "description": "Ten distinct social media posts regarding topic",
+            "type": "text"
+          }
+        ]
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Create 10 standalone Bluesky posts about {{\"type\":\"in\",\"path\":\"723f56ec-7081-4d5e-b47c-8c4caf06f753\",\"title\":\"ACA\"}}.\n\nMythology to use: Ask the user for this option\n\nRules:\n1. Each post must be UNDER 280 characters (Bluesky limit is 300)\n2. Each post must reference a DIFFERENT god, hero, or creature from that mythology\n3. Each post must clearly connect that myth to {{\"type\":\"in\",\"path\":\"723f56ec-7081-4d5e-b47c-8c4caf06f753\",\"title\":\"ACA\"}} with a modern take\n4. Tone: witty, intelligent, conversational - not academic\n5. No more than 1 hashtag per post\n6. Make them scroll-stoppers, not explainers\n7. CTA is for engagement only.\n\nOutput format:\nPost 1: [text]\nPost 2: [text]\n..."
+            }
+          ]
+        },
+        "generation-mode": "text-3-flash",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "bff607be-80cb-4fa2-a054-369ffdf554cb",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "ACA OUPUT",
+        "visual": {
+          "x": 1040,
+          "y": -700
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"a22df212-93b3-46da-bff0-16da42fefda7\",\"title\":\"ACA PROMPT\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "p-render-mode": "Manual layout"
+      }
+    },
+    {
+      "id": "1b82a263-4cc0-48bc-9a50-91f7b73425a1",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "CORE/MAIN BRAIN",
+        "visual": {
+          "x": 400,
+          "y": 660
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "parts": [
+            {
+              "text": " {{\"type\":\"in\",\"path\":\"090f2a8b-0511-4186-8a69-c85b95b2cacf\",\"title\":\"MAIN MENU\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"eb7ba4e6-6fb1-47eb-9ddf-e9c766969d92\",\"title\":\"1\"}}  {{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"900b7d02-09b9-435a-9baf-65c52b10a201\",\"title\":\"2\"}} {{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"f5c4bfa8-d143-475f-b646-f8ee8ff952b1\",\"title\":\"3\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "generation-mode": "agent"
+      }
+    },
+    {
+      "id": "090f2a8b-0511-4186-8a69-c85b95b2cacf",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "MAIN MENU",
+        "visual": {
+          "x": 80,
+          "y": 660
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "CHOOSE WHAT DO YOU WANT TO GENERATE:\n\n1. TWEET (TWITTER/THREAD/BLUESKY/REDDIT)\n2. PICTURES (INSTAGRAM/PINTEREST)\n3. TEXT (NEWSLETTER/LINKEDIN/ARTICLE)\n4. REASEARCH\n"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "eb7ba4e6-6fb1-47eb-9ddf-e9c766969d92",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "1",
+        "visual": {
+          "x": 400,
+          "y": 480
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Choose Platforms:\nAA. TWITTER\nAB. INSTAGRAM THREAD\nAC. BLUESKY\nAD. REDDIT\n"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "c32ec273-373f-4992-9e9b-ae2e8c25a0f8",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "THREADING MAIN BRAIN",
+        "visual": {
+          "x": 400,
+          "y": 260
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"eb7ba4e6-6fb1-47eb-9ddf-e9c766969d92\",\"title\":\"1\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"6bb0ff04-21d6-49b8-839c-3cb3f5022186\",\"title\":\"AA\"}}{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"f03f963d-a911-443f-bf7a-7678213edb1b\",\"title\":\"AB\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"c58f4c68-6dfe-4274-bf90-0a0adf095b9b\",\"title\":\"AC\"}}{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"ffdcc817-ef4d-4f20-9d4b-74639846299d\",\"title\":\"AD\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "generation-mode": "agent"
+      }
+    },
+    {
+      "id": "6bb0ff04-21d6-49b8-839c-3cb3f5022186",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "AA",
+        "visual": {
+          "x": 400,
+          "y": -80
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Choose what you want to generate:\n\nNon-promotional:\nAAA. TWEET\nAAB. SINGLE TWEET\nAAC. BANNER\n\nPromotional:\nAAD. PROMOTIONAL TWEET\nAAE. PROMOTIONAL SINGLE TWEET\nAAF. PROMOTIONAL BANNER"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "f03f963d-a911-443f-bf7a-7678213edb1b",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "AB",
+        "visual": {
+          "x": 400,
+          "y": -520
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Choose Thread content you want to create:\n\nABA. EDUCATIONAL\nABB. BEHIND THE SCENE\nABC. HOT TAKES\nABD. STORYTELLING\nABE. PRODUCT SPOTLIGHT\nABF. MYTH-BUSTER\nABG. FEAR ANGLE\n\n"
+            }
+          ]
+        },
+        "p-modality": "Text",
+        "p-required": true
+      }
+    },
+    {
+      "id": "a56c22ba-0bd6-404d-b043-1331784f05f6",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "TWEET BRAIN",
+        "visual": {
+          "x": 720,
+          "y": -80
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"6bb0ff04-21d6-49b8-839c-3cb3f5022186\",\"title\":\"AA\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"9f6d70a5-9395-42a7-9560-1bc33bb616a3\",\"title\":\"AAA\"}} {{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"6fe563bb-a232-408c-84fd-ba80c1c9dfe4\",\"title\":\"AAB\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"b5f84271-6fca-42a0-b5b2-b91f7f3ab409\",\"title\":\"AAC\"}} {{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"4174a878-71ac-40d7-8f99-57999b189374\",\"title\":\"AAD\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"1e55f142-452e-4a60-af0b-888f6901d6ea\",\"title\":\"AAE\"}} {{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"cf63a22c-4246-41dc-abc1-927cbcd152ff\",\"title\":\"AAF\"}}"
+            }
+          ]
+        },
+        "generation-mode": "agent"
+      }
+    },
+    {
+      "id": "9f6d70a5-9395-42a7-9560-1bc33bb616a3",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "AAA",
+        "visual": {
+          "x": 1040,
+          "y": -80
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Insert topic"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "4a3bf8ab-7daf-4703-8308-789df389fbc4",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "AAA PROMPT",
+        "visual": {
+          "x": 1040,
+          "y": 40
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Write a viral Twitter/X thread  to discuss about {{\"type\":\"in\",\"path\":\"9f6d70a5-9395-42a7-9560-1bc33bb616a3\",\"title\":\"AAA\"}}. Start with a shocking hook and End the thread with a question to drive engagement. Each words should be under (max) 280 character"
+            }
+          ]
+        },
+        "generation-mode": "text-3-flash",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "48dd38b7-6b57-495e-b518-d7f5c050d654",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "INSTAGRAM THREAD BRAIN",
+        "visual": {
+          "x": 720,
+          "y": -520
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"f03f963d-a911-443f-bf7a-7678213edb1b\",\"title\":\"AB\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"04e57115-cb51-4c0e-81ee-92290d140050\",\"title\":\"ABA\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"931ad214-c203-47d0-8002-eec82bad9b19\",\"title\":\"ABB PROMPT\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"060a5a9e-f1f6-496f-84ed-2dabe1e8650b\",\"title\":\"ABC \"}}{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"613b767c-9483-4505-9717-84d1b52ff266\",\"title\":\"ABD\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"491b40bf-9237-475d-8c33-ac0ea6dc2435\",\"title\":\"ABE\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"773ab6af-7e04-4d0d-9b24-f5592e0c0510\",\"title\":\"ABF\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"5904a81e-a931-4a18-ba69-2ec0cf2c1e8f\",\"title\":\"ABG\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "generation-mode": "agent"
+      }
+    },
+    {
+      "id": "4174a878-71ac-40d7-8f99-57999b189374",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "AAD",
+        "visual": {
+          "x": 2000,
+          "y": -80
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Input product"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "5fcd11ea-f138-4d0d-b9d1-52326f3ab31c",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "AAD PROMPT",
+        "visual": {
+          "x": 2000,
+          "y": 20
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Write a viral Twitter/X thread  to promote {{\"type\":\"in\",\"path\":\"4174a878-71ac-40d7-8f99-57999b189374\",\"title\":\"AAD\"}}. Start with a shocking hook and End the thread with a question to drive engagement. Each words should be under (max) 280 character"
+            }
+          ]
+        },
+        "generation-mode": "text-3-flash",
+        "p-aspect-ratio": "1:1",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "bb257240-eed3-48bb-9413-b500d499c39a",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "AAF PROMPT",
+        "visual": {
+          "x": 2640,
+          "y": 20
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "\"enhancement_type\": \"professional_product_photography\",\n\"product\": \"{{\"type\":\"in\",\"path\":\"cf63a22c-4246-41dc-abc1-927cbcd152ff\",\"title\":\"AAF\"}}\",\n\"style\": \"product_box\",\n\"background\": \"bright_modern_office_room\",\n\"lighting\": \"dramatic_studio_lighting\", \"natural_light\",\n\"angle\": \"dynamic_3/4_view\",\n\"props\": \"laptop\",\n\"special_effects\": \"sharp_details, perfect_shadows, texture_enhancement\" "
+            }
+          ]
+        },
+        "generation-mode": "agent",
+        "p-aspect-ratio": "4:3"
+      }
+    },
+    {
+      "id": "cf63a22c-4246-41dc-abc1-927cbcd152ff",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "AAF",
+        "visual": {
+          "x": 2640,
+          "y": -80
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Input product"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "1e55f142-452e-4a60-af0b-888f6901d6ea",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "AAE",
+        "visual": {
+          "x": 2320,
+          "y": -80
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Insert product"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "116597d8-b97b-4eea-a1e1-51aab7fe3afd",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "AAE PROMPT",
+        "visual": {
+          "x": 2320,
+          "y": 20
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Write a viral Twitter/X thread to promote {{\"type\":\"in\",\"path\":\"1e55f142-452e-4a60-af0b-888f6901d6ea\",\"title\":\"AAE\"}}. Start with a shocking hook and End the thread with a question to drive engagement. Each words should be under (max) 280 character"
+            }
+          ]
+        },
+        "generation-mode": "text-3-flash",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "6fe563bb-a232-408c-84fd-ba80c1c9dfe4",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "AAB",
+        "visual": {
+          "x": 1360,
+          "y": -80
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Insert topic"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "6162fb79-c292-405a-a79a-c6db7980502c",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "AAB PROMPT",
+        "visual": {
+          "x": 1360,
+          "y": 20
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Write a viral Twitter/X tweet to discuss about {{\"type\":\"in\",\"path\":\"6fe563bb-a232-408c-84fd-ba80c1c9dfe4\",\"title\":\"AAB\"}}. Start with a shocking hook and End the thread with a question to drive engagement. Each words should be under (max) 280 character"
+            }
+          ]
+        },
+        "generation-mode": "text-3-flash",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "38f35572-2c0d-4bf0-a029-73401ada743d",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "OUTPUT AAA",
+        "visual": {
+          "x": 1040,
+          "y": 220
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "p-render-mode": "Manual layout",
+        "text": {
+          "parts": [
+            {
+              "text": " {{\"type\":\"in\",\"path\":\"4a3bf8ab-7daf-4703-8308-789df389fbc4\",\"title\":\"AAA PROMPT\"}}"
+            }
+          ],
+          "role": "user"
+        }
+      }
+    },
+    {
+      "id": "274594f6-3aa4-4e91-bbad-0294c1fa0e45",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "OUTPUT AAB",
+        "visual": {
+          "x": 1360,
+          "y": 200
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"6162fb79-c292-405a-a79a-c6db7980502c\",\"title\":\"AAB PROMPT\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "p-render-mode": "Manual layout"
+      }
+    },
+    {
+      "id": "b5f84271-6fca-42a0-b5b2-b91f7f3ab409",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "AAC",
+        "visual": {
+          "x": 1680,
+          "y": -80
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Input topic"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "2e1a6777-4971-4aaf-a03c-5e10bdf7b39a",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "AAC PROMPT",
+        "visual": {
+          "x": 1680,
+          "y": 20
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Create an X / Twitter banner, 1500x500 pixels, 3:1 aspect ratio, about {{\"type\":\"in\",\"path\":\"b5f84271-6fca-42a0-b5b2-b91f7f3ab409\",\"title\":\"AAC\"}}.\n\nStyle: Modern\nColor palette: White, dark orange, black\nVisual elements: subtle icons and illustrations related to {{\"type\":\"in\",\"path\":\"b5f84271-6fca-42a0-b5b2-b91f7f3ab409\",\"title\":\"AAC\"}}, clean composition, lots of negative space\nLayout rules: Keep the center and bottom-left 400px area EMPTY to avoid overlap with profile picture and bio buttons. Put the main visual focus on the right side.\nText: No text at all\nQuality: 4K, ultra detailed, vector style, no blur, no distorted text"
+            }
+          ]
+        },
+        "generation-mode": "image",
+        "p-aspect-ratio": "4:3"
+      }
+    },
+    {
+      "id": "642ebe28-1c68-4e04-bdb0-3de12ea1ade3",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "AAC OUTPUT",
+        "visual": {
+          "x": 1680,
+          "y": 200
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"2e1a6777-4971-4aaf-a03c-5e10bdf7b39a\",\"title\":\"AAC PROMPT\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "p-render-mode": "Manual layout"
+      }
+    },
+    {
+      "id": "3811a4b4-2642-41b4-8372-f106567cf00f",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "AAD OUTPUT",
+        "visual": {
+          "x": 2000,
+          "y": 200
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"5fcd11ea-f138-4d0d-b9d1-52326f3ab31c\",\"title\":\"AAD PROMPT\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "p-render-mode": "Manual layout"
+      }
+    },
+    {
+      "id": "970d35b4-244c-4ff8-94f7-0b2c1bc60671",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "AAE OUTPUT",
+        "visual": {
+          "x": 2320,
+          "y": 200
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"116597d8-b97b-4eea-a1e1-51aab7fe3afd\",\"title\":\"AAE PROMPT\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "p-render-mode": "Manual layout"
+      }
+    },
+    {
+      "id": "23a2fe56-63e2-47d1-a3f5-0704807230f0",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "AAF OUTPUT",
+        "visual": {
+          "x": 2640,
+          "y": 220
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "p-render-mode": "Manual layout",
+        "text": {
+          "parts": [
+            {
+              "text": " {{\"type\":\"in\",\"path\":\"bb257240-eed3-48bb-9413-b500d499c39a\",\"title\":\"AAF PROMPT\"}}"
+            }
+          ],
+          "role": "user"
+        }
+      }
+    },
+    {
+      "id": "db9eb1c4-815e-435b-bccd-f72c62f4e73b",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "BAA PROMPT",
+        "visual": {
+          "x": 1360,
+          "y": 1120
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Generate 100 myth-buster content ideas about {{\"type\":\"in\",\"path\":\"ec3ed45e-4932-429f-9bc8-d339a92940f0\",\"title\":\"BAA\"}}\n\nAudience: Generic, no prior knowledge assumed. Explain any jargon in 5 words or less.\nTone: Professional casual. Like a knowledgeable friend, not corporate, not slangy. Clear, direct, confident.\nRule: ALWAYS facts. No opinions, no motivation quotes. Every truth must be verifiable.\n\nFor each idea, use this exact format:\n\n**# | Myth:** [State the false belief exactly as people say it]\n**Fact:** [The correct information in 1 sentence, under 25 words]\n**Why people believe the myth:** [1 sentence, logical reason]\n**Evidence:** [1 specific fact, data point, mechanism, or real example that proves it]\n**Takeaway:** [What to do instead, practical and neutral]\n\nConstraints:\n1. Group the 100 into 5 categories of 20: Basics, Money/Time, Tools/Methods, Habits/Behavior, Advanced\n2. No duplicate myths. No filler myths.\n3. Keep language simple enough for a generic audience.\n4. If a fact needs verification, write \"Verify: [what to check]\" instead of guessing.\n5. Do not use emojis, hype words, or CTAs.\n6. Caption for existing fact"
+            }
+          ]
+        },
+        "generation-mode": "text-3-flash",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "04e57115-cb51-4c0e-81ee-92290d140050",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "ABA",
+        "visual": {
+          "x": 1040,
+          "y": -520
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Input topic"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "0e2ca7ec-5f4f-4707-9e0f-5304f6003cc6",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "BAA OUTPUT",
+        "visual": {
+          "x": 1360,
+          "y": 1480
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"db9eb1c4-815e-435b-bccd-f72c62f4e73b\",\"title\":\"BAA PROMPT\"}} {{\"type\":\"in\",\"path\":\"b7537295-d55b-4475-9710-a7b7361a9c06\",\"title\":\"BAA CAPTION\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "p-render-mode": "google-doc",
+        "b-d-sheets-edit-mode": "new-sheet",
+        "b-doc-title": "MYTH-BUSTERS",
+        "b-doc-a-edit-mode": "same",
+        "b-doc-a-write-mode": "overwrite"
+      }
+    },
+    {
+      "id": "a0e59a10-19bd-465f-af4f-c511c7205664",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "ABF PROMPT",
+        "visual": {
+          "x": 2640,
+          "y": -420
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Write 10 instagram myth-busters Threads posts about {{\"type\":\"in\",\"path\":\"773ab6af-7e04-4d0d-9b24-f5592e0c0510\",\"title\":\"ABF\"}}. Each one is a different content angle. Keep every post casual, direct, and short. No corporate language. No emojis overload. Max 3 sentences per post before the thread continues. End each thread with a soft CTA pointing to the link in bio.\n\nStyle: Educational, breaks down the concept simply"
+            }
+          ]
+        },
+        "generation-mode": "text-3-flash",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "060a5a9e-f1f6-496f-84ed-2dabe1e8650b",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "ABC ",
+        "visual": {
+          "x": 1680,
+          "y": -520
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Input topic"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "c1f2011c-a462-41e8-a0ff-af24d70f1ad4",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "ABA PROMPT",
+        "visual": {
+          "x": 1040,
+          "y": -420
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Write 10 instagram educational Threads posts about{{\"type\":\"in\",\"path\":\"04e57115-cb51-4c0e-81ee-92290d140050\",\"title\":\"ABA\"}}. Each one is a different content angle. Keep every post casual, direct, and short. No corporate language. No emojis overload. Max 3 sentences per post before the thread continues. End each thread with a soft CTA pointing to the link in bio.\n\nStyle: List thread, one product per slide, practical and specific\n"
+            }
+          ]
+        },
+        "generation-mode": "text-3-flash",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "122685a3-175c-42d2-be5e-95108e69b608",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "ABA OUTPUT",
+        "visual": {
+          "x": 1040,
+          "y": -260
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"c1f2011c-a462-41e8-a0ff-af24d70f1ad4\",\"title\":\"ABA PROMPT\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "p-render-mode": "Manual layout"
+      }
+    },
+    {
+      "id": "931ad214-c203-47d0-8002-eec82bad9b19",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "ABB PROMPT",
+        "visual": {
+          "x": 1360,
+          "y": -520
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Write 10 instagram behind the scenes Threads posts for ThatDigitalStore. Each one is a different content angle. Keep every post casual, direct, and short. No corporate language. No emojis overload. Max 3 sentences per post before the thread continues. End each thread with a soft CTA pointing to the link in bio.\n\nStyle: Personal, honest, no sugarcoating\n"
+            }
+          ]
+        },
+        "generation-mode": "text-3-flash",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "c2526ff7-b4cb-4799-a233-643e89f231e0",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "ABB OUTPUT",
+        "visual": {
+          "x": 1360,
+          "y": -360
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"931ad214-c203-47d0-8002-eec82bad9b19\",\"title\":\"ABB PROMPT\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "p-render-mode": "Manual layout"
+      }
+    },
+    {
+      "id": "88ee3da4-798a-4a34-81c0-486d2e2d6700",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "ABC PROMPT",
+        "visual": {
+          "x": 1680,
+          "y": -420
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Write 10 instagram hot takes Threads posts about {{\"type\":\"in\",\"path\":\"060a5a9e-f1f6-496f-84ed-2dabe1e8650b\",\"title\":\"ABC \"}}. Each one is a different content angle. Keep every post casual, direct, and short. No corporate language. No emojis overload. Max 3 sentences per post before the thread continues. End each thread with a soft CTA pointing to the link in bio.\n\nStyle: Provocative opener, then back it up with real reasons\n"
+            }
+          ]
+        },
+        "generation-mode": "text-3-flash",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "3389f081-b934-409f-9f6f-f9999b34a220",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "ABC OUTPUT",
+        "visual": {
+          "x": 1680,
+          "y": -240
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"88ee3da4-798a-4a34-81c0-486d2e2d6700\",\"title\":\"ABC PROMPT\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "p-render-mode": "Manual layout"
+      }
+    },
+    {
+      "id": "d2efb948-6908-4181-ada4-333793d7d428",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "ABD OUTPUT",
+        "visual": {
+          "x": 2000,
+          "y": -240
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"beecdea6-ac4a-45d7-a7d3-0be53915f624\",\"title\":\"ABD PROMPT\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "p-render-mode": "Manual layout"
+      }
+    },
+    {
+      "id": "613b767c-9483-4505-9717-84d1b52ff266",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "ABD",
+        "visual": {
+          "x": 2000,
+          "y": -520
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Input topic"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "beecdea6-ac4a-45d7-a7d3-0be53915f624",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "ABD PROMPT",
+        "visual": {
+          "x": 2000,
+          "y": -420
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Write 10 instagram storytelling Threads posts about {{\"type\":\"in\",\"path\":\"613b767c-9483-4505-9717-84d1b52ff266\",\"title\":\"ABD\"}}. Each one is a different content angle. Keep every post casual, direct, and short. No corporate language. No emojis overload. Max 3 sentences per post before the thread continues. End each thread with a soft CTA pointing to the link in bio.\n\nStyle: Raw, real, leads naturally to the store at the end\n"
+            }
+          ]
+        },
+        "generation-mode": "text-3-flash",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "d1da5210-8c0b-4c76-9539-cd6dc277b2e5",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "ABE PROMPT",
+        "visual": {
+          "x": 2320,
+          "y": -420
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Write 10 instagram storytelling Threads posts about {{\"type\":\"in\",\"path\":\"491b40bf-9237-475d-8c33-ac0ea6dc2435\",\"title\":\"ABE\"}}. Each one is a different content angle. Keep every post casual, direct, and short. No corporate language. No emojis overload. Max 3 sentences per post before the thread continues. End each thread with a soft CTA pointing to the link in bio.\n\nStyle: Raw, real, leads naturally to the store at the end\n"
+            }
+          ]
+        },
+        "generation-mode": "text-3-flash",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "491b40bf-9237-475d-8c33-ac0ea6dc2435",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "ABE",
+        "visual": {
+          "x": 2320,
+          "y": -520
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Input product"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "0af72e23-05e8-4a36-85ce-a6b7e32a113f",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "ABE OUTPUT",
+        "visual": {
+          "x": 2320,
+          "y": -240
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"d1da5210-8c0b-4c76-9539-cd6dc277b2e5\",\"title\":\"ABE PROMPT\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "p-render-mode": "Manual layout"
+      }
+    },
+    {
+      "id": "773ab6af-7e04-4d0d-9b24-f5592e0c0510",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "ABF",
+        "visual": {
+          "x": 2640,
+          "y": -520
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Input topic"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "7e433ece-2311-4a3b-b3c8-534f2744cd6a",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "ABF OUTPUT",
+        "visual": {
+          "x": 2640,
+          "y": -240
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"a0e59a10-19bd-465f-af4f-c511c7205664\",\"title\":\"ABF PROMPT\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "p-render-mode": "Manual layout"
+      }
+    },
+    {
+      "id": "5904a81e-a931-4a18-ba69-2ec0cf2c1e8f",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "ABG",
+        "visual": {
+          "x": 2960,
+          "y": -520
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Input topic\n"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "c8d78d81-535f-4b40-ba83-79f6285c7d7f",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "ABG PROMPT",
+        "visual": {
+          "x": 2960,
+          "y": -420
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Write 10 instagram fear agle Threads posts about {{\"type\":\"in\",\"path\":\"5904a81e-a931-4a18-ba69-2ec0cf2c1e8f\",\"title\":\"ABG\"}}. Each one is a different content angle. Keep every post casual, direct, and short. No corporate language. No emojis overload. Max 3 sentences per post before the thread continues. End each thread with a soft CTA pointing to the link in bio.\n\nStyle: Direct, unsettling, ends with soft push"
+            }
+          ]
+        },
+        "generation-mode": "text-3-flash",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "0cb3ec75-017d-4b82-a889-739014e204df",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "ABG OUTPUT",
+        "visual": {
+          "x": 2960,
+          "y": -240
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"c8d78d81-535f-4b40-ba83-79f6285c7d7f\",\"title\":\"ABG PROMPT\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "p-render-mode": "Manual layout"
+      }
+    },
+    {
+      "id": "c58f4c68-6dfe-4274-bf90-0a0adf095b9b",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "AC",
+        "visual": {
+          "x": 400,
+          "y": -980
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Choose Bluesky content you want to create:\n\nACA. MYTHOLOGY FUNFACT\nACB. SHOWER THOUGTHS\nACC. REAL TALK\nACD. QUESTION POST\nACE. "
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "eaa0761a-3ae3-4bf6-9387-98c2c557a2c9",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "BLUESKY BRAIN",
+        "visual": {
+          "x": 720,
+          "y": -980
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"c58f4c68-6dfe-4274-bf90-0a0adf095b9b\",\"title\":\"AC\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"723f56ec-7081-4d5e-b47c-8c4caf06f753\",\"title\":\"ACA\"}} {{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"2e63365a-5031-41b2-9ebe-0ed1bcdf3ea9\",\"title\":\"ACB\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"ab7a1170-3882-4519-8593-a02c59ebb8da\",\"title\":\"ACC\"}} {{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"cc832b2d-3351-42f7-9997-496b7a5b1d87\",\"title\":\"ACD\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"87505e35-b0f2-4de7-9118-f303407fd192\",\"title\":\"ACE\"}}"
+            }
+          ]
+        },
+        "generation-mode": "agent"
+      }
+    },
+    {
+      "id": "879f2c3a-2fdd-4ed6-a8db-93985ebdd76d",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "BBA",
+        "visual": {
+          "x": 1040,
+          "y": 1620
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Input title"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "10962fcf-5db7-417b-bf82-9765009cc6eb",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "BBA PROMPT",
+        "visual": {
+          "x": 1040,
+          "y": 1720
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "{\n  \"type\": \"image_prompt\",\n  \"title\": \"{{\"type\":\"in\",\"path\":\"879f2c3a-2fdd-4ed6-a8db-93985ebdd76d\",\"title\":\"BBA\"}}\",\n  \"style\": {\n    \"overall\": \"premium natural-history guidebook meets modern editorial infographic\",\n    \"tone\": \"educational, refined, collectible, highly structured\",\n    \"background\": \"clean light-colored\",\n    \"palette\": \"soft, elegant, muted scientific tones (light blues, warm grays, subtle pastels)\",\n    \"lighting\": \"gentle shadows, soft highlights\",\n    \"layout\": \"vertical, modular, high information density but uncluttered\"\n  }\n} {{\"type\":\"tool\",\"path\":\"embed://a2/tools.bgl.json#module:code-execution\",\"title\":\"Code Execution\"}}"
+            }
+          ]
+        },
+        "generation-mode": "agent",
+        "p-aspect-ratio": "1:1"
+      }
+    },
+    {
+      "id": "5ef65130-c269-45e6-ad1f-f4b5ef8582b7",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "BBA OUTPUT",
+        "visual": {
+          "x": 1040,
+          "y": 2160
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"10962fcf-5db7-417b-bf82-9765009cc6eb\",\"title\":\"BBA PROMPT\"}} {{\"type\":\"in\",\"path\":\"28c83444-2832-4963-9bc4-ae18635f060b\",\"title\":\"BBA CAPTION\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "p-render-mode": "Manual layout"
+      }
+    },
+    {
+      "id": "2e63365a-5031-41b2-9ebe-0ed1bcdf3ea9",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "ACB",
+        "visual": {
+          "x": 1360,
+          "y": -980
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Input topic"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "ad958fb9-8f35-4277-b393-eebe65a99781",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "ACB PROMPT",
+        "visual": {
+          "x": 1360,
+          "y": -860
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Write 10 Bluesky shower thoughts about {{\"type\":\"in\",\"path\":\"2e63365a-5031-41b2-9ebe-0ed1bcdf3ea9\",\"title\":\"ACB\"}}. \nFormat: Random but deep observation, 1-2 sentences, very shareable.\nExample style: \"If Hades ran a modern business it would have the best employee retention. Nobody leaves.\"\nMake them sound like a thought you had at 2am. Under 240 chars each."
+            }
+          ]
+        },
+        "generation-mode": "text-3-flash",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "c5c8c17d-e0d2-4a8c-8902-5fea931eb746",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "ACB OUTPUT",
+        "visual": {
+          "x": 1360,
+          "y": -680
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "p-render-mode": "Manual layout",
+        "text": {
+          "parts": [
+            {
+              "text": " {{\"type\":\"in\",\"path\":\"ad958fb9-8f35-4277-b393-eebe65a99781\",\"title\":\"ACB PROMPT\"}}"
+            }
+          ],
+          "role": "user"
+        }
+      }
+    },
+    {
+      "id": "ab7a1170-3882-4519-8593-a02c59ebb8da",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "ACC",
+        "visual": {
+          "x": 1680,
+          "y": -980
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Input Topic"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "a7fc442d-e8f0-4971-b4b4-ea30cd559207",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "ACC PROMPT",
+        "visual": {
+          "x": 1680,
+          "y": -860
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Write 10 Real Talk posts for Bluesky about {{\"type\":\"in\",\"path\":\"ab7a1170-3882-4519-8593-a02c59ebb8da\",\"title\":\"ACC\"}}.\nHonest, unfiltered, no motivational fluff. Share a real moment: a doubt, a win, a mistake, a decision.\n\nTone: Professional casual, always true.\n\nConstraint: No advice, just what happened. \n\nBluesky respects authenticity over polish.\nExample start: \"Spent 6 hours on one glyph that no one will notice. Still worth it.\""
+            }
+          ]
+        },
+        "generation-mode": "text-3-flash",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "8ac36afa-f40f-4d75-b1a3-a83cbead96f7",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "ACC OUTPUT",
+        "visual": {
+          "x": 1680,
+          "y": -700
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "p-render-mode": "Manual layout",
+        "text": {
+          "parts": [
+            {
+              "text": " {{\"type\":\"in\",\"path\":\"a7fc442d-e8f0-4971-b4b4-ea30cd559207\",\"title\":\"ACC PROMPT\"}}"
+            }
+          ],
+          "role": "user"
+        }
+      }
+    },
+    {
+      "id": "baabd3e9-5cc2-43e1-a65e-096911883e20",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "ACD PROMPT",
+        "visual": {
+          "x": 2000,
+          "y": -860
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Write 10 Question posts for Bluesky to boost replies.\nGoal: Get fast answers. Must be answerable in under 5 words.\nAbout: {{\"type\":\"in\",\"path\":\"cc832b2d-3351-42f7-9997-496b7a5b1d87\",\"title\":\"ACD\"}}.\nNo yes/no questions. Ask for preferences, would-you-rather, or fill-in-the-blank.\nExample: \"What would be written on your warning glyph?\""
+            }
+          ]
+        },
+        "generation-mode": "text-3-flash",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "cc832b2d-3351-42f7-9997-496b7a5b1d87",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "ACD",
+        "visual": {
+          "x": 2000,
+          "y": -980
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Input topic"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "3c1fccef-a48a-4280-8f30-3ac48f2974d4",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "ACD OUTPUT",
+        "visual": {
+          "x": 2000,
+          "y": -680
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"baabd3e9-5cc2-43e1-a65e-096911883e20\",\"title\":\"ACD PROMPT\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "p-render-mode": "Manual layout"
+      }
+    },
+    {
+      "id": "87505e35-b0f2-4de7-9118-f303407fd192",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "ACE",
+        "visual": {
+          "x": 2320,
+          "y": -980
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Input topic"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "3f132a07-3f9b-4d19-933c-6a8b889d2853",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "ACE PROMPT",
+        "visual": {
+          "x": 2320,
+          "y": -860
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Write 10 one-liners for Bluesky, in the world of {{\"type\":\"in\",\"path\":\"87505e35-b0f2-4de7-9118-f303407fd192\",\"title\":\"ACE\"}}.\nSingle sentence, stops the scroll, no context needed.\nStyle: Dark, poetic, cinematic.\n\nUnder 150 characters, no explanation."
+            }
+          ]
+        },
+        "generation-mode": "text-3-flash",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "4dcceff2-3296-4af2-8c74-04c126096d97",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "ACE OUTPUT",
+        "visual": {
+          "x": 2320,
+          "y": -680
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"3f132a07-3f9b-4d19-933c-6a8b889d2853\",\"title\":\"ACE PROMPT\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "p-render-mode": "Manual layout"
+      }
+    },
+    {
+      "id": "ffdcc817-ef4d-4f20-9d4b-74639846299d",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "AD",
+        "visual": {
+          "x": 400,
+          "y": -1460
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Choose Reddit content you want to create:\n\nPromotional content:\nADA. PROMOTE TOOLS/PRODUCTS\n\nNon-Promotional content:\nADB. MYTH-BUSTER\nADC. SEARCH r/"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "8e02b5ee-bbaf-475b-9f6e-a568bd175e74",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "REDDIT MAIN CORE",
+        "visual": {
+          "x": 720,
+          "y": -1460
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"ffdcc817-ef4d-4f20-9d4b-74639846299d\",\"title\":\"AD\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"9792a5c7-4b9c-4bd5-b88b-a7d6eb23ba2a\",\"title\":\"ADA\"}} {{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"5e05873d-ae6d-4cfa-8410-6dbaad2109eb\",\"title\":\"ADB\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"title\":\"Go to:\"}}"
+            }
+          ]
+        },
+        "generation-mode": "agent"
+      }
+    },
+    {
+      "id": "9792a5c7-4b9c-4bd5-b88b-a7d6eb23ba2a",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "ADA",
+        "visual": {
+          "x": 1040,
+          "y": -1460
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Input product/tools\n"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "3d4b3fd0-fee7-49dc-ab2e-636dcfaf5a0d",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "ADA PROMPT",
+        "visual": {
+          "x": 1040,
+          "y": -1340
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "parts": [
+            {
+              "text": "Write a casual, non-salesy Reddit post sharing {{\"type\":\"in\",\"path\":\"9792a5c7-4b9c-4bd5-b88b-a7d6eb23ba2a\",\"title\":\"ADA\"}}. \nRules:\n1. Sound like an authentic community member sharing a personal project.\n2. Clearly explain WHY (solving a personal annoyance).\n3. List 3 key features as bullet points.\n4. Ask for feedback from the community at the end.\n5. Do NOT use marketing buzzwords like \"game-changer,\" \"revolutionary,\" or \"unleash.\"\n6. Ask the user for its tools or product"
+            }
+          ],
+          "role": "user"
+        },
+        "generation-mode": "agent"
+      }
+    },
+    {
+      "id": "4963e077-51e4-4f02-805e-019a03ce5a25",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "ADA OUTPUT",
+        "visual": {
+          "x": 1040,
+          "y": -1160
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "p-render-mode": "Manual layout",
+        "text": {
+          "parts": [
+            {
+              "text": " {{\"type\":\"in\",\"path\":\"3d4b3fd0-fee7-49dc-ab2e-636dcfaf5a0d\",\"title\":\"ADA PROMPT\"}}"
+            }
+          ],
+          "role": "user"
+        }
+      }
+    },
+    {
+      "id": "5e05873d-ae6d-4cfa-8410-6dbaad2109eb",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "ADB",
+        "visual": {
+          "x": 1360,
+          "y": -1460
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Input topic"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "77934248-cfc4-45ac-a570-fb967eb5358a",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "ADB PROMPT",
+        "visual": {
+          "x": 1360,
+          "y": -1340
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Write 10 Reddit post about {{\"type\":\"in\",\"path\":\"5e05873d-ae6d-4cfa-8410-6dbaad2109eb\",\"title\":\"ADB\"}} myth.\n\nTitle: Must be a question or \"Myth: [common belief]\"\nBody:\nContext: 2 sentences\nMyth: What people believe\nFact: What actually happens, with 1 verifiable data point\nEvidence: Screenshot, personal test, or source\nDiscussion starter: End with \"What was your experience? Did you see different results?\"\n\nTone: Professional casual, generic audience, no jargon, no selling.\nRule: First 30 minutes determine success - posts with 10 upvotes in first hour outrank 50 over 24h, so make it reply-worthy."
+            }
+          ]
+        },
+        "generation-mode": "text-3-flash",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "b4e215b7-0310-4d97-b6ad-8ed4d2c249fe",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "ADB OUTPUT",
+        "visual": {
+          "x": 1360,
+          "y": -1160
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "p-render-mode": "Manual layout",
+        "text": {
+          "parts": [
+            {
+              "text": " {{\"type\":\"in\",\"path\":\"77934248-cfc4-45ac-a570-fb967eb5358a\",\"title\":\"ADB PROMPT\"}}"
+            }
+          ],
+          "role": "user"
+        }
+      }
+    },
+    {
+      "id": "6e1b72bb-4573-4d56-8b49-1958e812472e",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "ADC PROMPT",
+        "visual": {
+          "x": 1680,
+          "y": -1340
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "parts": [
+            {
+              "text": "You are a Reddit research assistant for this {{\"type\":\"in\",\"path\":\"99b08dcd-8b50-4363-8ea0-f7d970de6c5c\",\"title\":\"ADC\"}}.\n\nMy goal: get audience, upvote and feedback\nTask: Find me 10 perfect subreddits, 5 for Project A and 5 for Project B.\n\nFor each subreddit, give me this table:\n\n| Subreddit | Members | Active Now | What top posts look like | Self-promo allowed? Yes/No/Soft | Why it's perfect for me from Indonesia | Risk of ban |\n\nRules for your search:\n1. Check r/SideProject, r/buildinpublic, r/DigitalProducts, r/Entrepreneur, r/worldbuilding, r/lore, r/WorldBuildingAdvice, r/indonesia, plus 2 niche ones you find\n2. Prioritize subreddits where: honest comparison posts like \"I tried X for 90 days\" win, native images get 3x upvotes over links, and value-first posts are upvoted over promo\n3. Flag any subreddit that hates digital store promos or requires 100+ karma to post\n4. For Indonesia, include at least 1 subreddit where posting at 8-10pm WIB will still get US upvotes\n\nOutput sorted by easiest win first."
+            }
+          ],
+          "role": "user"
+        },
+        "generation-mode": "text-3-flash"
+      }
+    },
+    {
+      "id": "900b7d02-09b9-435a-9baf-65c52b10a201",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "2",
+        "visual": {
+          "x": 400,
+          "y": 880
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Choose Platforms:\nBA. INSTAGRAM\nBB. PINTEREST"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "0c3bc236-2c82-4c59-b3b5-94c48fe8fa91",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "PICTURE POSTING MAIN CORE",
+        "visual": {
+          "x": 400,
+          "y": 1000
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"900b7d02-09b9-435a-9baf-65c52b10a201\",\"title\":\"2\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"6af1029d-5a1f-400d-8fd9-f654c2dfeebe\",\"title\":\"BA\"}}{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"75aca9f2-5d80-4234-ad36-679ad23a32b9\",\"title\":\"BB\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "generation-mode": "agent"
+      }
+    },
+    {
+      "id": "b7537295-d55b-4475-9710-a7b7361a9c06",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "BAA CAPTION",
+        "visual": {
+          "x": 1360,
+          "y": 1300
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are a copywriter for a brands that get 5%+ engagement. Generate a caption about . Must include:\n\nA pattern-interrupt hook\n1 relatable pain point it solves\n1 engagement question that sparks comments\n1 strong CTA: [Your CTA, e.g. \"Comment VAULT to get link\"]\nInclude 10-15 relevant hashtags."
+            }
+          ]
+        },
+        "generation-mode": "text-3-flash",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "ec3ed45e-4932-429f-9bc8-d339a92940f0",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "BAA",
+        "visual": {
+          "x": 1360,
+          "y": 1000
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "input topic"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "696c52b0-ac82-422b-aae0-3d37adceb102",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "BAB PROMPT",
+        "visual": {
+          "x": 1680,
+          "y": 1120
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Create an Instagram feed picture about, size 1080x1350 pixels, 4:5 portrait ratio.\n\nStyle: clean minimal for digital store \nColor palette: white, orange, purple\nComposition: Center subject, lots of negative space, keep all important text inside middle 900x1100 safe zone - Instagram crops edges in grid\n\nText: Only 3 words max in bold sans-serif\nLighting: soft studio, ultra sharp, 4K, no blur, no watermark\nGoal: Stop scroll in 1 second for generic audience, professional casual vibe"
+            }
+          ]
+        },
+        "generation-mode": "image",
+        "p-aspect-ratio": "1:1"
+      }
+    },
+    {
+      "id": "134ec4a9-5e07-40b2-a12e-279c0204100b",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "BAB CAPTION",
+        "visual": {
+          "x": 1680,
+          "y": 1280
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are a copywriter for a brands that get 5%+ engagement. Generate a caption about {{\"type\":\"in\",\"path\":\"696c52b0-ac82-422b-aae0-3d37adceb102\",\"title\":\"BAB PROMPT\"}}. Must include:\n\nA pattern-interrupt hook\n1 relatable pain point it solves\n1 engagement question that sparks comments\n1 strong CTA: [Your CTA, e.g. \"Comment VAULT to get link\"]\nInclude 10-15 relevant hashtags."
+            }
+          ]
+        },
+        "generation-mode": "text-3-flash",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "4c201301-0cbe-49b8-9506-68858c2fd661",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "BAB OUTPUT",
+        "visual": {
+          "x": 1680,
+          "y": 1460
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"134ec4a9-5e07-40b2-a12e-279c0204100b\",\"title\":\"BAB CAPTION\"}} {{\"type\":\"in\",\"path\":\"134ec4a9-5e07-40b2-a12e-279c0204100b\",\"title\":\"BAB CAPTION\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "p-render-mode": "Manual layout"
+      }
+    },
+    {
+      "id": "10a43e51-50e6-4b46-a0af-c6aae288001a",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "BAB",
+        "visual": {
+          "x": 1680,
+          "y": 1000
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Input topic"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "6af1029d-5a1f-400d-8fd9-f654c2dfeebe",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "BA",
+        "visual": {
+          "x": 720,
+          "y": 1000
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Choose what you want to generate:\nBAA. INSTAGRAM MYTH-BUSTER\nBAB. INSTAGRAM FEED \nBAC. INSTAGRAM FUN FACT"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "9c1f61d3-3667-4b0a-a52b-2ddac38ee500",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "INSTAGRAM MAIN CORE",
+        "visual": {
+          "x": 1040,
+          "y": 1000
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": " {{\"type\":\"in\",\"path\":\"6af1029d-5a1f-400d-8fd9-f654c2dfeebe\",\"title\":\"BA\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"ec3ed45e-4932-429f-9bc8-d339a92940f0\",\"title\":\"BAA\"}}{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"10a43e51-50e6-4b46-a0af-c6aae288001a\",\"title\":\"BAB\"}}{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"96b925d7-5027-48d5-9b8e-499fe9d2175f\",\"title\":\"BAC\"}}"
+            }
+          ]
+        },
+        "generation-mode": "agent"
+      }
+    },
+    {
+      "id": "96b925d7-5027-48d5-9b8e-499fe9d2175f",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "BAC",
+        "visual": {
+          "x": 2000,
+          "y": 1000
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Input topic"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": false
+      }
+    },
+    {
+      "id": "991e5aee-912f-4a52-9fb1-68762f621dc6",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "BAC PROMPT",
+        "visual": {
+          "x": 2000,
+          "y": 1120
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Generate 100 fun fact content bank about {{\"type\":\"in\",\"path\":\"96b925d7-5027-48d5-9b8e-499fe9d2175f\",\"title\":\"BAC\"}}.\n\nAudience: Generic, no prior knowledge. Explain in simple language.\nTone: Professional casual. Fun but always factual.\nRule: FACT is true. Mythology is ONLY an analogy to make it easy, not the fact itself.\n\nFor each fact, use this exact format:\n\n| # | Fun Fact [1 sentence, true, verifiable] | Mythology Analogy [Which god/creature/story explains it simply] | Easy Explanation [Like explaining to a smart friend, under 25 words] | Hook for post [Under 12 words, scroll-stopper] |\n\nConstraints:\n1. Group 100 into 5 categories of 20: Basics, Money/Time, Tools, Mistakes, Advanced\n2. Use mix of mythology: Greek, Norse, and Indonesian [Wayang, Javanese] since my audience is global + Indonesia\n3. Never present mythology as fact. Format must be \"This fact is like [myth] because...\"\n4. Keep fun fact under 20 words. Keep mythology analogy familiar - if obscure myth, explain in 5 words\n5. No duplicate facts\n6. No opinions\n7. Ask the user for this option"
+            }
+          ]
+        },
+        "generation-mode": "text-3-flash",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "1dc1b956-aebc-45a6-bc61-5f7385f7b111",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "BAC OUTPUT",
+        "visual": {
+          "x": 2000,
+          "y": 1300
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "p-render-mode": "google-sheets",
+        "text": {
+          "parts": [
+            {
+              "text": " {{\"type\":\"in\",\"path\":\"991e5aee-912f-4a52-9fb1-68762f621dc6\",\"title\":\"BAC PROMPT\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "b-d-sheets-edit-mode": "new-sheet",
+        "b-doc-title": "IMSTAGRAM FUNFACT TDS"
+      }
+    },
+    {
+      "id": "75aca9f2-5d80-4234-ad36-679ad23a32b9",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "BB",
+        "visual": {
+          "x": 400,
+          "y": 1620
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Choose what you want to generate:\n\nNon-promotional content:\n\nBBA. INFOGRAPHIC\nBBB. PINTEREST PROMPT CONTENT\n\nPromotional content:\n\nBBC. PROMOTIONAL CONTENT PINTEREST\nBBD. PROMOTIONAL CONTENT INFOGRAPHIC\n\n"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "99ebdddc-0f39-4e68-b8a3-9fdcaa3f6d84",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "PINTEREST MAIN CORE",
+        "visual": {
+          "x": 720,
+          "y": 1620
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"75aca9f2-5d80-4234-ad36-679ad23a32b9\",\"title\":\"BB\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"879f2c3a-2fdd-4ed6-a8db-93985ebdd76d\",\"title\":\"BBA\"}}{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"7f5ff940-bc33-4f42-a2a6-ff550bd44188\",\"title\":\"BBB\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"b806516e-14dd-4c6e-b771-5e45718a2c84\",\"title\":\"BBC\"}}"
+            }
+          ]
+        },
+        "generation-mode": "agent"
+      }
+    },
+    {
+      "id": "28c83444-2832-4963-9bc4-ae18635f060b",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "BBA CAPTION",
+        "visual": {
+          "x": 1040,
+          "y": 1960
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are a copywriter for a brands that get 5%+ engagement. Generate a caption about {{\"type\":\"in\",\"path\":\"10962fcf-5db7-417b-bf82-9765009cc6eb\",\"title\":\"BBA PROMPT\"}}. Must include:\n\nA pattern-interrupt hook\n1 relatable pain point it solves\n1 engagement question that sparks comments\n1 strong CTA: [Your CTA, e.g. \"Comment VAULT to get link\"]\nInclude 10-15 relevant hashtags."
+            }
+          ]
+        },
+        "generation-mode": "text-3-flash"
+      }
+    },
+    {
+      "id": "47435583-d74c-4dd1-bbae-d6702ecf486f",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "BBB PROMPT",
+        "visual": {
+          "x": 1360,
+          "y": 1720
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Generate 15 ChatGPT prompts to make content for {{\"type\":\"in\",\"path\":\"7f5ff940-bc33-4f42-a2a6-ff550bd44188\",\"title\":\"BBB\"}}.\n\nFor each of the 15 prompts, use this structure:\nRole: You are an expert for {{\"type\":\"in\",\"path\":\"7f5ff940-bc33-4f42-a2a6-ff550bd44188\",\"title\":\"BBB\"}}\nTask: Create prompts\nContext: Audience = generic, no prior knowledge. \n\nRules for the 15:\n1. Each prompt must include hook \n\n2. No duplicates\n"
+            }
+          ]
+        },
+        "generation-mode": "text-3-flash",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "7f5ff940-bc33-4f42-a2a6-ff550bd44188",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "BBB",
+        "visual": {
+          "x": 1360,
+          "y": 1620
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Input niche"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "3a6d01f4-955c-45b7-95fe-f2e6f1677193",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "BBB OUTPUT",
+        "visual": {
+          "x": 1360,
+          "y": 1900
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"47435583-d74c-4dd1-bbae-d6702ecf486f\",\"title\":\"BBB PROMPT\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "p-render-mode": "Manual layout"
+      }
+    },
+    {
+      "id": "b806516e-14dd-4c6e-b771-5e45718a2c84",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "BBC",
+        "visual": {
+          "x": 1680,
+          "y": 1620
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Input product"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "8e9c5764-62b5-4120-a9bb-be48755810e9",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "BBC PROMPT",
+        "visual": {
+          "x": 1680,
+          "y": 1740
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Act as a Pinterest SEO expert. I have product/tools called {{\"type\":\"in\",\"path\":\"b806516e-14dd-4c6e-b771-5e45718a2c84\",\"title\":\"BBC\"}}. Generate 30 high-converting Pinterest Pin Content, Titles and Descriptions. \nRequirements:\n1. Include high-volume search terms naturally in the first sentence.\n2. Focus on clear value, not fluff.\n3. End with a strong Call-to-Action (e.g., \"Tap to use the tool for free\").\n4. Provide 5 targeted hashtags."
+            }
+          ]
+        },
+        "generation-mode": "text-3-flash",
+        "p-aspect-ratio": "1:1",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "9d7c43c5-83d7-4535-94c1-a3191441e2b2",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "BBC OUTPUT",
+        "visual": {
+          "x": 1680,
+          "y": 1920
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"8e9c5764-62b5-4120-a9bb-be48755810e9\",\"title\":\"BBC PROMPT\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "p-render-mode": "Manual layout"
+      }
+    },
+    {
+      "id": "b63cb7e9-c7d9-4bcd-9d6f-ead5449caa62",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "BBD",
+        "visual": {
+          "x": 2000,
+          "y": 1620
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Input product"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": false
+      }
+    },
+    {
+      "id": "ae247d3a-8aee-4446-9e9f-ba92134a2ccb",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "BBD PROMPT",
+        "visual": {
+          "x": 2000,
+          "y": 1740
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Act as a Pinterest SEO expert. I have product/tools called {{\"type\":\"in\",\"path\":\"b63cb7e9-c7d9-4bcd-9d6f-ead5449caa62\",\"title\":\"BBD\"}}. Generate 30 high-converting Pinterest Infographic Content, Titles and Descriptions. \nRequirements:\n1. Include high-volume search terms naturally in the first sentence.\n2. Focus on clear value, not fluff.\n3. End with a strong Call-to-Action (e.g., \"Tap to use the tool for free\").\n4. Provide 5 targeted hashtags."
+            }
+          ]
+        },
+        "generation-mode": "text-3-flash",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "a1ae7806-1ce6-45db-a275-046c4320000b",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "BBD OUTPUT",
+        "visual": {
+          "x": 2000,
+          "y": 1880
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"ae247d3a-8aee-4446-9e9f-ba92134a2ccb\",\"title\":\"BBD PROMPT\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "p-render-mode": "Manual layout"
+      }
+    },
+    {
+      "id": "f5c4bfa8-d143-475f-b646-f8ee8ff952b1",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "3",
+        "visual": {
+          "x": 400,
+          "y": 2280
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Choose Platforms:\nCA. EMAIL\nCB. LINKEDIN\nCC. ARTICLE\nCD. TOOLS\n\n"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "5193a4f6-942d-47f2-87e1-0072976373d3",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "TEXT MAIN BRAIN",
+        "visual": {
+          "x": 720,
+          "y": 2280
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"f5c4bfa8-d143-475f-b646-f8ee8ff952b1\",\"title\":\"3\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"c4b62ab2-8279-4268-82ab-af236f8652b1\",\"title\":\"CA\"}} {{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"a10dacda-d054-45e9-bd73-43b34efa8e7e\",\"title\":\"CB\"}} {{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"4ff55dc1-df63-4a5a-944e-e9821be1d7e0\",\"title\":\"CC\"}} {{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"02243d00-7880-49df-ac00-4bf8413dbe67\",\"title\":\"CD\"}}"
+            }
+          ]
+        },
+        "generation-mode": "agent"
+      }
+    },
+    {
+      "id": "c4b62ab2-8279-4268-82ab-af236f8652b1",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "CA",
+        "visual": {
+          "x": 720,
+          "y": 2480
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Choose what you want to generate:\n\nCAA. EMAIL MARKETING\nCAB. BANNER"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "2699818e-91d7-406c-a60c-405cb27d11cc",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "EMAIL MAIN CORE",
+        "visual": {
+          "x": 1040,
+          "y": 2480
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"c4b62ab2-8279-4268-82ab-af236f8652b1\",\"title\":\"CA\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"21b077a4-585c-4e85-85f9-200d6ab1cf98\",\"title\":\"CAA\"}} {{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"5612fa33-b0f6-4ce8-8f54-efe194de302c\",\"title\":\"CAB\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "generation-mode": "agent"
+      }
+    },
+    {
+      "id": "21b077a4-585c-4e85-85f9-200d6ab1cf98",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "CAA",
+        "visual": {
+          "x": 1360,
+          "y": 2480
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Input product/tools"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "85f4581b-33e8-4df3-9eee-92b0b6131894",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "CAA PROMPT",
+        "visual": {
+          "x": 1360,
+          "y": 2600
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "parts": [
+            {
+              "text": "Act like you are a professional copywriter. Composed me an email about {{\"type\":\"in\",\"path\":\"21b077a4-585c-4e85-85f9-200d6ab1cf98\",\"title\":\"CAA\"}} with required structure:\n\n- Subject Line: Provide 3 options (Fear-based, Curiosity-based, Direct)\n- Body Structure (PAS — Problem, Agitate, Solution):\n  - Opening: Uncomfortable question about seed phrase safety\n  - Problem: List common storage mistakes (screenshot, sticky note, cloud)\n  - Agitate: all scenarios where those fail\n  - Solution\n  - Include a comparison \n  - Offer limited-time discount (e.g., 20% off for first responders)\n  - CTA: Clear product link\n  - Engagement: Ask them to reply \"YES\" or \"NO\" — offer a bonus for each (YES = free audit checklist, NO = 2-min walkthrough)\n- Footer: Name, Title, Company"
+            }
+          ],
+          "role": "user"
+        },
+        "generation-mode": "text-3-flash",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "8a5d5e7e-49e7-4c94-ad53-c9a6aa8523f4",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "CAA OUTPUT",
+        "visual": {
+          "x": 1360,
+          "y": 2760
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"85f4581b-33e8-4df3-9eee-92b0b6131894\",\"title\":\"CAA PROMPT\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "p-render-mode": "Manual layout"
+      }
+    },
+    {
+      "id": "5612fa33-b0f6-4ce8-8f54-efe194de302c",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "CAB",
+        "visual": {
+          "x": 1680,
+          "y": 2480
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Input product/topic"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "2931ce8b-b025-426a-a4fc-0b8d34de99dd",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "CAB PROMPT",
+        "visual": {
+          "x": 1680,
+          "y": 2600
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Create a cinematic email banner for [PRODUCT: e.g. luxury matte black perfume bottle], 1200x600px, anamorphic lens, volumetric lighting, shallow depth of field, dark premium background with smoke and spotlight on product, large clean negative space on the left for text, ultra-realistic, 8K, high CTR design, curiosity-driven, includes a prominent glossy CTA button area that says \"SHOP NOW\", minimalist, luxury e-commerce ad style"
+            }
+          ]
+        },
+        "generation-mode": "image",
+        "p-aspect-ratio": "4:3"
+      }
+    },
+    {
+      "id": "761b10b3-81b2-41bb-b54f-174ec4fb08af",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "CAB OUTPUT",
+        "visual": {
+          "x": 1680,
+          "y": 2820
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "p-render-mode": "Manual layout",
+        "text": {
+          "role": "user",
+          "parts": [
+            {
+              "text": " {{\"title\":\"CAB PROMPT\",\"path\":\"2931ce8b-b025-426a-a4fc-0b8d34de99dd\",\"type\":\"in\"}}"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "a10dacda-d054-45e9-bd73-43b34efa8e7e",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "CB",
+        "visual": {
+          "x": 720,
+          "y": 2960
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Choose what you want to generate:\n\nCBA. LINKEDIN ARTICLE\nCBB. LINKEDIN POST\nCBC. BANNER"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "38cc0513-6aef-4024-9f0b-7d3f7483cb71",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "LINKEDIN MAIN CORE",
+        "visual": {
+          "x": 1040,
+          "y": 2960
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"a10dacda-d054-45e9-bd73-43b34efa8e7e\",\"title\":\"CB\"}}\n\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"ee2fb53b-e0e2-4716-aedf-fa5775cdb92a\",\"title\":\"CBA\"}} {{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"fae86033-bc04-44d6-9cd1-a4c6af4a61be\",\"title\":\"CBB\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"cc41c635-36a8-49c1-95af-88eddf96e055\",\"title\":\"CBC\"}}"
+            }
+          ]
+        },
+        "generation-mode": "agent"
+      }
+    },
+    {
+      "id": "ee2fb53b-e0e2-4716-aedf-fa5775cdb92a",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "CBA",
+        "visual": {
+          "x": 1360,
+          "y": 2960
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Input topiic/product"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "3c899998-cb36-490b-ad8f-bfba328694c6",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "CBA PROMPT",
+        "visual": {
+          "x": 1360,
+          "y": 3080
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Write a LinkedIn article with these exact specs:\n\nTopic: {{\"type\":\"in\",\"path\":\"ee2fb53b-e0e2-4716-aedf-fa5775cdb92a\",\"title\":\"CBA\"}}\nTone: Educational, plain English, no crypto jargon, no hype\nTarget audience: Crypto holders — beginners to intermediate, people with $500–$100k in crypto\nLength: 600–800 words\n\nStructure to follow:\n- Title — make it SEO friendly\n- Hook — open with this stat: Make it hit hard in 2–3 sentences\n- The Problem — explain the problem.\n- The 3 Most Common Mistakes\n- The Fix — introduce the product\n- Soft close — one short paragraph that naturally leads the reader to want the full system without a hard sell. End with engaging CTA.\n\nRules:\n\nNo bullet point overload — mix bullets with short paragraphs\nNo corporate language\nNo income claims\nKeep sentences short and punchy\nDo not mention any brand names or tools\nEnd every section with one line that makes the reader want to keep going\n"
+            }
+          ]
+        },
+        "generation-mode": "text-3-flash",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "48517250-6cf4-44be-b861-2b64d16ea0e2",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "CBA OUTPUT",
+        "visual": {
+          "x": 1360,
+          "y": 3240
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "{{\"title\":\"CBA PROMPT\",\"path\":\"3c899998-cb36-490b-ad8f-bfba328694c6\",\"type\":\"in\"}}"
+            }
+          ]
+        },
+        "p-render-mode": "Manual layout"
+      }
+    },
+    {
+      "id": "fae86033-bc04-44d6-9cd1-a4c6af4a61be",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "CBB",
+        "visual": {
+          "x": 1680,
+          "y": 2960
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Input topic/product"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": false
+      }
+    },
+    {
+      "id": "5d8482a6-152c-4acc-baa3-cd0392b9dbd1",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "CBB PROMPT",
+        "visual": {
+          "x": 1680,
+          "y": 3080
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Write a short LinkedIn post with these exact specs:\n\nTopic: {{\"type\":\"in\",\"path\":\"fae86033-bc04-44d6-9cd1-a4c6af4a61be\",\"title\":\"CBB\"}}\nTone: Casual, direct, plain English, no jargon\nLength: 150–200 words max\n\nStructure:\n- Title should be clickable\n- Open with a one-line hook that stops the scroll — make it - a statement or uncomfortable truth, not a question\n- One short paragraph expanding on the hook — keep it simple, one idea only\n- One practical tip the reader can act on today\n- End with engaging CTA.\n\nRules:\n\nNo bullet points\nNo hashtag stuffing — max 3 hashtags at the end\nNo corporate language\nShort sentences only\nNo income claims\nMake it feel like a person talking, not a brand posting\n\n"
+            }
+          ]
+        },
+        "generation-mode": "text-3-flash",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "4211d60f-e9e2-4ed2-b270-781dcf5434e7",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "CBB OUTPUT",
+        "visual": {
+          "x": 1680,
+          "y": 3260
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "p-render-mode": "Manual layout",
+        "text": {
+          "role": "user",
+          "parts": [
+            {
+              "text": " {{\"title\":\"CBB PROMPT\",\"path\":\"5d8482a6-152c-4acc-baa3-cd0392b9dbd1\",\"type\":\"in\"}}"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "cc41c635-36a8-49c1-95af-88eddf96e055",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "CBC",
+        "visual": {
+          "x": 2000,
+          "y": 2960
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Input topic/product"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": false
+      }
+    },
+    {
+      "id": "a8a1e290-c66c-4fcd-b3a3-e58e6cce2e1c",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "CBC PROMPT",
+        "visual": {
+          "x": 2000,
+          "y": 3080
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Minimalist LinkedIn cover, abstract {{\"type\":\"in\",\"path\":\"cc41c635-36a8-49c1-95af-88eddf96e055\",\"title\":\"CBC\"}} theme, geometric silhouette, deep navy #0B1D33 with gold #C9A86A accents, large empty space on left, no icons with text, no seed phrases, no letters, professional and clean"
+            }
+          ]
+        },
+        "generation-mode": "image",
+        "p-aspect-ratio": "1:1"
+      }
+    },
+    {
+      "id": "7dee80af-0255-41af-aeb2-77fddd1dc603",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "CBC OUTPUT",
+        "visual": {
+          "x": 2000,
+          "y": 3260
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "{{\"title\":\"CBC PROMPT\",\"path\":\"a8a1e290-c66c-4fcd-b3a3-e58e6cce2e1c\",\"type\":\"in\"}}"
+            }
+          ]
+        },
+        "p-render-mode": "Manual layout"
+      }
+    },
+    {
+      "id": "4ff55dc1-df63-4a5a-944e-e9821be1d7e0",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "CC",
+        "visual": {
+          "x": 720,
+          "y": 3400
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Choose what you want to generate:\n\nPromotional:\nCCA. The \"Stack\" Approach\nCCB. The \"Best Practice\"\nCCC. The \"Swiped\" Framework\n\nCCD. CTA Generator\nCCE. SEO Article\nCCF. SEO Full Article + Metadata"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "cdad2c5a-14e6-422c-abbb-6c99754f6078",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "ARTICLE MAIN CORE",
+        "visual": {
+          "x": 1040,
+          "y": 3400
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "parts": [
+            {
+              "text": " {{\"type\":\"in\",\"path\":\"4ff55dc1-df63-4a5a-944e-e9821be1d7e0\",\"title\":\"CC\"}}\n\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"682b7d80-49b3-47cd-9cae-c70d7f8fc832\",\"title\":\"CCA\"}} {{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"3f59c83a-d1b9-4aa9-ae6c-4c4e5c8d7b77\",\"title\":\"CCB\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"230bc64f-4c44-44e3-8569-17e46b802f42\",\"title\":\"CCC\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "generation-mode": "agent"
+      }
+    },
+    {
+      "id": "99b08dcd-8b50-4363-8ea0-f7d970de6c5c",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "ADC",
+        "visual": {
+          "x": 1680,
+          "y": -1460
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Input topic/product"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "722db286-83f8-48c2-a59a-91ef276ffbe5",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "ADC OUTPUT",
+        "visual": {
+          "x": 1680,
+          "y": -1180
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "p-render-mode": "Manual layout",
+        "text": {
+          "role": "user",
+          "parts": [
+            {
+              "text": " {{\"title\":\"ADC PROMPT\",\"path\":\"6e1b72bb-4573-4d56-8b49-1958e812472e\",\"type\":\"in\"}}"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "682b7d80-49b3-47cd-9cae-c70d7f8fc832",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "CCA",
+        "visual": {
+          "x": 1360,
+          "y": 3400
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Input product"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "5e10d6ca-9823-4d92-b11c-5c25b75ac501",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "CCA PROMPT",
+        "visual": {
+          "x": 1360,
+          "y": 3500
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "parts": [
+            {
+              "text": "Write a blog post for my blog store that positions {{\"type\":\"in\",\"path\":\"682b7d80-49b3-47cd-9cae-c70d7f8fc832\",\"title\":\"CCA\"}} and a related Keystone as a complementary pair that works better together than either does alone.\n\nCore Purpose: Educate the reader on a specific challenge they face, show how my product solves the core of that challenge, and then introduce the affiliate tool as the logical next step that enhances, automates, or accelerates the results.\n\nTarget Audience: Crypto owners, crypto beginner.\nTone: Authoritative yet conversational / Inspiring and actionable / Professional and data-driven.\n\nArticle Structure:\n\nIntroduction: Acknowledge the reader's struggle or goal. Briefly preview that you'll share a two-part solution.\n\nThe Core Solution: Introduce \nas the primary answer to their problem. Explain what it does, who it's for, and the main benefit they'll get. Include a natural link to my product page.\n\nThe Enhancement: Introduce the affiliate tool as the perfect companion. Explain exactly how it fills a gap, saves time, or unlocks extra value when used alongside my product. Include a natural link to my Keystone affiliate URL.\n\nHow They Work Together: Give a practical example, workflow, or use case that shows the reader how to combine both for maximum impact.\n"
+            }
+          ],
+          "role": "user"
+        },
+        "generation-mode": "text-3-flash",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "19d57169-2e2b-42c5-9860-77b30d5a6a69",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "CCA BANNER",
+        "visual": {
+          "x": 1360,
+          "y": 3680
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "parts": [
+            {
+              "text": "A photorealistic 3D render of a premium {{\"type\":\"in\",\"path\":\"682b7d80-49b3-47cd-9cae-c70d7f8fc832\",\"title\":\"CCA\"}}. In the center. Dark moody lighting with deep black and gold color palette. Extremely detailed and professional product photography style. 16:9 aspect ratio.\n"
+            }
+          ],
+          "role": "user"
+        },
+        "generation-mode": "image",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        },
+        "p-aspect-ratio": "16:9"
+      }
+    },
+    {
+      "id": "f20835b7-164c-4165-a9ff-781b69d7504b",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "CCA OUTPUT",
+        "visual": {
+          "x": 1360,
+          "y": 3840
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "p-render-mode": "Manual layout",
+        "text": {
+          "role": "user",
+          "parts": [
+            {
+              "text": " {{\"title\":\"CCA BANNER\",\"path\":\"19d57169-2e2b-42c5-9860-77b30d5a6a69\",\"type\":\"in\"}} {{\"title\":\"CCA PROMPT\",\"path\":\"5e10d6ca-9823-4d92-b11c-5c25b75ac501\",\"type\":\"in\"}}"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "3f59c83a-d1b9-4aa9-ae6c-4c4e5c8d7b77",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "CCB",
+        "visual": {
+          "x": 1680,
+          "y": 3400
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Input product"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "2827b691-5795-4fe6-9462-806b4e2fc93b",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "CCB PROMPT",
+        "visual": {
+          "x": 1680,
+          "y": 3520
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "parts": [
+            {
+              "text": "Act as a professional content marketer and copywriter. I need you to write a blog post for my blog that promotes my digital product {{\"type\":\"in\",\"path\":\"3f59c83a-d1b9-4aa9-ae6c-4c4e5c8d7b77\",\"title\":\"CCB\"}}, while also strategically recommending a Keystone products.\n\nArticle Goal: To educate the reader on a specific problem that my product solves, subtly position my product as the best solution, and introduce the affiliate tool as a complementary 'power-up.'\n\nTarget Audience: general people (including cryptos, traders, financial, content creator, etc.)\n\nTone: Authoritative yet conversational / Inspiring and actionable / Professional and data-driven.\n\nInstructions:\n- Create a compelling title that hooks the reader.\n- Structure the article using an introduction, 3-4 subheadings, and a conclusion.\n- Include a soft-sell section where I naturally explain how the affiliate tool enhances the result they get from my product.\n- End with a clear call-to-action (CTA) that encourages clicking both links (offer a discount or bonus for the product, and explain the value of the affiliate tool)."
+            }
+          ],
+          "role": "user"
+        },
+        "generation-mode": "text-3-flash",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "50722f01-17c5-4120-948b-195a6d0229f2",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "CCB BANNER",
+        "visual": {
+          "x": 1680,
+          "y": 3660
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "parts": [
+            {
+              "text": "A photorealistic 3D render of a premium {{\"type\":\"in\",\"path\":\"3f59c83a-d1b9-4aa9-ae6c-4c4e5c8d7b77\",\"title\":\"CCB\"}}. In the center. Dark moody lighting with deep black and gold color palette. Extremely detailed and professional product photography style. 16:9 aspect ratio.\n"
+            }
+          ],
+          "role": "user"
+        },
+        "generation-mode": "image",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        },
+        "p-aspect-ratio": "16:9"
+      }
+    },
+    {
+      "id": "587724af-1771-4aa6-ab02-ab712a994fcb",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "CCB OUTPUT",
+        "visual": {
+          "x": 1680,
+          "y": 3820
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "parts": [
+            {
+              "text": "{{\"title\":\"CCB BANNER\",\"path\":\"50722f01-17c5-4120-948b-195a6d0229f2\",\"type\":\"in\"}} {{\"type\":\"in\",\"path\":\"2827b691-5795-4fe6-9462-806b4e2fc93b\",\"title\":\"CCB PROMPT\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "p-render-mode": "Manual layout"
+      }
+    },
+    {
+      "id": "230bc64f-4c44-44e3-8569-17e46b802f42",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "CCC",
+        "visual": {
+          "x": 2000,
+          "y": 3400
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Input product"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "736ee8ec-f10a-490f-8d70-c1bfef765324",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "CCC PROMPT",
+        "visual": {
+          "x": 2000,
+          "y": 3520
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "parts": [
+            {
+              "text": "Write a case-study style blog post for my blog audience. The post should show how using {{\"type\":\"in\",\"path\":\"230bc64f-4c44-44e3-8569-17e46b802f42\",\"title\":\"CCC\"}} combined with Keystone helped a hypothetical user solve seed safety.\n\nStructure:\n\nThe Problem: Describe the struggle.\n\nThe Discovery: How they found my product and the initial results.\n\nThe Optimization: How they discovered the affiliate tool to speed up the process (include affiliate link).\n\nThe Result: The quantitative outcome (e.g., 'made $500 in a week').\n\nEnsure the tone is trustworthy and transparent about the affiliate relationship. Focus on value, not just selling."
+            }
+          ],
+          "role": "user"
+        },
+        "generation-mode": "text-3-flash",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "0a63afda-7826-4b47-9473-882f023c195b",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "CCB BANNER",
+        "visual": {
+          "x": 2000,
+          "y": 3660
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "parts": [
+            {
+              "text": "A photorealistic 3D render of a premium {{\"type\":\"in\",\"path\":\"230bc64f-4c44-44e3-8569-17e46b802f42\",\"title\":\"CCC\"}}. In the center. Dark moody lighting with deep black and gold color palette. Extremely detailed and professional product photography style. 16:9 aspect ratio.\n"
+            }
+          ],
+          "role": "user"
+        },
+        "generation-mode": "image",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        },
+        "p-aspect-ratio": "16:9"
+      }
+    },
+    {
+      "id": "a12b0ba8-1cb4-4dad-9059-f944647e4867",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "CCC PROMPT",
+        "visual": {
+          "x": 2000,
+          "y": 3820
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "p-render-mode": "Manual layout",
+        "text": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "  {{\"title\":\"CCB BANNER\",\"path\":\"0a63afda-7826-4b47-9473-882f023c195b\",\"type\":\"in\"}} {{\"title\":\"CCC PROMPT\",\"path\":\"736ee8ec-f10a-490f-8d70-c1bfef765324\",\"type\":\"in\"}}"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "f9d3e1be-2d97-4c78-a720-fda1c1910112",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "CDA",
+        "visual": {
+          "x": 1360,
+          "y": 4000
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Input article tittle"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "9a6fb7b1-5079-4c43-9e1c-0c4a65480022",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "CDA PROMPT",
+        "visual": {
+          "x": 1360,
+          "y": 4120
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Act as a direct-response copywriting expert. Create 5 high-converting Call to Action (CTA) options for {{\"type\":\"in\",\"path\":\"f9d3e1be-2d97-4c78-a720-fda1c1910112\",\"title\":\"CDA\"}}."
+            }
+          ]
+        },
+        "generation-mode": "text-3-flash",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "80d20124-a851-4934-9140-f19cc99a4a69",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "CDA PROMPT",
+        "visual": {
+          "x": 1360,
+          "y": 4280
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"9a6fb7b1-5079-4c43-9e1c-0c4a65480022\",\"title\":\"CDA PROMPT\"}}"
+            }
+          ]
+        },
+        "p-render-mode": "Manual layout"
+      }
+    },
+    {
+      "id": "76ac0270-4d7b-43e2-8f28-7f532feb4de9",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "CDB",
+        "visual": {
+          "x": 1680,
+          "y": 4000
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Input topic"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "02243d00-7880-49df-ac00-4bf8413dbe67",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "CD",
+        "visual": {
+          "x": 720,
+          "y": 4000
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Choose what you want to generate:\n\nCDA. CTA Generator\nCDB. SEO Title Generator\nCDC. SEO Full Article Generator"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": false
+      }
+    },
+    {
+      "id": "dcc8bc6c-7649-41b0-a047-875e42b8b94a",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "TOOLS MAIN BRAIN",
+        "visual": {
+          "x": 1040,
+          "y": 4000
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "parts": [
+            {
+              "text": " {{\"type\":\"in\",\"path\":\"02243d00-7880-49df-ac00-4bf8413dbe67\",\"title\":\"CD\"}} \n\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"f9d3e1be-2d97-4c78-a720-fda1c1910112\",\"title\":\"CDA\"}} {{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"76ac0270-4d7b-43e2-8f28-7f532feb4de9\",\"title\":\"CDB\"}} @"
+            }
+          ],
+          "role": "user"
+        },
+        "generation-mode": "agent"
+      }
+    },
+    {
+      "id": "44e25352-9ced-4a8c-b3a1-83d09ab81e67",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "CDB PROMPT",
+        "visual": {
+          "x": 1680,
+          "y": 4120
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "parts": [
+            {
+              "text": "Act as an SEO specialist. Generate 10 blog post titles targeting high-intent keywords for {{\"type\":\"in\",\"path\":\"76ac0270-4d7b-43e2-8f28-7f532feb4de9\",\"title\":\"CDB\"}} that have commercial intent (people looking to buy). For the top 3 titles, outline the article structure including where to place affiliate links or ads, and how to write a conclusion that drives conversion."
+            }
+          ],
+          "role": "user"
+        },
+        "generation-mode": "text-3-flash",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "4de8e3ed-73d5-4f6e-8520-b16f1c2a9ff1",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "CDB",
+        "visual": {
+          "x": 1680,
+          "y": 4240
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "{{\"title\":\"CDB PROMPT\",\"path\":\"44e25352-9ced-4a8c-b3a1-83d09ab81e67\",\"type\":\"in\"}}"
+            }
+          ]
+        },
+        "p-render-mode": "Manual layout"
+      }
+    },
+    {
+      "id": "70618898-e8b9-4766-b058-a23551738ca5",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "CDC",
+        "visual": {
+          "x": 2000,
+          "y": 4000
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Input topic"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "ddae5c85-41e6-4ebf-b8fa-ce07110bb179",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "CDC PROMPT",
+        "visual": {
+          "x": 2000,
+          "y": 4120
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Act as an SEO expert. Generate 15 SEO-optimized blog post titles about {{\"type\":\"in\",\"path\":\"70618898-e8b9-4766-b058-a23551738ca5\",\"title\":\"CDC\"}}. For each title, provide:\n\nSEO Title [under 60 characters]\nMeta Description [150-160 characters with CTA]\nFocus Keyword\n2 Secondary Keywords\nSearch Intent [Informational / Transactional / Troubleshooting]\nThen give me a master keyword list grouped by Primary, Secondary, and Long-tail LSI keywords.\nFinally, give me a blog post outline with H1, H2s, H3s showing exactly where to place those keywords.\nNiche: SaaS, memberships, and podcast subscriptions. Audience: creators and small business owners."
+            }
+          ]
+        },
+        "generation-mode": "text-3-flash",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "fbc1d427-21b4-4988-a207-b20044502ccc",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "CDC OUTPUT",
+        "visual": {
+          "x": 2000,
+          "y": 4300
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "{{\"title\":\"CDC PROMPT\",\"path\":\"ddae5c85-41e6-4ebf-b8fa-ce07110bb179\",\"type\":\"in\"}}"
+            }
+          ]
+        },
+        "p-render-mode": "Manual layout"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "a22df212-93b3-46da-bff0-16da42fefda7",
+      "to": "bff607be-80cb-4fa2-a054-369ffdf554cb",
+      "out": "context",
+      "in": "p-z-a22df212-93b3-46da-bff0-16da42fefda7"
+    },
+    {
+      "from": "723f56ec-7081-4d5e-b47c-8c4caf06f753",
+      "to": "a22df212-93b3-46da-bff0-16da42fefda7",
+      "out": "context",
+      "in": "p-z-723f56ec-7081-4d5e-b47c-8c4caf06f753"
+    },
+    {
+      "from": "090f2a8b-0511-4186-8a69-c85b95b2cacf",
+      "to": "1b82a263-4cc0-48bc-9a50-91f7b73425a1",
+      "out": "context",
+      "in": "p-z-090f2a8b-0511-4186-8a69-c85b95b2cacf"
+    },
+    {
+      "from": "1b82a263-4cc0-48bc-9a50-91f7b73425a1",
+      "to": "eb7ba4e6-6fb1-47eb-9ddf-e9c766969d92",
+      "out": "eb7ba4e6-6fb1-47eb-9ddf-e9c766969d92",
+      "in": "context"
+    },
+    {
+      "from": "eb7ba4e6-6fb1-47eb-9ddf-e9c766969d92",
+      "to": "c32ec273-373f-4992-9e9b-ae2e8c25a0f8",
+      "out": "context",
+      "in": "p-z-eb7ba4e6-6fb1-47eb-9ddf-e9c766969d92"
+    },
+    {
+      "from": "c32ec273-373f-4992-9e9b-ae2e8c25a0f8",
+      "to": "6bb0ff04-21d6-49b8-839c-3cb3f5022186",
+      "out": "6bb0ff04-21d6-49b8-839c-3cb3f5022186",
+      "in": "context"
+    },
+    {
+      "from": "c32ec273-373f-4992-9e9b-ae2e8c25a0f8",
+      "to": "f03f963d-a911-443f-bf7a-7678213edb1b",
+      "out": "f03f963d-a911-443f-bf7a-7678213edb1b",
+      "in": "context"
+    },
+    {
+      "from": "6bb0ff04-21d6-49b8-839c-3cb3f5022186",
+      "to": "a56c22ba-0bd6-404d-b043-1331784f05f6",
+      "out": "context",
+      "in": "p-z-6bb0ff04-21d6-49b8-839c-3cb3f5022186"
+    },
+    {
+      "from": "9f6d70a5-9395-42a7-9560-1bc33bb616a3",
+      "to": "4a3bf8ab-7daf-4703-8308-789df389fbc4",
+      "out": "context",
+      "in": "p-z-9f6d70a5-9395-42a7-9560-1bc33bb616a3"
+    },
+    {
+      "from": "f03f963d-a911-443f-bf7a-7678213edb1b",
+      "to": "48dd38b7-6b57-495e-b518-d7f5c050d654",
+      "out": "context",
+      "in": "p-z-f03f963d-a911-443f-bf7a-7678213edb1b"
+    },
+    {
+      "from": "a56c22ba-0bd6-404d-b043-1331784f05f6",
+      "to": "9f6d70a5-9395-42a7-9560-1bc33bb616a3",
+      "out": "9f6d70a5-9395-42a7-9560-1bc33bb616a3",
+      "in": "context"
+    },
+    {
+      "from": "cf63a22c-4246-41dc-abc1-927cbcd152ff",
+      "to": "bb257240-eed3-48bb-9413-b500d499c39a",
+      "out": "context",
+      "in": "p-z-cf63a22c-4246-41dc-abc1-927cbcd152ff"
+    },
+    {
+      "from": "1e55f142-452e-4a60-af0b-888f6901d6ea",
+      "to": "116597d8-b97b-4eea-a1e1-51aab7fe3afd",
+      "out": "context",
+      "in": "p-z-1e55f142-452e-4a60-af0b-888f6901d6ea"
+    },
+    {
+      "from": "6fe563bb-a232-408c-84fd-ba80c1c9dfe4",
+      "to": "6162fb79-c292-405a-a79a-c6db7980502c",
+      "out": "context",
+      "in": "p-z-6fe563bb-a232-408c-84fd-ba80c1c9dfe4"
+    },
+    {
+      "from": "a56c22ba-0bd6-404d-b043-1331784f05f6",
+      "to": "6fe563bb-a232-408c-84fd-ba80c1c9dfe4",
+      "out": "6fe563bb-a232-408c-84fd-ba80c1c9dfe4",
+      "in": "context"
+    },
+    {
+      "from": "4a3bf8ab-7daf-4703-8308-789df389fbc4",
+      "to": "38f35572-2c0d-4bf0-a029-73401ada743d",
+      "out": "context",
+      "in": "p-z-4a3bf8ab-7daf-4703-8308-789df389fbc4"
+    },
+    {
+      "from": "6162fb79-c292-405a-a79a-c6db7980502c",
+      "to": "274594f6-3aa4-4e91-bbad-0294c1fa0e45",
+      "out": "context",
+      "in": "p-z-6162fb79-c292-405a-a79a-c6db7980502c"
+    },
+    {
+      "from": "b5f84271-6fca-42a0-b5b2-b91f7f3ab409",
+      "to": "2e1a6777-4971-4aaf-a03c-5e10bdf7b39a",
+      "out": "context",
+      "in": "p-z-b5f84271-6fca-42a0-b5b2-b91f7f3ab409"
+    },
+    {
+      "from": "a56c22ba-0bd6-404d-b043-1331784f05f6",
+      "to": "b5f84271-6fca-42a0-b5b2-b91f7f3ab409",
+      "out": "b5f84271-6fca-42a0-b5b2-b91f7f3ab409",
+      "in": "context"
+    },
+    {
+      "from": "2e1a6777-4971-4aaf-a03c-5e10bdf7b39a",
+      "to": "642ebe28-1c68-4e04-bdb0-3de12ea1ade3",
+      "out": "context",
+      "in": "p-z-2e1a6777-4971-4aaf-a03c-5e10bdf7b39a"
+    },
+    {
+      "from": "4174a878-71ac-40d7-8f99-57999b189374",
+      "to": "5fcd11ea-f138-4d0d-b9d1-52326f3ab31c",
+      "out": "context",
+      "in": "p-z-4174a878-71ac-40d7-8f99-57999b189374"
+    },
+    {
+      "from": "a56c22ba-0bd6-404d-b043-1331784f05f6",
+      "to": "4174a878-71ac-40d7-8f99-57999b189374",
+      "out": "4174a878-71ac-40d7-8f99-57999b189374",
+      "in": "context"
+    },
+    {
+      "from": "5fcd11ea-f138-4d0d-b9d1-52326f3ab31c",
+      "to": "3811a4b4-2642-41b4-8372-f106567cf00f",
+      "out": "context",
+      "in": "p-z-5fcd11ea-f138-4d0d-b9d1-52326f3ab31c"
+    },
+    {
+      "from": "116597d8-b97b-4eea-a1e1-51aab7fe3afd",
+      "to": "970d35b4-244c-4ff8-94f7-0b2c1bc60671",
+      "out": "context",
+      "in": "p-z-116597d8-b97b-4eea-a1e1-51aab7fe3afd"
+    },
+    {
+      "from": "a56c22ba-0bd6-404d-b043-1331784f05f6",
+      "to": "1e55f142-452e-4a60-af0b-888f6901d6ea",
+      "out": "1e55f142-452e-4a60-af0b-888f6901d6ea",
+      "in": "context"
+    },
+    {
+      "from": "bb257240-eed3-48bb-9413-b500d499c39a",
+      "to": "23a2fe56-63e2-47d1-a3f5-0704807230f0",
+      "out": "context",
+      "in": "p-z-bb257240-eed3-48bb-9413-b500d499c39a"
+    },
+    {
+      "from": "db9eb1c4-815e-435b-bccd-f72c62f4e73b",
+      "to": "0e2ca7ec-5f4f-4707-9e0f-5304f6003cc6",
+      "out": "context",
+      "in": "p-z-db9eb1c4-815e-435b-bccd-f72c62f4e73b"
+    },
+    {
+      "from": "48dd38b7-6b57-495e-b518-d7f5c050d654",
+      "to": "04e57115-cb51-4c0e-81ee-92290d140050",
+      "out": "04e57115-cb51-4c0e-81ee-92290d140050",
+      "in": "context"
+    },
+    {
+      "from": "04e57115-cb51-4c0e-81ee-92290d140050",
+      "to": "c1f2011c-a462-41e8-a0ff-af24d70f1ad4",
+      "out": "context",
+      "in": "p-z-04e57115-cb51-4c0e-81ee-92290d140050"
+    },
+    {
+      "from": "c1f2011c-a462-41e8-a0ff-af24d70f1ad4",
+      "to": "122685a3-175c-42d2-be5e-95108e69b608",
+      "out": "context",
+      "in": "p-z-c1f2011c-a462-41e8-a0ff-af24d70f1ad4"
+    },
+    {
+      "from": "931ad214-c203-47d0-8002-eec82bad9b19",
+      "to": "c2526ff7-b4cb-4799-a233-643e89f231e0",
+      "out": "context",
+      "in": "p-z-931ad214-c203-47d0-8002-eec82bad9b19"
+    },
+    {
+      "from": "48dd38b7-6b57-495e-b518-d7f5c050d654",
+      "to": "931ad214-c203-47d0-8002-eec82bad9b19",
+      "out": "931ad214-c203-47d0-8002-eec82bad9b19",
+      "in": "context"
+    },
+    {
+      "from": "060a5a9e-f1f6-496f-84ed-2dabe1e8650b",
+      "to": "88ee3da4-798a-4a34-81c0-486d2e2d6700",
+      "out": "context",
+      "in": "p-z-060a5a9e-f1f6-496f-84ed-2dabe1e8650b"
+    },
+    {
+      "from": "88ee3da4-798a-4a34-81c0-486d2e2d6700",
+      "to": "3389f081-b934-409f-9f6f-f9999b34a220",
+      "out": "context",
+      "in": "p-z-88ee3da4-798a-4a34-81c0-486d2e2d6700"
+    },
+    {
+      "from": "48dd38b7-6b57-495e-b518-d7f5c050d654",
+      "to": "060a5a9e-f1f6-496f-84ed-2dabe1e8650b",
+      "out": "060a5a9e-f1f6-496f-84ed-2dabe1e8650b",
+      "in": "context"
+    },
+    {
+      "from": "a56c22ba-0bd6-404d-b043-1331784f05f6",
+      "to": "cf63a22c-4246-41dc-abc1-927cbcd152ff",
+      "out": "cf63a22c-4246-41dc-abc1-927cbcd152ff",
+      "in": "context"
+    },
+    {
+      "from": "48dd38b7-6b57-495e-b518-d7f5c050d654",
+      "to": "613b767c-9483-4505-9717-84d1b52ff266",
+      "out": "613b767c-9483-4505-9717-84d1b52ff266",
+      "in": "context"
+    },
+    {
+      "from": "beecdea6-ac4a-45d7-a7d3-0be53915f624",
+      "to": "d2efb948-6908-4181-ada4-333793d7d428",
+      "out": "context",
+      "in": "p-z-beecdea6-ac4a-45d7-a7d3-0be53915f624"
+    },
+    {
+      "from": "613b767c-9483-4505-9717-84d1b52ff266",
+      "to": "beecdea6-ac4a-45d7-a7d3-0be53915f624",
+      "out": "context",
+      "in": "p-z-613b767c-9483-4505-9717-84d1b52ff266"
+    },
+    {
+      "from": "491b40bf-9237-475d-8c33-ac0ea6dc2435",
+      "to": "d1da5210-8c0b-4c76-9539-cd6dc277b2e5",
+      "out": "context",
+      "in": "p-z-491b40bf-9237-475d-8c33-ac0ea6dc2435"
+    },
+    {
+      "from": "d1da5210-8c0b-4c76-9539-cd6dc277b2e5",
+      "to": "0af72e23-05e8-4a36-85ce-a6b7e32a113f",
+      "out": "context",
+      "in": "p-z-d1da5210-8c0b-4c76-9539-cd6dc277b2e5"
+    },
+    {
+      "from": "48dd38b7-6b57-495e-b518-d7f5c050d654",
+      "to": "491b40bf-9237-475d-8c33-ac0ea6dc2435",
+      "out": "491b40bf-9237-475d-8c33-ac0ea6dc2435",
+      "in": "context"
+    },
+    {
+      "from": "773ab6af-7e04-4d0d-9b24-f5592e0c0510",
+      "to": "a0e59a10-19bd-465f-af4f-c511c7205664",
+      "out": "context",
+      "in": "p-z-773ab6af-7e04-4d0d-9b24-f5592e0c0510"
+    },
+    {
+      "from": "a0e59a10-19bd-465f-af4f-c511c7205664",
+      "to": "7e433ece-2311-4a3b-b3c8-534f2744cd6a",
+      "out": "context",
+      "in": "p-z-a0e59a10-19bd-465f-af4f-c511c7205664"
+    },
+    {
+      "from": "48dd38b7-6b57-495e-b518-d7f5c050d654",
+      "to": "773ab6af-7e04-4d0d-9b24-f5592e0c0510",
+      "out": "773ab6af-7e04-4d0d-9b24-f5592e0c0510",
+      "in": "context"
+    },
+    {
+      "from": "5904a81e-a931-4a18-ba69-2ec0cf2c1e8f",
+      "to": "c8d78d81-535f-4b40-ba83-79f6285c7d7f",
+      "out": "context",
+      "in": "p-z-5904a81e-a931-4a18-ba69-2ec0cf2c1e8f"
+    },
+    {
+      "from": "c8d78d81-535f-4b40-ba83-79f6285c7d7f",
+      "to": "0cb3ec75-017d-4b82-a889-739014e204df",
+      "out": "context",
+      "in": "p-z-c8d78d81-535f-4b40-ba83-79f6285c7d7f"
+    },
+    {
+      "from": "48dd38b7-6b57-495e-b518-d7f5c050d654",
+      "to": "5904a81e-a931-4a18-ba69-2ec0cf2c1e8f",
+      "out": "5904a81e-a931-4a18-ba69-2ec0cf2c1e8f",
+      "in": "context"
+    },
+    {
+      "from": "c58f4c68-6dfe-4274-bf90-0a0adf095b9b",
+      "to": "eaa0761a-3ae3-4bf6-9387-98c2c557a2c9",
+      "out": "context",
+      "in": "p-z-c58f4c68-6dfe-4274-bf90-0a0adf095b9b"
+    },
+    {
+      "from": "c32ec273-373f-4992-9e9b-ae2e8c25a0f8",
+      "to": "c58f4c68-6dfe-4274-bf90-0a0adf095b9b",
+      "out": "c58f4c68-6dfe-4274-bf90-0a0adf095b9b",
+      "in": "context"
+    },
+    {
+      "from": "879f2c3a-2fdd-4ed6-a8db-93985ebdd76d",
+      "to": "10962fcf-5db7-417b-bf82-9765009cc6eb",
+      "out": "context",
+      "in": "p-z-879f2c3a-2fdd-4ed6-a8db-93985ebdd76d"
+    },
+    {
+      "from": "10962fcf-5db7-417b-bf82-9765009cc6eb",
+      "to": "5ef65130-c269-45e6-ad1f-f4b5ef8582b7",
+      "out": "context",
+      "in": "p-z-10962fcf-5db7-417b-bf82-9765009cc6eb"
+    },
+    {
+      "from": "eaa0761a-3ae3-4bf6-9387-98c2c557a2c9",
+      "to": "723f56ec-7081-4d5e-b47c-8c4caf06f753",
+      "out": "723f56ec-7081-4d5e-b47c-8c4caf06f753",
+      "in": "context"
+    },
+    {
+      "from": "2e63365a-5031-41b2-9ebe-0ed1bcdf3ea9",
+      "to": "ad958fb9-8f35-4277-b393-eebe65a99781",
+      "out": "context",
+      "in": "p-z-2e63365a-5031-41b2-9ebe-0ed1bcdf3ea9"
+    },
+    {
+      "from": "eaa0761a-3ae3-4bf6-9387-98c2c557a2c9",
+      "to": "2e63365a-5031-41b2-9ebe-0ed1bcdf3ea9",
+      "out": "2e63365a-5031-41b2-9ebe-0ed1bcdf3ea9",
+      "in": "context"
+    },
+    {
+      "from": "ab7a1170-3882-4519-8593-a02c59ebb8da",
+      "to": "a7fc442d-e8f0-4971-b4b4-ea30cd559207",
+      "out": "context",
+      "in": "p-z-ab7a1170-3882-4519-8593-a02c59ebb8da"
+    },
+    {
+      "from": "a7fc442d-e8f0-4971-b4b4-ea30cd559207",
+      "to": "8ac36afa-f40f-4d75-b1a3-a83cbead96f7",
+      "out": "context",
+      "in": "p-z-a7fc442d-e8f0-4971-b4b4-ea30cd559207"
+    },
+    {
+      "from": "eaa0761a-3ae3-4bf6-9387-98c2c557a2c9",
+      "to": "ab7a1170-3882-4519-8593-a02c59ebb8da",
+      "out": "ab7a1170-3882-4519-8593-a02c59ebb8da",
+      "in": "context"
+    },
+    {
+      "from": "baabd3e9-5cc2-43e1-a65e-096911883e20",
+      "to": "3c1fccef-a48a-4280-8f30-3ac48f2974d4",
+      "out": "context",
+      "in": "p-z-baabd3e9-5cc2-43e1-a65e-096911883e20"
+    },
+    {
+      "from": "cc832b2d-3351-42f7-9997-496b7a5b1d87",
+      "to": "baabd3e9-5cc2-43e1-a65e-096911883e20",
+      "out": "context",
+      "in": "p-z-cc832b2d-3351-42f7-9997-496b7a5b1d87"
+    },
+    {
+      "from": "eaa0761a-3ae3-4bf6-9387-98c2c557a2c9",
+      "to": "cc832b2d-3351-42f7-9997-496b7a5b1d87",
+      "out": "cc832b2d-3351-42f7-9997-496b7a5b1d87",
+      "in": "context"
+    },
+    {
+      "from": "87505e35-b0f2-4de7-9118-f303407fd192",
+      "to": "3f132a07-3f9b-4d19-933c-6a8b889d2853",
+      "out": "context",
+      "in": "p-z-87505e35-b0f2-4de7-9118-f303407fd192"
+    },
+    {
+      "from": "3f132a07-3f9b-4d19-933c-6a8b889d2853",
+      "to": "4dcceff2-3296-4af2-8c74-04c126096d97",
+      "out": "context",
+      "in": "p-z-3f132a07-3f9b-4d19-933c-6a8b889d2853"
+    },
+    {
+      "from": "c32ec273-373f-4992-9e9b-ae2e8c25a0f8",
+      "to": "ffdcc817-ef4d-4f20-9d4b-74639846299d",
+      "out": "ffdcc817-ef4d-4f20-9d4b-74639846299d",
+      "in": "context"
+    },
+    {
+      "from": "ffdcc817-ef4d-4f20-9d4b-74639846299d",
+      "to": "8e02b5ee-bbaf-475b-9f6e-a568bd175e74",
+      "out": "context",
+      "in": "p-z-ffdcc817-ef4d-4f20-9d4b-74639846299d"
+    },
+    {
+      "from": "3d4b3fd0-fee7-49dc-ab2e-636dcfaf5a0d",
+      "to": "4963e077-51e4-4f02-805e-019a03ce5a25",
+      "out": "context",
+      "in": "p-z-3d4b3fd0-fee7-49dc-ab2e-636dcfaf5a0d"
+    },
+    {
+      "from": "8e02b5ee-bbaf-475b-9f6e-a568bd175e74",
+      "to": "9792a5c7-4b9c-4bd5-b88b-a7d6eb23ba2a",
+      "out": "9792a5c7-4b9c-4bd5-b88b-a7d6eb23ba2a",
+      "in": "context"
+    },
+    {
+      "from": "9792a5c7-4b9c-4bd5-b88b-a7d6eb23ba2a",
+      "to": "3d4b3fd0-fee7-49dc-ab2e-636dcfaf5a0d",
+      "out": "context",
+      "in": "p-z-9792a5c7-4b9c-4bd5-b88b-a7d6eb23ba2a"
+    },
+    {
+      "from": "5e05873d-ae6d-4cfa-8410-6dbaad2109eb",
+      "to": "77934248-cfc4-45ac-a570-fb967eb5358a",
+      "out": "context",
+      "in": "p-z-5e05873d-ae6d-4cfa-8410-6dbaad2109eb"
+    },
+    {
+      "from": "8e02b5ee-bbaf-475b-9f6e-a568bd175e74",
+      "to": "5e05873d-ae6d-4cfa-8410-6dbaad2109eb",
+      "out": "5e05873d-ae6d-4cfa-8410-6dbaad2109eb",
+      "in": "context"
+    },
+    {
+      "from": "77934248-cfc4-45ac-a570-fb967eb5358a",
+      "to": "b4e215b7-0310-4d97-b6ad-8ed4d2c249fe",
+      "out": "context",
+      "in": "p-z-77934248-cfc4-45ac-a570-fb967eb5358a"
+    },
+    {
+      "from": "eaa0761a-3ae3-4bf6-9387-98c2c557a2c9",
+      "to": "87505e35-b0f2-4de7-9118-f303407fd192",
+      "out": "87505e35-b0f2-4de7-9118-f303407fd192",
+      "in": "context"
+    },
+    {
+      "from": "ad958fb9-8f35-4277-b393-eebe65a99781",
+      "to": "c5c8c17d-e0d2-4a8c-8902-5fea931eb746",
+      "out": "context",
+      "in": "p-z-ad958fb9-8f35-4277-b393-eebe65a99781"
+    },
+    {
+      "from": "1b82a263-4cc0-48bc-9a50-91f7b73425a1",
+      "to": "900b7d02-09b9-435a-9baf-65c52b10a201",
+      "out": "900b7d02-09b9-435a-9baf-65c52b10a201",
+      "in": "context"
+    },
+    {
+      "from": "900b7d02-09b9-435a-9baf-65c52b10a201",
+      "to": "0c3bc236-2c82-4c59-b3b5-94c48fe8fa91",
+      "out": "context",
+      "in": "p-z-900b7d02-09b9-435a-9baf-65c52b10a201"
+    },
+    {
+      "from": "ec3ed45e-4932-429f-9bc8-d339a92940f0",
+      "to": "db9eb1c4-815e-435b-bccd-f72c62f4e73b",
+      "out": "context",
+      "in": "p-z-ec3ed45e-4932-429f-9bc8-d339a92940f0"
+    },
+    {
+      "from": "b7537295-d55b-4475-9710-a7b7361a9c06",
+      "to": "0e2ca7ec-5f4f-4707-9e0f-5304f6003cc6",
+      "out": "context",
+      "in": "p-z-b7537295-d55b-4475-9710-a7b7361a9c06"
+    },
+    {
+      "from": "134ec4a9-5e07-40b2-a12e-279c0204100b",
+      "to": "4c201301-0cbe-49b8-9506-68858c2fd661",
+      "out": "context",
+      "in": "p-z-134ec4a9-5e07-40b2-a12e-279c0204100b"
+    },
+    {
+      "from": "696c52b0-ac82-422b-aae0-3d37adceb102",
+      "to": "134ec4a9-5e07-40b2-a12e-279c0204100b",
+      "out": "context",
+      "in": "p-z-696c52b0-ac82-422b-aae0-3d37adceb102"
+    },
+    {
+      "from": "6af1029d-5a1f-400d-8fd9-f654c2dfeebe",
+      "to": "9c1f61d3-3667-4b0a-a52b-2ddac38ee500",
+      "out": "context",
+      "in": "p-z-6af1029d-5a1f-400d-8fd9-f654c2dfeebe"
+    },
+    {
+      "from": "0c3bc236-2c82-4c59-b3b5-94c48fe8fa91",
+      "to": "6af1029d-5a1f-400d-8fd9-f654c2dfeebe",
+      "out": "6af1029d-5a1f-400d-8fd9-f654c2dfeebe",
+      "in": "context"
+    },
+    {
+      "from": "9c1f61d3-3667-4b0a-a52b-2ddac38ee500",
+      "to": "ec3ed45e-4932-429f-9bc8-d339a92940f0",
+      "out": "ec3ed45e-4932-429f-9bc8-d339a92940f0",
+      "in": "context"
+    },
+    {
+      "from": "96b925d7-5027-48d5-9b8e-499fe9d2175f",
+      "to": "991e5aee-912f-4a52-9fb1-68762f621dc6",
+      "out": "context",
+      "in": "p-z-96b925d7-5027-48d5-9b8e-499fe9d2175f"
+    },
+    {
+      "from": "991e5aee-912f-4a52-9fb1-68762f621dc6",
+      "to": "1dc1b956-aebc-45a6-bc61-5f7385f7b111",
+      "out": "context",
+      "in": "p-z-991e5aee-912f-4a52-9fb1-68762f621dc6"
+    },
+    {
+      "from": "9c1f61d3-3667-4b0a-a52b-2ddac38ee500",
+      "to": "10a43e51-50e6-4b46-a0af-c6aae288001a",
+      "out": "10a43e51-50e6-4b46-a0af-c6aae288001a",
+      "in": "context"
+    },
+    {
+      "from": "9c1f61d3-3667-4b0a-a52b-2ddac38ee500",
+      "to": "96b925d7-5027-48d5-9b8e-499fe9d2175f",
+      "out": "96b925d7-5027-48d5-9b8e-499fe9d2175f",
+      "in": "context"
+    },
+    {
+      "from": "0c3bc236-2c82-4c59-b3b5-94c48fe8fa91",
+      "to": "75aca9f2-5d80-4234-ad36-679ad23a32b9",
+      "out": "75aca9f2-5d80-4234-ad36-679ad23a32b9",
+      "in": "context"
+    },
+    {
+      "from": "75aca9f2-5d80-4234-ad36-679ad23a32b9",
+      "to": "99ebdddc-0f39-4e68-b8a3-9fdcaa3f6d84",
+      "out": "context",
+      "in": "p-z-75aca9f2-5d80-4234-ad36-679ad23a32b9"
+    },
+    {
+      "from": "10962fcf-5db7-417b-bf82-9765009cc6eb",
+      "to": "28c83444-2832-4963-9bc4-ae18635f060b",
+      "out": "context",
+      "in": "p-z-10962fcf-5db7-417b-bf82-9765009cc6eb"
+    },
+    {
+      "from": "28c83444-2832-4963-9bc4-ae18635f060b",
+      "to": "5ef65130-c269-45e6-ad1f-f4b5ef8582b7",
+      "out": "context",
+      "in": "p-z-28c83444-2832-4963-9bc4-ae18635f060b"
+    },
+    {
+      "from": "99ebdddc-0f39-4e68-b8a3-9fdcaa3f6d84",
+      "to": "879f2c3a-2fdd-4ed6-a8db-93985ebdd76d",
+      "out": "879f2c3a-2fdd-4ed6-a8db-93985ebdd76d",
+      "in": "context"
+    },
+    {
+      "from": "47435583-d74c-4dd1-bbae-d6702ecf486f",
+      "to": "3a6d01f4-955c-45b7-95fe-f2e6f1677193",
+      "out": "context",
+      "in": "p-z-47435583-d74c-4dd1-bbae-d6702ecf486f"
+    },
+    {
+      "from": "7f5ff940-bc33-4f42-a2a6-ff550bd44188",
+      "to": "47435583-d74c-4dd1-bbae-d6702ecf486f",
+      "out": "context",
+      "in": "p-z-7f5ff940-bc33-4f42-a2a6-ff550bd44188"
+    },
+    {
+      "from": "99ebdddc-0f39-4e68-b8a3-9fdcaa3f6d84",
+      "to": "7f5ff940-bc33-4f42-a2a6-ff550bd44188",
+      "out": "7f5ff940-bc33-4f42-a2a6-ff550bd44188",
+      "in": "context"
+    },
+    {
+      "from": "99ebdddc-0f39-4e68-b8a3-9fdcaa3f6d84",
+      "to": "b806516e-14dd-4c6e-b771-5e45718a2c84",
+      "out": "b806516e-14dd-4c6e-b771-5e45718a2c84",
+      "in": "context"
+    },
+    {
+      "from": "b806516e-14dd-4c6e-b771-5e45718a2c84",
+      "to": "8e9c5764-62b5-4120-a9bb-be48755810e9",
+      "out": "context",
+      "in": "p-z-b806516e-14dd-4c6e-b771-5e45718a2c84"
+    },
+    {
+      "from": "8e9c5764-62b5-4120-a9bb-be48755810e9",
+      "to": "9d7c43c5-83d7-4535-94c1-a3191441e2b2",
+      "out": "context",
+      "in": "p-z-8e9c5764-62b5-4120-a9bb-be48755810e9"
+    },
+    {
+      "from": "b63cb7e9-c7d9-4bcd-9d6f-ead5449caa62",
+      "to": "ae247d3a-8aee-4446-9e9f-ba92134a2ccb",
+      "out": "context",
+      "in": "p-z-b63cb7e9-c7d9-4bcd-9d6f-ead5449caa62"
+    },
+    {
+      "from": "ae247d3a-8aee-4446-9e9f-ba92134a2ccb",
+      "to": "a1ae7806-1ce6-45db-a275-046c4320000b",
+      "out": "context",
+      "in": "p-z-ae247d3a-8aee-4446-9e9f-ba92134a2ccb"
+    },
+    {
+      "from": "f5c4bfa8-d143-475f-b646-f8ee8ff952b1",
+      "to": "5193a4f6-942d-47f2-87e1-0072976373d3",
+      "out": "context",
+      "in": "p-z-f5c4bfa8-d143-475f-b646-f8ee8ff952b1"
+    },
+    {
+      "from": "1b82a263-4cc0-48bc-9a50-91f7b73425a1",
+      "to": "f5c4bfa8-d143-475f-b646-f8ee8ff952b1",
+      "out": "f5c4bfa8-d143-475f-b646-f8ee8ff952b1",
+      "in": "context"
+    },
+    {
+      "from": "c4b62ab2-8279-4268-82ab-af236f8652b1",
+      "to": "2699818e-91d7-406c-a60c-405cb27d11cc",
+      "out": "context",
+      "in": "p-z-c4b62ab2-8279-4268-82ab-af236f8652b1"
+    },
+    {
+      "from": "21b077a4-585c-4e85-85f9-200d6ab1cf98",
+      "to": "85f4581b-33e8-4df3-9eee-92b0b6131894",
+      "out": "context",
+      "in": "p-z-21b077a4-585c-4e85-85f9-200d6ab1cf98"
+    },
+    {
+      "from": "5193a4f6-942d-47f2-87e1-0072976373d3",
+      "to": "c4b62ab2-8279-4268-82ab-af236f8652b1",
+      "out": "c4b62ab2-8279-4268-82ab-af236f8652b1",
+      "in": "context"
+    },
+    {
+      "from": "85f4581b-33e8-4df3-9eee-92b0b6131894",
+      "to": "8a5d5e7e-49e7-4c94-ad53-c9a6aa8523f4",
+      "out": "context",
+      "in": "p-z-85f4581b-33e8-4df3-9eee-92b0b6131894"
+    },
+    {
+      "from": "2699818e-91d7-406c-a60c-405cb27d11cc",
+      "to": "21b077a4-585c-4e85-85f9-200d6ab1cf98",
+      "out": "21b077a4-585c-4e85-85f9-200d6ab1cf98",
+      "in": "context"
+    },
+    {
+      "from": "2699818e-91d7-406c-a60c-405cb27d11cc",
+      "to": "5612fa33-b0f6-4ce8-8f54-efe194de302c",
+      "out": "5612fa33-b0f6-4ce8-8f54-efe194de302c",
+      "in": "context"
+    },
+    {
+      "from": "2931ce8b-b025-426a-a4fc-0b8d34de99dd",
+      "to": "761b10b3-81b2-41bb-b54f-174ec4fb08af",
+      "out": "context",
+      "in": "p-z-2931ce8b-b025-426a-a4fc-0b8d34de99dd"
+    },
+    {
+      "from": "5193a4f6-942d-47f2-87e1-0072976373d3",
+      "to": "a10dacda-d054-45e9-bd73-43b34efa8e7e",
+      "out": "a10dacda-d054-45e9-bd73-43b34efa8e7e",
+      "in": "context"
+    },
+    {
+      "from": "a10dacda-d054-45e9-bd73-43b34efa8e7e",
+      "to": "38cc0513-6aef-4024-9f0b-7d3f7483cb71",
+      "out": "context",
+      "in": "p-z-a10dacda-d054-45e9-bd73-43b34efa8e7e"
+    },
+    {
+      "from": "ee2fb53b-e0e2-4716-aedf-fa5775cdb92a",
+      "to": "3c899998-cb36-490b-ad8f-bfba328694c6",
+      "out": "context",
+      "in": "p-z-ee2fb53b-e0e2-4716-aedf-fa5775cdb92a"
+    },
+    {
+      "from": "38cc0513-6aef-4024-9f0b-7d3f7483cb71",
+      "to": "ee2fb53b-e0e2-4716-aedf-fa5775cdb92a",
+      "out": "ee2fb53b-e0e2-4716-aedf-fa5775cdb92a",
+      "in": "context"
+    },
+    {
+      "from": "3c899998-cb36-490b-ad8f-bfba328694c6",
+      "to": "48517250-6cf4-44be-b861-2b64d16ea0e2",
+      "out": "context",
+      "in": "p-z-3c899998-cb36-490b-ad8f-bfba328694c6"
+    },
+    {
+      "from": "fae86033-bc04-44d6-9cd1-a4c6af4a61be",
+      "to": "5d8482a6-152c-4acc-baa3-cd0392b9dbd1",
+      "out": "context",
+      "in": "p-z-fae86033-bc04-44d6-9cd1-a4c6af4a61be"
+    },
+    {
+      "from": "5d8482a6-152c-4acc-baa3-cd0392b9dbd1",
+      "to": "4211d60f-e9e2-4ed2-b270-781dcf5434e7",
+      "out": "context",
+      "in": "p-z-5d8482a6-152c-4acc-baa3-cd0392b9dbd1"
+    },
+    {
+      "from": "38cc0513-6aef-4024-9f0b-7d3f7483cb71",
+      "to": "fae86033-bc04-44d6-9cd1-a4c6af4a61be",
+      "out": "fae86033-bc04-44d6-9cd1-a4c6af4a61be",
+      "in": "context"
+    },
+    {
+      "from": "cc41c635-36a8-49c1-95af-88eddf96e055",
+      "to": "a8a1e290-c66c-4fcd-b3a3-e58e6cce2e1c",
+      "out": "context",
+      "in": "p-z-cc41c635-36a8-49c1-95af-88eddf96e055"
+    },
+    {
+      "from": "a8a1e290-c66c-4fcd-b3a3-e58e6cce2e1c",
+      "to": "7dee80af-0255-41af-aeb2-77fddd1dc603",
+      "out": "context",
+      "in": "p-z-a8a1e290-c66c-4fcd-b3a3-e58e6cce2e1c"
+    },
+    {
+      "from": "38cc0513-6aef-4024-9f0b-7d3f7483cb71",
+      "to": "cc41c635-36a8-49c1-95af-88eddf96e055",
+      "out": "cc41c635-36a8-49c1-95af-88eddf96e055",
+      "in": "context"
+    },
+    {
+      "from": "5193a4f6-942d-47f2-87e1-0072976373d3",
+      "to": "4ff55dc1-df63-4a5a-944e-e9821be1d7e0",
+      "out": "4ff55dc1-df63-4a5a-944e-e9821be1d7e0",
+      "in": "context"
+    },
+    {
+      "from": "99b08dcd-8b50-4363-8ea0-f7d970de6c5c",
+      "to": "6e1b72bb-4573-4d56-8b49-1958e812472e",
+      "out": "context",
+      "in": "p-z-99b08dcd-8b50-4363-8ea0-f7d970de6c5c"
+    },
+    {
+      "from": "6e1b72bb-4573-4d56-8b49-1958e812472e",
+      "to": "722db286-83f8-48c2-a59a-91ef276ffbe5",
+      "out": "context",
+      "in": "p-z-6e1b72bb-4573-4d56-8b49-1958e812472e"
+    },
+    {
+      "from": "4ff55dc1-df63-4a5a-944e-e9821be1d7e0",
+      "to": "cdad2c5a-14e6-422c-abbb-6c99754f6078",
+      "out": "context",
+      "in": "p-z-4ff55dc1-df63-4a5a-944e-e9821be1d7e0"
+    },
+    {
+      "from": "682b7d80-49b3-47cd-9cae-c70d7f8fc832",
+      "to": "5e10d6ca-9823-4d92-b11c-5c25b75ac501",
+      "out": "context",
+      "in": "p-z-682b7d80-49b3-47cd-9cae-c70d7f8fc832"
+    },
+    {
+      "from": "682b7d80-49b3-47cd-9cae-c70d7f8fc832",
+      "to": "19d57169-2e2b-42c5-9860-77b30d5a6a69",
+      "out": "context",
+      "in": "p-z-682b7d80-49b3-47cd-9cae-c70d7f8fc832"
+    },
+    {
+      "from": "19d57169-2e2b-42c5-9860-77b30d5a6a69",
+      "to": "f20835b7-164c-4165-a9ff-781b69d7504b",
+      "out": "context",
+      "in": "p-z-19d57169-2e2b-42c5-9860-77b30d5a6a69"
+    },
+    {
+      "from": "5e10d6ca-9823-4d92-b11c-5c25b75ac501",
+      "to": "f20835b7-164c-4165-a9ff-781b69d7504b",
+      "out": "context",
+      "in": "p-z-5e10d6ca-9823-4d92-b11c-5c25b75ac501"
+    },
+    {
+      "from": "cdad2c5a-14e6-422c-abbb-6c99754f6078",
+      "to": "682b7d80-49b3-47cd-9cae-c70d7f8fc832",
+      "out": "682b7d80-49b3-47cd-9cae-c70d7f8fc832",
+      "in": "context"
+    },
+    {
+      "from": "3f59c83a-d1b9-4aa9-ae6c-4c4e5c8d7b77",
+      "to": "2827b691-5795-4fe6-9462-806b4e2fc93b",
+      "out": "context",
+      "in": "p-z-3f59c83a-d1b9-4aa9-ae6c-4c4e5c8d7b77"
+    },
+    {
+      "from": "3f59c83a-d1b9-4aa9-ae6c-4c4e5c8d7b77",
+      "to": "50722f01-17c5-4120-948b-195a6d0229f2",
+      "out": "context",
+      "in": "p-z-3f59c83a-d1b9-4aa9-ae6c-4c4e5c8d7b77"
+    },
+    {
+      "from": "50722f01-17c5-4120-948b-195a6d0229f2",
+      "to": "587724af-1771-4aa6-ab02-ab712a994fcb",
+      "out": "context",
+      "in": "p-z-50722f01-17c5-4120-948b-195a6d0229f2"
+    },
+    {
+      "from": "2827b691-5795-4fe6-9462-806b4e2fc93b",
+      "to": "587724af-1771-4aa6-ab02-ab712a994fcb",
+      "out": "context",
+      "in": "p-z-2827b691-5795-4fe6-9462-806b4e2fc93b"
+    },
+    {
+      "from": "cdad2c5a-14e6-422c-abbb-6c99754f6078",
+      "to": "3f59c83a-d1b9-4aa9-ae6c-4c4e5c8d7b77",
+      "out": "3f59c83a-d1b9-4aa9-ae6c-4c4e5c8d7b77",
+      "in": "context"
+    },
+    {
+      "from": "230bc64f-4c44-44e3-8569-17e46b802f42",
+      "to": "736ee8ec-f10a-490f-8d70-c1bfef765324",
+      "out": "context",
+      "in": "p-z-230bc64f-4c44-44e3-8569-17e46b802f42"
+    },
+    {
+      "from": "230bc64f-4c44-44e3-8569-17e46b802f42",
+      "to": "0a63afda-7826-4b47-9473-882f023c195b",
+      "out": "context",
+      "in": "p-z-230bc64f-4c44-44e3-8569-17e46b802f42"
+    },
+    {
+      "from": "0a63afda-7826-4b47-9473-882f023c195b",
+      "to": "a12b0ba8-1cb4-4dad-9059-f944647e4867",
+      "out": "context",
+      "in": "p-z-0a63afda-7826-4b47-9473-882f023c195b"
+    },
+    {
+      "from": "736ee8ec-f10a-490f-8d70-c1bfef765324",
+      "to": "a12b0ba8-1cb4-4dad-9059-f944647e4867",
+      "out": "context",
+      "in": "p-z-736ee8ec-f10a-490f-8d70-c1bfef765324"
+    },
+    {
+      "from": "cdad2c5a-14e6-422c-abbb-6c99754f6078",
+      "to": "230bc64f-4c44-44e3-8569-17e46b802f42",
+      "out": "230bc64f-4c44-44e3-8569-17e46b802f42",
+      "in": "context"
+    },
+    {
+      "from": "f9d3e1be-2d97-4c78-a720-fda1c1910112",
+      "to": "9a6fb7b1-5079-4c43-9e1c-0c4a65480022",
+      "out": "context",
+      "in": "p-z-f9d3e1be-2d97-4c78-a720-fda1c1910112"
+    },
+    {
+      "from": "9a6fb7b1-5079-4c43-9e1c-0c4a65480022",
+      "to": "80d20124-a851-4934-9140-f19cc99a4a69",
+      "out": "context",
+      "in": "p-z-9a6fb7b1-5079-4c43-9e1c-0c4a65480022"
+    },
+    {
+      "from": "02243d00-7880-49df-ac00-4bf8413dbe67",
+      "to": "dcc8bc6c-7649-41b0-a047-875e42b8b94a",
+      "out": "context",
+      "in": "p-z-02243d00-7880-49df-ac00-4bf8413dbe67"
+    },
+    {
+      "from": "dcc8bc6c-7649-41b0-a047-875e42b8b94a",
+      "to": "f9d3e1be-2d97-4c78-a720-fda1c1910112",
+      "out": "f9d3e1be-2d97-4c78-a720-fda1c1910112",
+      "in": "context"
+    },
+    {
+      "from": "76ac0270-4d7b-43e2-8f28-7f532feb4de9",
+      "to": "44e25352-9ced-4a8c-b3a1-83d09ab81e67",
+      "out": "context",
+      "in": "p-z-76ac0270-4d7b-43e2-8f28-7f532feb4de9"
+    },
+    {
+      "from": "44e25352-9ced-4a8c-b3a1-83d09ab81e67",
+      "to": "4de8e3ed-73d5-4f6e-8520-b16f1c2a9ff1",
+      "out": "context",
+      "in": "p-z-44e25352-9ced-4a8c-b3a1-83d09ab81e67"
+    },
+    {
+      "from": "dcc8bc6c-7649-41b0-a047-875e42b8b94a",
+      "to": "76ac0270-4d7b-43e2-8f28-7f532feb4de9",
+      "out": "76ac0270-4d7b-43e2-8f28-7f532feb4de9",
+      "in": "context"
+    },
+    {
+      "from": "70618898-e8b9-4766-b058-a23551738ca5",
+      "to": "ddae5c85-41e6-4ebf-b8fa-ce07110bb179",
+      "out": "context",
+      "in": "p-z-70618898-e8b9-4766-b058-a23551738ca5"
+    },
+    {
+      "from": "ddae5c85-41e6-4ebf-b8fa-ce07110bb179",
+      "to": "fbc1d427-21b4-4988-a207-b20044502ccc",
+      "out": "context",
+      "in": "p-z-ddae5c85-41e6-4ebf-b8fa-ce07110bb179"
+    },
+    {
+      "from": "5193a4f6-942d-47f2-87e1-0072976373d3",
+      "to": "02243d00-7880-49df-ac00-4bf8413dbe67",
+      "out": "02243d00-7880-49df-ac00-4bf8413dbe67",
+      "in": "context"
+    }
+  ],
+  "url": "drive:/1Lfr1x6JPTgfA2NQNnz84c7Wq50fzzV7F",
+  "metadata": {
+    "visual": {
+      "presentation": {
+        "themes": {
+          "8740aa37-763a-4391-9ce9-4c7be1c821cc": {
+            "themeColors": {
+              "primaryColor": "#1a1a1a",
+              "secondaryColor": "#7a7a7a",
+              "backgroundColor": "#ffffff",
+              "textColor": "#1a1a1a",
+              "primaryTextColor": "#ffffff"
+            },
+            "template": "basic",
+            "isDefaultTheme": true,
+            "palette": {
+              "primary": {
+                "0": "#000000",
+                "5": "#001417",
+                "10": "#001f24",
+                "15": "#002b30",
+                "20": "#00363d",
+                "25": "#00424a",
+                "30": "#004f58",
+                "35": "#005b66",
+                "40": "#006874",
+                "50": "#008391",
+                "60": "#00a0b0",
+                "70": "#22bccf",
+                "80": "#4fd8eb",
+                "90": "#97f0ff",
+                "95": "#d0f8ff",
+                "98": "#edfcff",
+                "99": "#f6feff",
+                "100": "#ffffff"
+              },
+              "secondary": {
+                "0": "#000000",
+                "5": "#001417",
+                "10": "#051f23",
+                "15": "#10292d",
+                "20": "#1c3438",
+                "25": "#273f43",
+                "30": "#334b4f",
+                "35": "#3e565b",
+                "40": "#4a6267",
+                "50": "#637b80",
+                "60": "#7c959a",
+                "70": "#96b0b4",
+                "80": "#b1cbd0",
+                "90": "#cde7ec",
+                "95": "#dbf6fa",
+                "98": "#edfcff",
+                "99": "#f6feff",
+                "100": "#ffffff"
+              },
+              "tertiary": {
+                "0": "#000000",
+                "5": "#030f2c",
+                "10": "#0e1b37",
+                "15": "#192541",
+                "20": "#24304d",
+                "25": "#2f3b58",
+                "30": "#3b4664",
+                "35": "#465271",
+                "40": "#525e7d",
+                "50": "#6b7697",
+                "60": "#8490b2",
+                "70": "#9faace",
+                "80": "#bac6ea",
+                "90": "#dae2ff",
+                "95": "#eef0ff",
+                "98": "#faf8ff",
+                "99": "#fefbff",
+                "100": "#ffffff"
+              },
+              "neutral": {
+                "0": "#000000",
+                "5": "#0e1212",
+                "10": "#191c1d",
+                "15": "#232627",
+                "20": "#2e3132",
+                "25": "#393c3d",
+                "30": "#444748",
+                "35": "#505354",
+                "40": "#5c5f5f",
+                "50": "#747878",
+                "60": "#8e9192",
+                "70": "#a9acac",
+                "80": "#c4c7c7",
+                "90": "#e1e3e3",
+                "95": "#eff1f1",
+                "98": "#f8fafa",
+                "99": "#fafdfd",
+                "100": "#ffffff"
+              },
+              "neutralVariant": {
+                "0": "#000000",
+                "5": "#091214",
+                "10": "#141d1f",
+                "15": "#1e2729",
+                "20": "#293234",
+                "25": "#343d3f",
+                "30": "#3f484a",
+                "35": "#4b5456",
+                "40": "#576062",
+                "50": "#6f797a",
+                "60": "#899294",
+                "70": "#a3adaf",
+                "80": "#bfc8ca",
+                "90": "#dbe4e6",
+                "95": "#e9f2f4",
+                "98": "#f2fbfd",
+                "99": "#f6feff",
+                "100": "#ffffff"
+              },
+              "error": {
+                "0": "#000000",
+                "5": "#2d0001",
+                "10": "#410002",
+                "15": "#540003",
+                "20": "#690005",
+                "25": "#7e0007",
+                "30": "#93000a",
+                "35": "#a80710",
+                "40": "#ba1a1a",
+                "50": "#de3730",
+                "60": "#ff5449",
+                "70": "#ff897d",
+                "80": "#ffb4ab",
+                "90": "#ffdad6",
+                "95": "#ffedea",
+                "98": "#fff8f7",
+                "99": "#fffbff",
+                "100": "#ffffff"
+              }
+            }
+          },
+          "2477429d-13d2-4717-8e68-c957998c5969": {
+            "template": "basic",
+            "templateAdditionalOptions": {},
+            "palette": {
+              "primary": {
+                "0": "#000000",
+                "5": "#001225",
+                "10": "#001c37",
+                "15": "#002748",
+                "20": "#00325a",
+                "25": "#003d6c",
+                "30": "#00497f",
+                "35": "#005492",
+                "40": "#0c61a4",
+                "50": "#367abf",
+                "60": "#5494da",
+                "70": "#70aff7",
+                "80": "#a0c9ff",
+                "90": "#d2e4ff",
+                "95": "#eaf1ff",
+                "98": "#f8f9ff",
+                "99": "#fdfcff",
+                "100": "#ffffff"
+              },
+              "secondary": {
+                "0": "#000000",
+                "5": "#051220",
+                "10": "#101c2b",
+                "15": "#1b2735",
+                "20": "#253141",
+                "25": "#303c4c",
+                "30": "#3c4858",
+                "35": "#475364",
+                "40": "#535f70",
+                "50": "#6c788a",
+                "60": "#8592a4",
+                "70": "#a0acbf",
+                "80": "#bbc7db",
+                "90": "#d7e3f8",
+                "95": "#eaf1ff",
+                "98": "#f8f9ff",
+                "99": "#fdfcff",
+                "100": "#ffffff"
+              },
+              "tertiary": "",
+              "error": {
+                "0": "#000000",
+                "5": "#2d0001",
+                "10": "#410002",
+                "15": "#540003",
+                "20": "#690005",
+                "25": "#7e0007",
+                "30": "#93000a",
+                "35": "#a80710",
+                "40": "#ba1a1a",
+                "50": "#de3730",
+                "60": "#ff5449",
+                "70": "#ff897d",
+                "80": "#ffb4ab",
+                "90": "#ffdad6",
+                "95": "#ffedea",
+                "98": "#fff8f7",
+                "99": "#fffbff",
+                "100": "#ffffff"
+              },
+              "neutral": {
+                "0": "#000000",
+                "5": "#0f1114",
+                "10": "#1a1c1e",
+                "15": "#242629",
+                "20": "#2f3033",
+                "25": "#3a3b3e",
+                "30": "#45474a",
+                "35": "#515255",
+                "40": "#5d5e61",
+                "50": "#76777a",
+                "60": "#909094",
+                "70": "#ababae",
+                "80": "#c6c6ca",
+                "90": "#e3e2e6",
+                "95": "#f1f0f4",
+                "98": "#faf9fd",
+                "99": "#fdfcff",
+                "100": "#ffffff"
+              },
+              "neutralVariant": {
+                "0": "#000000",
+                "5": "#0d1117",
+                "10": "#171c22",
+                "15": "#22262d",
+                "20": "#2c3137",
+                "25": "#373c43",
+                "30": "#43474e",
+                "35": "#4e535a",
+                "40": "#5a5f66",
+                "50": "#73777f",
+                "60": "#8d9199",
+                "70": "#a7abb4",
+                "80": "#c3c6cf",
+                "90": "#dfe2eb",
+                "95": "#edf1fa",
+                "98": "#f8f9ff",
+                "99": "#fdfcff",
+                "100": "#ffffff"
+              }
+            },
+            "themeColors": {
+              "primaryColor": "",
+              "secondaryColor": "",
+              "backgroundColor": "",
+              "primaryTextColor": "",
+              "textColor": ""
+            },
+            "splashScreen": {
+              "storedData": {
+                "handle": "drive:/1E2kHr9JHSWDiPoU8VMalQ3YCV40ikRR6",
+                "mimeType": "image/png",
+                "contentLength": 2002516
+              }
+            }
+          }
+        },
+        "theme": "2477429d-13d2-4717-8e68-c957998c5969"
+      }
+    },
+    "parameters": {}
+  }
+}

@@ -1,0 +1,2727 @@
+{
+  "title": "PODCAST FACTORY MACHINE",
+  "description": "",
+  "version": "0.0.1",
+  "nodes": [
+    {
+      "id": "295b8fa9-b5c4-4764-8118-36b38852cb3c",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "0",
+        "visual": {
+          "x": -460,
+          "y": 420
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "SELECT MENU:\n\n1. ARTICLE \n2. CONTENT\n3. SCRIPT\n4. DESCRIPTION"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "a864ffcb-f7fd-434d-93ca-bcf259d96868",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "CORE BRAIN",
+        "visual": {
+          "x": 160,
+          "y": 420
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "parts": [
+            {
+              "text": " {{\"type\":\"in\",\"path\":\"295b8fa9-b5c4-4764-8118-36b38852cb3c\",\"title\":\"0\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"3244dae5-5685-4954-937d-34384d849e99\",\"title\":\"1\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"7319e93c-bbae-4bec-92fd-8c72eb5347a3\",\"title\":\"2\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"f2e9d7dc-b395-4d21-a884-fafcb589deba\",\"title\":\"3\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"81a40aa3-632b-4ed2-9ae7-ca7072254e26\",\"title\":\"4\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "generation-mode": "agent"
+      }
+    },
+    {
+      "id": "3244dae5-5685-4954-937d-34384d849e99",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "1",
+        "visual": {
+          "x": 160,
+          "y": -1160
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "CHOOSE ARTICLE WHAT YOU WANT TO MAKE\n\nA. COLDCASE (ENGLISH)\nB. THE LAST EVENT (ENGLISH)\nC. CRIME ID (BAHASA)\nD. SPOTIFY PLAYLIST (BAHASA)\nE. AFFILIATE MARKETING (BAHASA)"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "81a40aa3-632b-4ed2-9ae7-ca7072254e26",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "4",
+        "visual": {
+          "x": 160,
+          "y": 1960
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "CHOOSE CAPTION YOU WANT TO MAKE:\n\nN. CRIME ID\nO. THE LAST EVENT\nP. CREEPYPASTA: THE UNSOLVED CASE"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": false
+      }
+    },
+    {
+      "id": "f2e9d7dc-b395-4d21-a884-fafcb589deba",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "3",
+        "visual": {
+          "x": 160,
+          "y": 860
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "CHOOSE TYPE OF SCRIPT YOU WANT TO MAKE:\n\nL. CRIME ID\nM. THE LAST EVENT"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": false
+      }
+    },
+    {
+      "id": "6ae9c927-ffd0-41c1-ae88-75b54d7ebb5f",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "PODCAST ARTICLE BRAIN",
+        "visual": {
+          "x": 560,
+          "y": -1160
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "parts": [
+            {
+              "text": " {{\"type\":\"in\",\"path\":\"3244dae5-5685-4954-937d-34384d849e99\",\"title\":\"1\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"f9ae146f-1ba5-49f3-b965-e114176a2154\",\"title\":\"A\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"4c85216b-d967-46b3-9ab3-364bcdb21e40\",\"title\":\"B\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"a7ee6763-f4b7-43fb-ad70-8cd06b9a0027\",\"title\":\"C\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"e38475d1-121d-4560-9761-7300f917983f\",\"title\":\"D\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"daf9e507-2646-46be-b537-32e82c9ce1bb\",\"title\":\"E\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "generation-mode": "agent"
+      }
+    },
+    {
+      "id": "f9ae146f-1ba5-49f3-b965-e114176a2154",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "A",
+        "visual": {
+          "x": 560,
+          "y": -1440
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Insert topic you want to discuss"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "8e8bc082-05b2-4597-862f-2ff44468623a",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "A BANNER",
+        "visual": {
+          "x": 1160,
+          "y": -1280
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "parts": [
+            {
+              "text": "Create a highly detailed Marvel cartoon-style front page illustration of {{\"type\":\"in\",\"path\":\"f9ae146f-1ba5-49f3-b965-e114176a2154\",\"title\":\"A\"}}, emphasizing a dark, intense, and personal atmosphere. Use dramatic, chiaroscuro lighting to heighten mood and highlight expressive characters with deep emotions. Incorporate mysterious, ominous elements such as shadowy figures, subtle hints of the killer's identity, and atmospheric backgrounds that evoke suspense. Utilize vibrant, bold colors characteristic of Marvel comics, with dynamic, energetic compositions and thick, defining lines to maximize visual impact. Ensure the scene conveys a gripping, suspenseful narrative filled with tension, curiosity, and evocative symbolism.\n"
+            }
+          ],
+          "role": "user"
+        },
+        "generation-mode": "image-pro",
+        "p-aspect-ratio": "1:1"
+      }
+    },
+    {
+      "id": "868ee2f4-106c-4b70-a0fa-cd788660c3ee",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "A PROMPT",
+        "visual": {
+          "x": 1160,
+          "y": -1540
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "parts": [
+            {
+              "text": "Act as a professional ghostwriter, investigative journalist, and SEO content strategist. Write a complete, well-researched, and engaging article about {{\"type\":\"in\",\"path\":\"f9ae146f-1ba5-49f3-b965-e114176a2154\",\"title\":\"A\"}}. \n\nRequirements:\n\nBase the article on verified facts and credible information. Do not exaggerate claims or present speculation as fact. If discussing conspiracy theories, clearly separate them from confirmed information and explain their origins, evidence, criticisms, and current status. Include the latest available updates, developments, or recent news related to the topic.\n\nWrite in a natural, human-like style that is informative and easy to read. Optimize the article for SEO using relevant keywords, semantic keywords, and proper heading structure (H1, H2, H3). Ensure the content is original, authoritative, and suitable for publication on Paragraph.com. Use short paragraphs, transition words, and strong readability practices. Include statistics, examples, expert opinions, and historical context where relevant. Maintain a balanced and objective tone.\n\nArticle Structure:\n\nSEO Title (H1)\nSEO-Friendly Subtitle\nPreview/Excerpt (150–200 words)\nIntroduction\nMain Sections with H2 and H3 Headings\nFacts and Evidence\nConspiracy Theories (if applicable)\n\t- Theory Overview\n\t- Supporting Claims\n\t- Counterarguments\n\t- Current Expert Consensus\n\t- Latest Updates and Recent Developments\n\t- Key Takeaways\n\t- Conclusion\n\t- FAQ Section (5–10 questions)\n\t- Meta Description (150–160 characters)\n\t- SEO Tags (15–30 relevant tags)\n\t- Suggested Keywords\n\t- Suggested Slug URL\n\nAdditional Instructions:\n\nFact-check all major claims. Clearly indicate when information is disputed, unverified, or speculative. Avoid clickbait and misleading statements. Write as an experienced journalist and subject-matter expert. Format the article professionally for direct publishing on Paragraph.com. If new information exists as of the latest available data, include it in a dedicated \"Latest Updates\" section.\n"
+            }
+          ],
+          "role": "user"
+        },
+        "generation-mode": "text-3-pro",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "f93ec7d2-ce5d-4e8e-adc1-db1e07b059ca",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "A OUTPUT",
+        "visual": {
+          "x": 1740,
+          "y": -1400
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "p-render-mode": "Manual layout",
+        "text": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"8e8bc082-05b2-4597-862f-2ff44468623a\",\"title\":\"A BANNER\"}}\n{{\"type\":\"in\",\"path\":\"868ee2f4-106c-4b70-a0fa-cd788660c3ee\",\"title\":\"A PROMPT\"}}\n"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "135abbfe-4341-4b71-9403-fb73ef707d4c",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "L",
+        "visual": {
+          "x": 1080,
+          "y": 860
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Masukan topik yang ingin di bahas"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "4af38f8a-25e3-437c-b77e-f2823b92857d",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "L PROMPT",
+        "visual": {
+          "x": 1600,
+          "y": 860
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Buat script TikTok true crime berdurasi 3-5 menit tentang kasus{{\"type\":\"in\",\"path\":\"135abbfe-4341-4b71-9403-fb73ef707d4c\",\"title\":\"L\"}}. Tujuan: Membuat penonton merasa terkejut, tegang, dan penasaran.Tetap 100% berdasarkan fakta yang terdokumentasi. Jangan menambahkan detail yang tidak pernah dilaporkan oleh sumber resmi, dokumen pengadilan, wawancara korban, atau media kredibel. Jika suatu informasi masih diperdebatkan atau tidak pasti, jelaskan sebagai dugaan atau klaim, bukan fakta.\n\nFormat penulisan: Gunakan gaya narator TikTok Indonesia yang dramatis dan konvensional. Awali dengan HOOK yang sangat mengejutkan dalam 1-2 kalimat.  Bagi cerita menjadi beberapa segmen pendek. Setiap segmen diawali dengan kalimat pemicu rasa penasaran seperti: \"Ini yang bikin kasus ini berbeda...\", \"Tapi tunggu dulu...\", \"Nah, yang lebih mengejutkan lagi...\", \"Dan ini bagian yang paling mengerikan...\", Sisipkan [Pause]di antara segmen. Gunakan HURUF BESAR hanya untuk kata-kata yang ingin diberi penekanan emosional. Fokus pada: kronologi kejadian, fakta-fakta yang paling mengejutkan, bagaimana pelaku menjalankan aksinya, bagaimana korban bertahan, bagaimana korban akhirnya ditemukan, dampak setelah kasus berakhir. Hindari clickbait palsu. Hindari teori konspirasi. Jangan mengubah urutan kejadian sejarah. Jangan mengarang dialog. Jika ada ucapan, gunakan hanya kutipan yang memang pernah dilaporkan atau parafrase yang jelas diberi keterangan. Jangan menyebut informasi yang tidak memiliki dasar sumber kuat.\n\nStruktur output:\nHOOK\n[Pause]\nFAKTA/KRONOLOGI 1\n[Pause]\nFAKTA/KRONOLOGI 2\n[Pause]\nFAKTA/KRONOLOGI 3\n[Pause]\nMOMEN PALING MENGEJUTKAN\n[Pause]\nBAGAIMANA KORBAN DITEMUKAN\n[Pause]\nAPA YANG TERJADI SETELAHNYA\n[Pause]\nPENUTUP EMOSIONAL\n\nGaya yang diinginkan: Gabungan antara dokumenter kriminal, storytelling TikTok viral, dan investigasi jurnalistik. Prioritaskan akurasi fakta di atas dramatisasi. Jika harus memilih antara lebih dramatis atau lebih akurat, selalu pilih yang lebih akurat. Setiap 20-30 detik, masukkan satu fakta yang cukup mengejutkan sehingga penonton terdorong untuk terus menonton sampai akhir, tetapi fakta tersebut harus benar-benar didukung oleh catatan sejarah kasus"
+            }
+          ]
+        },
+        "generation-mode": "text-3-pro",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "77b9dcbb-fe2c-4395-ad77-920675e7098f",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "L OUTPUT",
+        "visual": {
+          "x": 2140,
+          "y": 860
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"4af38f8a-25e3-437c-b77e-f2823b92857d\",\"title\":\"L PROMPT\"}}"
+            }
+          ]
+        },
+        "p-render-mode": "Manual layout"
+      }
+    },
+    {
+      "id": "388cc071-6c62-42e4-ad98-6d15da0afa67",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "I",
+        "visual": {
+          "x": 1280,
+          "y": 60
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Input style"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "c9f3d073-5b96-4433-a380-a207bba10f13",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "I PROMPT",
+        "visual": {
+          "x": 1700,
+          "y": 60
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Create a collection of 40 original short quotes designed for Instagram Threads and viral social media distribution. Generate:\n\n10 Self-Improvement Quotes\n10 Music Quotes\n10 Motivation Quotes\n10 Romance Quotes\n\nAll quotes must be inspired by the atmosphere and storytelling style of {{\"type\":\"in\",\"path\":\"388cc071-6c62-42e4-ad98-6d15da0afa67\",\"title\":\"I\"}}\n, blending darkness, mystery, unease, and psychological depth. The quotes should feel like they were whispered in abandoned hallways, written in forgotten journals, or discovered in old internet legends. Focus on themes such as: hidden truths, obsession, loneliness, transformation, midnight thoughts, fear of loss, haunted memories, devotion, resilience, the thin line between love and madness. Keep each quote between 10–30 words. Make them highly shareable, thought-provoking, and emotionally impactful. Avoid clichés and generic inspirational phrases. Each quote should have a memorable \"save-worthy\" ending. Balance darkness with wisdom; unsettling yet relatable. Ensure the quotes are completely original and not derived from existing creepypasta stories or copyrighted characters. \n\nVary the tone: eerie and poetic, melancholic, chillingly romantic, quietly motivational, introspective and haunting.\n\nWrite 1 viral Instagram Threads caption that encourages comments, reposts, saves, and shares. Include a subtle call-to-action using curiosity or emotional resonance. Generate 10–15 relevant hashtags optimized for Instagram Threads reach and discoverability.\n\nPresent the output using the following structure:\n\nSelf-Improvement Quotes\n... 10.\nThreads Caption: ...\nHashtags: ...\n\nMusic Quotes\n(Repeat the same format)\n\nMotivation Quotes\n(Repeat the same format)\n\nRomance Quotes\n(Repeat the same format)\n\nImagine a fusion of: late-night \n confession threads, poetic horror, viral quote accounts, and modern self-reflection."
+            }
+          ]
+        },
+        "generation-mode": "text-3-pro",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "8486deab-97bd-4b06-9019-e6a4ab3f29bc",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "BD OUPUT",
+        "visual": {
+          "x": 2140,
+          "y": 60
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"c9f3d073-5b96-4433-a380-a207bba10f13\",\"title\":\"I PROMPT\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "p-render-mode": "google-doc",
+        "b-doc-a-edit-mode": "new",
+        "b-doc-title": "THREAD QUOTES"
+      }
+    },
+    {
+      "id": "23a38a87-c12b-4325-94bc-14052a6566d0",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "F",
+        "visual": {
+          "x": 840,
+          "y": -620
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Input case you want to discus\n"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "42c72aec-e6de-4d8f-992b-f143c2d98720",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "F SUMMARY PROMPT",
+        "visual": {
+          "x": 1280,
+          "y": -720
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Act as a professional true-crime writer for a high-quality digital publication. Please write it with this structure:\n\nTone: Is it objective and journalistic, or does it adopt a more narrative, novelistic, or ominous feel? Is it empathetic to victims or detached?\n\nPacing: How does the writer build suspense? Are sentences short and punchy for impact, or longer and more descriptive for atmosphere? How are paragraphs structured to control the flow of information?\n\nVocabulary & Diction: What is the specific word choice? Does the author use formal, precise language, or is it more conversational and accessible? Identify any recurring stylistic flourishes (e.g., using fragments for effect, specific adjectives to create mood).\n\nInformation Delivery: How is forensic, police, or historical detail integrated without disrupting the narrative flow? \n\nTask:\nOnce you have a firm grasp of that distinctive style, adopt it to write a compelling, publication-ready summary of the case provided below. Your summary must follow this exact 3-part structure, using the headings as shown:\n\nThe Crime: (Describe the events of the crime itself, including the date, location, victim(s), and the immediate sequence of events that led to their disappearance or the incident).\n\nThe Calling Card / The Mishandling / The Twist: (Focus on the singular, most compelling detail of the case. This could be a unique clue left by the perpetrator, a critical error made during the initial investigation, or an unexpected revelation that changed the direction of the case).\n\nThe Status: (Provide the current state of the case, including the outcome of the investigation, any recent developments, and its lasting legacy or impact).\n\nAlso make it brief and did not losing its important parts\n\nCase Details to Summarize:\n{{\"type\":\"in\",\"path\":\"23a38a87-c12b-4325-94bc-14052a6566d0\",\"title\":\"F\"}}\n"
+            }
+          ]
+        },
+        "generation-mode": "text-3-pro",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "8df8ae56-ee6d-4af6-bdaa-a361c83d3a75",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "F CAPTION PROMPT",
+        "visual": {
+          "x": 1280,
+          "y": -500
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Please refine and enhance the following Instagram caption. Improve its flow, tone, and readability while keeping it eerie, engaging, and historically vivid. Make it suitable for a true crime/ history storytelling audience.  \n\nAfter rewriting the caption, generate a set of **20 relevant and high-performing hashtags** — a mix of broad, niche, and branded tags — to maximize reach and engagement.  \n\nStructure your final output like this:  \n\nCaption:\n[Polished, captivating version of the caption]  \n\nHashtags: \n#hashtag1 #hashtag2 ... (20 total)  \n\nExample Output Format:\nCaption:\nHe broke in through back doors. He used a a victim's own axe. And he loved jazz. 🎷🪓🌙  \n\n1918–1919. New Orleans was terrorized by a shadow who struck while families slept — usually targeting Italian grocers and their wives. The Axeman didn't just kill. He taunted the press with letters, promising to spare anyone playing jazz in their homes on a chosen night.  \n\nAnd the city listened. Dance halls and living rooms erupted with horns and drums. That night? No one died.  \n\nHe was never caught. Never identified. Never stopped haunting the Big Easy.  \n\nWas he a serial killer with a soundtrack? A vendetta against immigrants? Or someone hiding in plain sight behind a trumpet?  \n\nSource: Reader's Digest  \nPod in the Box © 2026  \n\nHashtags:  \n#axemanofneworleans #truecrimecommunity #coldcasefiles #unsolvedmysteries #truecrimepodcast #neworleanshistory #famouscoldcases #podinthebox #jazzagemurders #theaxeman #historymystery #creepyhistory #nolatruecrime #unsolvedpodcast #truecrimeaddict #crimehistory #americanhorrorstory #jazzage #hauntedhistory #truecrimejunkie\n {{\"type\":\"in\",\"path\":\"23a38a87-c12b-4325-94bc-14052a6566d0\",\"title\":\"F\"}}"
+            }
+          ]
+        },
+        "generation-mode": "text-3-pro",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "d9df6f4d-fd2f-409d-a99f-032a4c0d3c22",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "BA OUTPUT",
+        "visual": {
+          "x": 1700,
+          "y": -620
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "p-render-mode": "Manual layout",
+        "text": {
+          "parts": [
+            {
+              "text": "Content:\n{{\"type\":\"in\",\"path\":\"42c72aec-e6de-4d8f-992b-f143c2d98720\",\"title\":\"F SUMMARY PROMPT\"}}\n\nCaption:\n{{\"type\":\"in\",\"path\":\"8df8ae56-ee6d-4af6-bdaa-a361c83d3a75\",\"title\":\"F CAPTION PROMPT\"}}\n"
+            }
+          ],
+          "role": "user"
+        }
+      }
+    },
+    {
+      "id": "36873639-579b-406e-b57c-062a5b8d7d05",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "H",
+        "visual": {
+          "x": 1280,
+          "y": -260
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Insert quotes"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "266549fa-e628-4257-8a37-60124597f8b7",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "H PROMPT",
+        "visual": {
+          "x": 1700,
+          "y": -260
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Write a haunting, emotionally powerful thread-style story inspired by the quote: {{\"type\":\"in\",\"path\":\"36873639-579b-406e-b57c-062a5b8d7d05\",\"title\":\"H\"}}\n\nThe story should read like a viral X/Twitter thread. Open with a strong hook that immediately captures attention. Use short paragraphs and numbered thread formatting (1/, 2/, 3/, etc.). Explore themes of self-deception, regret, identity, fear of change, and the cost of denying one's truth. Build tension gradually, revealing increasingly disturbing details about what happens to the versions of ourselves left behind. The ending should deliver an unforgettable emotional twist that reframes the original quote. The tone should be dark, introspective, literary, and slightly unsettling, similar to psychological horror blended with poetic realism. Include: A compelling title. A set of relevant hashtags designed for thread distribution. An Instagram caption adapted from the story that encourages reflection, shares, and saves. The writing should feel authentic, cinematic, and highly shareable, as if written by a storyteller whose posts regularly go viral.\n"
+            }
+          ]
+        },
+        "generation-mode": "text-3-pro",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "dafb0f8f-2650-4090-8ce9-15924f9f8ba5",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "BC OUTPUT",
+        "visual": {
+          "x": 2140,
+          "y": -260
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"266549fa-e628-4257-8a37-60124597f8b7\",\"title\":\"H PROMPT\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "p-render-mode": "Manual layout"
+      }
+    },
+    {
+      "id": "14ebb467-6d00-4f4f-9b01-efb32d3046aa",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "J",
+        "visual": {
+          "x": 840,
+          "y": 260
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Input the music genres"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": false
+      }
+    },
+    {
+      "id": "e08716d5-e343-46dc-837d-12b856a7dce3",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "J MOODBOARD",
+        "visual": {
+          "x": 1280,
+          "y": 260
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "An avant-garde, evocative moodboard for an {{\"type\":\"in\",\"path\":\"14ebb467-6d00-4f4f-9b01-efb32d3046aa\",\"title\":\"J\"}} album concept, arranged as an art installation flat lay on a raw, textured slate surface with visible fissures and dust motes. The composition narrates melancholic wanderlust through hyper-specific tactile artifacts: three overlapping gelatin silver print photographs with a heavy, organic 400 ISO film grain—one depicting a haunting, long-exposure streak of red taillights vanishing into a foggy midnight highway with realistic lens flare; another capturing a liminal, low-contrast scene of an abandoned vinyl diner booth bathed in eerie, warm 3200K neon reflection on the tabletop. Interspersed are fragments of a hand-scrawled poem on torn, deckle-edged 300gsm mulberry paper where black India ink slightly bleeds into the raw fibers, an unspooled, chaotic tangle of analog 35mm film strip catching amber light leaks along sprocket holes, and a deliberate arrangement of thick, palette-knife impasto paint smudges representing a color story of bruised indigo, muted sage, oxidized copper, and a sharp strike of bleeding vermillion. Shot from an overhead, slightly asymmetrical perspective with a 50mm anamorphic lens emulation, utilizing dramatic chiaroscuro lighting from a single, low-angle side window. Deep velvet shadows stretch across the arrangement, emphasizing frayed paper edges, tactile creases, dust particles on the film, and three-dimensional depth of overlapping mediums. Editorial fine-art photography style, cinematic atmosphere, authentic analog imperfections."
+            }
+          ]
+        },
+        "generation-mode": "image-pro",
+        "p-aspect-ratio": "1:1"
+      }
+    },
+    {
+      "id": "f67d5ab6-c6f4-4337-9fc0-3de9c39894f0",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "BE OUTPUT",
+        "visual": {
+          "x": 1700,
+          "y": 260
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"e08716d5-e343-46dc-837d-12b856a7dce3\",\"title\":\"J MOODBOARD\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "p-render-mode": "Manual layout"
+      }
+    },
+    {
+      "id": "05824898-f034-4253-a40f-49619181165d",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "K PROMPT",
+        "visual": {
+          "x": 840,
+          "y": 500
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "our task is to create a table of 200 unique entries in the digital marketing domain, segmented into three columns: ‘Headline’, ‘Text 1’, and ‘Text 2’. The content should cover topics like Music History & Lore. Each entry must be engaging and tailored to appeal to broad or specific demographic groups. Focus on lively insights that highlight unexpected, controversial, or particularly relevant aspects of Lore to stimulate discussion and engagement"
+            }
+          ]
+        },
+        "generation-mode": "text-3-pro",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "19d017e9-963b-48ef-aa3d-1ce059bd8699",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "Output 5",
+        "visual": {
+          "x": 2140,
+          "y": 500
+        },
+        "userModified": false
+      },
+      "configuration": {
+        "text": {
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"05824898-f034-4253-a40f-49619181165d\",\"title\":\"K PROMPT\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "p-render-mode": "google-sheets",
+        "b-doc-a-edit-mode": "same",
+        "b-doc-title": "PINTEREST FACTS MUSIC",
+        "b-doc-a-write-mode": "overwrite",
+        "b-d-sheets-edit-mode": "new-sheet"
+      }
+    },
+    {
+      "id": "7feb0890-0cad-42e8-89e0-774dd509c816",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "G",
+        "visual": {
+          "x": 840,
+          "y": -900
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Insert theme "
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "da226242-52f6-4406-a164-572329a65d33",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "G PROMPT",
+        "visual": {
+          "x": 1500,
+          "y": -900
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Create 40 original, highly shareable quotes inspired by {{\"type\":\"in\",\"path\":\"7feb0890-0cad-42e8-89e0-774dd509c816\",\"title\":\"G\"}} the dark, mysterious, and unsettling atmosphere of classic . The quotes should be emotionally powerful, relatable, and suitable for social media audiences.\n\nStructure the quotes as follows: 10 Self-Improvement Quotes, 10 Music Quotes, 10 Motivation Quotes, 10 Romance Quotes\n\nRequirements:\n\nEach quote should subtly incorporate creepypasta-inspired themes such as shadows, forgotten memories, midnight thoughts, haunted emotions, eerie loneliness, hidden truths, nightmares, darkness, and psychological mystery. Keep the quotes deep, poetic, and engaging rather than overly graphic or horror-focused. Make them feel inspirational, emotional, and thought-provoking. Write in a style that has strong viral potential for platforms like TikTok, Instagram Reels, YouTube Shorts, Facebook, and X. Vary the length of the quotes: some short and punchy, others more profound and cinematic. Ensure every quote is unique and memorable.\n\nFor each quote, also provide:\n\nA viral social media caption that complements the quote. 15–20 relevant hashtags optimized for maximum reach and engagement. An emotional category label (e.g., Dark Motivation, Haunted Romance, Midnight Wisdom, Shadow Growth, Eerie Inspiration). Format the output clearly by category, with each quote followed by its caption and hashtags.\n"
+            }
+          ]
+        },
+        "generation-mode": "text-3-pro",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "acdd3da1-ee7a-46de-9ce1-c4818754dbb0",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "BB OUTPUT",
+        "visual": {
+          "x": 1960,
+          "y": -900
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"da226242-52f6-4406-a164-572329a65d33\",\"title\":\"G PROMPT\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "p-render-mode": "Manual layout"
+      }
+    },
+    {
+      "id": "4c85216b-d967-46b3-9ab3-364bcdb21e40",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "B",
+        "visual": {
+          "x": 560,
+          "y": -1740
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Write topic you want to discus"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "9907506e-bc9d-4aa0-9c02-44e18a25ff56",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "B PROMPT",
+        "visual": {
+          "x": 1500,
+          "y": -1740
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "parts": [
+            {
+              "text": "Write a blog-style article as part of a mini-series about {{\"type\":\"in\",\"path\":\"4c85216b-d967-46b3-9ab3-364bcdb21e40\",\"title\":\"B\"}}.\n\nWriting Style\n\nWrite like a compelling magazine feature or documentary narration. Focus on storytelling, emotional impact, and human experiences. Keep the tone engaging, conversational, and easy to read. Avoid sounding academic, encyclopedic, or overly technical. Use short-to-medium paragraphs for readability.\n\nFact Guidelines\n\nStay close to well-established facts. Do not speculate, exaggerate, or introduce controversial claims unless they are widely documented. Avoid excessive dates, statistics, legal details, scientific explanations, or historical minutiae. Prioritize the core story over exhaustive research. If facts are uncertain, leave them out rather than guessing.\n\n\nStructure\n[Compelling Title]\n\nThe Beginning\nWhen Things Changed\nThe Human Cost\nThe Fight, Discovery, or Resolution\nThe Lasting Legacy\nA Final Thought\n\nAdditional Requirements\n\nLength: 800–1,200 words. Include vivid but accurate descriptions. Make readers feel the emotional weight of the story. Avoid clickbait, sensationalism, and unsupported claims. Write as if this is Episode [X] of a mini-series, with subtle continuity if appropriate. The final article should feel similar to a high-quality blog post like \"The Radium Girls: The Shocking Cost of a Glowing Smile\"—story-driven, emotionally engaging, fact-based, and accessible to general readers."
+            }
+          ],
+          "role": "user"
+        },
+        "generation-mode": "text-3-pro",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "37701863-68b5-4e41-a7f4-44a9f58bbe74",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "B OUTPUT",
+        "visual": {
+          "x": 1940,
+          "y": -1740
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "{{\"title\":\"B PROMPT\",\"path\":\"9907506e-bc9d-4aa0-9c02-44e18a25ff56\",\"type\":\"in\"}}"
+            }
+          ]
+        },
+        "p-render-mode": "Manual layout"
+      }
+    },
+    {
+      "id": "b1535b89-e9e9-49ea-a2b2-0e08b818afd5",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "M",
+        "visual": {
+          "x": 580,
+          "y": 1240
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Insert historical topic"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": false
+      }
+    },
+    {
+      "id": "1b7aa362-0f9c-4be3-a504-7f56b28a40a8",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "M SCRIPT PROMPT",
+        "visual": {
+          "x": 1080,
+          "y": 1040
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Create a 60-second script about {{\"type\":\"in\",\"path\":\"b1535b89-e9e9-49ea-a2b2-0e08b818afd5\",\"title\":\"M\"}}. Use a fast-paced, suspenseful, and narrative storytelling style. Break down the background, the sudden disappearance/mystery, the cryptic clues left behind, and popular theories or modern findings. Keep the sentences short, impactful, and easy to follow."
+            }
+          ]
+        },
+        "generation-mode": "text-3-pro",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "9e6b66f1-1168-4519-8034-fd9d12577df2",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "M CAPTIONS PROMPT",
+        "visual": {
+          "x": 1100,
+          "y": 1240
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Act as a social media content creator specializing in bizarre, engaging historical facts. Write a short, punchy Instagram caption based on {{\"type\":\"in\",\"path\":\"b1535b89-e9e9-49ea-a2b2-0e08b818afd5\",\"title\":\"M\"}} the exact structure below:\n\n[STRUCTURE]\n1. Header line format: \" [Catchy Title]: [Sub-hook]\"\n2. Body Paragraph: A concise 4–5 sentence narrative detailing a strange historical event. Include specific dates, numbers, weapons/equipment, and dramatic storytelling with a slight touch of humor. End with a strong punchline or plot twist.\n3. Call to Action line: \"🎬 Follow, Like, and Share\"\n4. Branding Tagline: \"👨‍🏫 History you probably didn't learn in school\"\n5. Hashtags: 5-6 highly relevant hashtags followed by \"#PodInTheBox\"\n6. Copyright Footer: \"Pod in the Box © [Current Year]\"\n\n[TOPIC]: Insert topic here (e.g., The Cadaver Synod, The Great Molasses Flood, etc.)\n[PART NUMBER]: e.g., 1"
+            }
+          ]
+        },
+        "generation-mode": "text-3-pro",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "e9d09284-193b-4c74-82d7-26e8d74ece61",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "M PICTURE PROMPT",
+        "visual": {
+          "x": 1100,
+          "y": 1440
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "A 1:1 square ratio atmospheric, cinematic illustration of{{\"type\":\"in\",\"path\":\"b1535b89-e9e9-49ea-a2b2-0e08b818afd5\",\"title\":\"M\"}} art style."
+            }
+          ]
+        },
+        "generation-mode": "image-pro",
+        "p-aspect-ratio": "1:1"
+      }
+    },
+    {
+      "id": "9e0fd19d-08d7-4caa-9c97-97d175e0e4f1",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "Output 8",
+        "visual": {
+          "x": 1580,
+          "y": 1240
+        },
+        "userModified": false
+      },
+      "configuration": {
+        "p-render-mode": "Manual layout",
+        "text": {
+          "parts": [
+            {
+              "text": "SCRIPT:\n{{\"type\":\"in\",\"path\":\"1b7aa362-0f9c-4be3-a504-7f56b28a40a8\",\"title\":\"M SCRIPT PROMPT\"}}\n\nCAPTION: \n{{\"type\":\"in\",\"path\":\"9e6b66f1-1168-4519-8034-fd9d12577df2\",\"title\":\"M CAPTIONS PROMPT\"}}\n\nPICTURE:\n{{\"type\":\"in\",\"path\":\"e9d09284-193b-4c74-82d7-26e8d74ece61\",\"title\":\"M PICTURE PROMPT\"}}\n"
+            }
+          ],
+          "role": "user"
+        }
+      }
+    },
+    {
+      "id": "a7ee6763-f4b7-43fb-ad70-8cd06b9a0027",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "C",
+        "visual": {
+          "x": 560,
+          "y": -1900
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Masukan topik yang ingin di bahas"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "2a043ad4-53e3-40cd-9409-b48c0f73f5e2",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "Generate",
+        "visual": {
+          "x": 1500,
+          "y": -1900
+        },
+        "userModified": false
+      },
+      "configuration": {
+        "config$prompt": {
+          "parts": [
+            {
+              "text": "Buatlah sebuah artikel investigasi mendalam tentang topik: {{\"type\":\"in\",\"path\":\"a7ee6763-f4b7-43fb-ad70-8cd06b9a0027\",\"title\":\"C\"}}\n\nGunakan gaya penulisan yang naratif, menggugah emosi, namun tetap sangat ketat pada fakta. Ikuti struktur dan format di bawah ini secara persis:\n\n1. **Judul Artikel**: Buat judul yang provokatif namun akurat, mencerminkan inti tragedi atau misteri.\n2. **Lead/Intro**: Mulai dengan hook yang kuat (paragraf pembuka yang dramatis), diikuti ringkasan singkat kasus (5W+1H) dan tabel fakta kunci yang merangkum korban, pelaku, motif, vonis, dan lokasi.\n3. **Isi Artikel**: Bagi menjadi beberapa sub-bab dengan judul menarik (H2) yang menceritakan kronologi kejadian secara berurutan. Fokus pada:\n   - Momen kejutan/kebohongan pelaku.\n   - Bukti digital atau forensik yang menghancurkan alibi.\n   - Proses penyelidikan yang berbelok arah.\n   - Sidang dan vonis.\n   - Teori konspirasi atau banding (jika ada).\n   - Dampak sosial/hukum.\n4. **Kesimpulan**: Ringkasan moral atau pelajaran dari kasus tersebut.\n5. **Hashtag**: Sertakan 3-4 hashtag relevan di akhir kesimpulan.\n6. **Daftar Sumber**: Wajib menyertakan daftar sumber dengan format:\n   - [Nama Media (Tahun)](Link URL) - Judul Artikel\n  Pastikan semua fakta didukung sumber yang valid dan dapat diverifikasi.\n\n**PENTING:**\n- Jangan mengarang fakta. Jika ada detail yang tidak jelas, gunakan kata \"diduga\" atau \"menurut laporan\".\n- Gunakan format Markdown (tebal, miring, tabel, list) untuk keterbacaan.\n- Nada tulisan harus serius, objektif, namun tetap mengalir seperti bercerita.\n- Sertakan link sumber yang aktif dan relevan."
+            }
+          ],
+          "role": "user"
+        },
+        "generation-mode": "text-3-pro",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "f25c92a5-fe2f-40e7-930a-35a67e79d9da",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "C OUTPUT",
+        "visual": {
+          "x": 1940,
+          "y": -1900
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "{{\"title\":\"Generate\",\"path\":\"2a043ad4-53e3-40cd-9409-b48c0f73f5e2\",\"type\":\"in\"}}"
+            }
+          ]
+        },
+        "p-render-mode": "Manual layout"
+      }
+    },
+    {
+      "id": "e38475d1-121d-4560-9761-7300f917983f",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "D",
+        "visual": {
+          "x": 560,
+          "y": -2100
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Masukan daftar tangga langgu"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": false
+      }
+    },
+    {
+      "id": "e2976abb-9434-4970-b3f0-aef2ec90a376",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "D PROMPT",
+        "visual": {
+          "x": 1500,
+          "y": -2100
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Buatlah artikel analisis chart musik mingguan yang bergaya \"Editorial Majalah Musik\" berdasarkan data berikut: {{\"type\":\"in\",\"path\":\"e38475d1-121d-4560-9761-7300f917983f\",\"title\":\"D\"}}\n\n**Tujuan:**\nMengubah data mentah menjadi ulasan eksklusif yang mendalam, seolah-olah ditulis oleh editor musik profesional yang sedang meninjau chart minggu ini. Artikel harus terasa personal, analitis, dan penuh wawasan tentang tren industri.\n\n**Format Output yang Diwajibkan:**\n\n1. **Judul & Header:**\n   - Buat judul yang dramatis dan menarik (misal: \"PERTEMPURAN RAKSASA & KEJUTAN PENDATANG BARU\").\n   - Sertakan metadata fiktif di bawah judul: **Periode** (gunakan tanggal minggu ini atau \"Minggu Ini\") dan **Editor** (misal: \"Tim Redaksi Musik\").\n   - Paragraf pembuka (Lead) yang merangkum \"cerita besar\" minggu ini: siapa yang menang, siapa yang turun, dan tren utama secara umum.\n\n2. **Ulasan Per Posisi (1-10):**\n   Setiap lagu harus memiliki blok terpisah dengan format berikut:\n   - **Heading:** Gunakan emoji medali untuk 3 besar (🥇, 🥈, 🥉) dan angka biasa untuk sisanya. Format: `# Emoji. Nama Artis – \"Judul Lagu\" (Status Naik/Turun/Debut)`\n   - **Narasi Mendalam (3-5 kalimat):** Jangan hanya menyebutkan naik/turun. Jelaskan **mengapa** hal itu terjadi.\n     - Gunakan istilah industri musik yang relevan (misal: *streaming*, *radio airplay*, *viral*, *slow burner*, *fanbase*, *mid-tempo*, *anthem*).\n     - Berikan konteks fiktif yang logis berdasarkan genre atau artis (misal: \"didorong oleh penampilan live di TV\", \"reaksi viral di TikTok\", \"kurangnya promosi\", \"daya tahan lagu\").\n     - Gunakan nada yang antusias, kritis, namun objektif.\n     - **Bold** nama artis, judul lagu, dan istilah kunci.\n     - Gunakan *italic* untuk istilah bahasa Inggris atau istilah teknis.\n\n3. **Bagian Tren & Analisis:**\n   - Buat sub-bab khusus dengan judul \"🔍 Tren & Analisis Singkat\".\n   - Sajikan 3 poin analisis utama dalam bentuk bullet point yang merangkum pola global (misal: Dominasi Artis Asing, Pergerakan Cepat, Genre yang Sedang Tren).\n\n4. **Penutup:**\n   - Kalimat penutup yang mengajak interaksi atau membuat prediksi untuk minggu depan.\n\n**Instruksi Gaya Bahasa:**\n- Gunakan bahasa Indonesia yang baku namun santai (gaya majalah).\n- Jangan kaku. Gunakan kata-kata seperti \"mengguncang\", \"membara\", \"meluncur mulus\", \"titik jenuh\".\n- Jika data menunjukkan lagu naik, cari alasan logis (viral, promosi). Jika turun, beri alasan logis (kebosanan, lagu baru).\n- Jika ada lagu baru (NEW/🆕), bahas potensi masa depannya."
+            }
+          ]
+        },
+        "generation-mode": "text-3-pro",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "f8196578-fad0-4922-931e-a267a93604c0",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "Output 9",
+        "visual": {
+          "x": 1940,
+          "y": -2100
+        }
+      },
+      "configuration": {
+        "text": {
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"e2976abb-9434-4970-b3f0-aef2ec90a376\",\"title\":\"D PROMPT\"}}"
+            }
+          ],
+          "role": "user"
+        }
+      }
+    },
+    {
+      "id": "daf9e507-2646-46be-b537-32e82c9ce1bb",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "E",
+        "visual": {
+          "x": 560,
+          "y": -2980
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "AA. Buat artikel review mendalam\nAB. Workflow harian menggunakan\nAC. Studi kasus\nAD. Review dalam format “sebelum dan sesudah”\nAE. Ulasan setelah 30 hari menggunakan\nAF. Input prompt"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "455be24a-fb79-41ae-a841-441dce720d48",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "AFFILIATE ARTICLE BRAIN",
+        "visual": {
+          "x": 980,
+          "y": -2980
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"daf9e507-2646-46be-b537-32e82c9ce1bb\",\"title\":\"E\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"4492cd0b-bce7-4526-b5ad-3ad21f3006d9\",\"title\":\"AA\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"978da348-2934-43ca-a5b8-fb3564b295bf\",\"title\":\"AB\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"13ed4d08-f62d-4927-9bf0-2a8c3b53402a\",\"title\":\"AC\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"8726e0d8-21a3-4abe-8836-0626f6585618\",\"title\":\"AD\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"5051f549-f1d4-4578-858b-ba2996b0bbe9\",\"title\":\"AE\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"bcfd4111-59d0-44f5-b548-6c5371b8538f\",\"title\":\"AF\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "generation-mode": "agent"
+      }
+    },
+    {
+      "id": "4492cd0b-bce7-4526-b5ad-3ad21f3006d9",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "AA",
+        "visual": {
+          "x": 980,
+          "y": -3220
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Masukan nama barang"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "ff27cbdf-4c05-4f90-8faf-0e6a957b05e4",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "AA PROMPT",
+        "visual": {
+          "x": 1500,
+          "y": -3220
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "parts": [
+            {
+              "text": "Buat artikel review mendalam tentang {{\"type\":\"in\",\"path\":\"4492cd0b-bce7-4526-b5ad-3ad21f3006d9\",\"title\":\"AA\"}} – bahas kelebihan, kekurangan, dan untuk siapa produk ini paling cocok."
+            }
+          ],
+          "role": "user"
+        },
+        "generation-mode": "text-3-pro",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "4dce1852-7a2a-4c67-801c-a3a1d777c840",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "AA OUTPUT",
+        "visual": {
+          "x": 1940,
+          "y": -3220
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "{{\"title\":\"AA PROMPT\",\"path\":\"ff27cbdf-4c05-4f90-8faf-0e6a957b05e4\",\"type\":\"in\"}}"
+            }
+          ]
+        },
+        "p-render-mode": "Manual layout"
+      }
+    },
+    {
+      "id": "978da348-2934-43ca-a5b8-fb3564b295bf",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "AB",
+        "visual": {
+          "x": 980,
+          "y": -3380
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Masukan nama barang"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "66fe4626-ff63-4b03-8fb8-b0ac06e3e238",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "AB PROMPT",
+        "visual": {
+          "x": 1500,
+          "y": -3380
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "parts": [
+            {
+              "text": "Workflow harian menggunakan {{\"type\":\"in\",\"path\":\"978da348-2934-43ca-a5b8-fb3564b295bf\",\"title\":\"AB\"}} untuk meningkatkan produktivitas."
+            }
+          ],
+          "role": "user"
+        },
+        "generation-mode": "agent"
+      }
+    },
+    {
+      "id": "769aa57b-d3d9-464b-8e02-d4bd6d9e23ea",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "AB OUTPUT",
+        "visual": {
+          "x": 1940,
+          "y": -3380
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "p-render-mode": "Manual layout",
+        "text": {
+          "role": "user",
+          "parts": [
+            {
+              "text": " {{\"title\":\"AB PROMPT\",\"path\":\"66fe4626-ff63-4b03-8fb8-b0ac06e3e238\",\"type\":\"in\"}}"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "13ed4d08-f62d-4927-9bf0-2a8c3b53402a",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "AC",
+        "visual": {
+          "x": 980,
+          "y": -3560
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Masukan nama barang"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "8726e0d8-21a3-4abe-8836-0626f6585618",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "AD",
+        "visual": {
+          "x": 980,
+          "y": -2640
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Masukan nama barang"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "5051f549-f1d4-4578-858b-ba2996b0bbe9",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "AE",
+        "visual": {
+          "x": 980,
+          "y": -2480
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Masukan nama barang"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "bcfd4111-59d0-44f5-b548-6c5371b8538f",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "AF",
+        "visual": {
+          "x": 980,
+          "y": -2340
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Masukan prompt (mohon sertakan produk)"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "965ba242-71a7-41b5-87bd-55f2c603f7ce",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "AC PROMPT",
+        "visual": {
+          "x": 1500,
+          "y": -3560
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "parts": [
+            {
+              "text": "Menghemat 10 jam per minggu menggunakan {{\"type\":\"in\",\"path\":\"13ed4d08-f62d-4927-9bf0-2a8c3b53402a\",\"title\":\"AC\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "generation-mode": "text-3-pro",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "0050ad1b-daf3-4b1c-ac02-c9fa6d66e6fd",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "Output 10",
+        "visual": {
+          "x": 1940,
+          "y": -3560
+        }
+      },
+      "configuration": {
+        "text": {
+          "parts": [
+            {
+              "text": "{{\"title\":\"AC PROMPT\",\"path\":\"965ba242-71a7-41b5-87bd-55f2c603f7ce\",\"type\":\"in\"}}"
+            }
+          ],
+          "role": "user"
+        }
+      }
+    },
+    {
+      "id": "66539e7c-0332-41ca-a775-2e6b792fc469",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "AD PROMPT",
+        "visual": {
+          "x": 1500,
+          "y": -2640
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "parts": [
+            {
+              "text": "Review dalam format “sebelum dan sesudah” untuk \n{{\"type\":\"in\",\"path\":\"8726e0d8-21a3-4abe-8836-0626f6585618\",\"title\":\"AD\"}}\n"
+            }
+          ],
+          "role": "user"
+        },
+        "generation-mode": "text-3-pro",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "ca379e85-27cc-4deb-8fb2-869955edcb08",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "AD OUTPUT",
+        "visual": {
+          "x": 1940,
+          "y": -2640
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "{{\"title\":\"AD PROMPT\",\"path\":\"66539e7c-0332-41ca-a775-2e6b792fc469\",\"type\":\"in\"}}"
+            }
+          ]
+        },
+        "p-render-mode": "Manual layout"
+      }
+    },
+    {
+      "id": "92312de9-03b3-4023-9677-55c3008a63ea",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "AE PROMPT",
+        "visual": {
+          "x": 1500,
+          "y": -2480
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Ulasan setelah 30 hari menggunakan {{\"type\":\"in\",\"path\":\"5051f549-f1d4-4578-858b-ba2996b0bbe9\",\"title\":\"AE\"}} – pengalaman riil dan hasil yang didapat."
+            }
+          ]
+        },
+        "generation-mode": "text-3-pro",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "d43ded67-c6df-47f2-9884-dc8919dcfea5",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "AE OUTPUT",
+        "visual": {
+          "x": 1940,
+          "y": -2480
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"92312de9-03b3-4023-9677-55c3008a63ea\",\"title\":\"AE PROMPT\"}}"
+            }
+          ]
+        },
+        "p-render-mode": "Manual layout"
+      }
+    },
+    {
+      "id": "e8a1ac9c-76c7-4e33-8a93-dfd9fdc6f760",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "Generate 1",
+        "visual": {
+          "x": 1500,
+          "y": -2340
+        }
+      },
+      "configuration": {
+        "config$prompt": {
+          "parts": [
+            {
+              "text": "{{\"title\":\"AF\",\"path\":\"bcfd4111-59d0-44f5-b548-6c5371b8538f\",\"type\":\"in\"}}"
+            }
+          ],
+          "role": "user"
+        }
+      }
+    },
+    {
+      "id": "37e38d85-b5b6-4dc3-9038-a548c153de9b",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "AF OUTPUT",
+        "visual": {
+          "x": 1940,
+          "y": -2340
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "{{\"title\":\"Generate 1\",\"path\":\"e8a1ac9c-76c7-4e33-8a93-dfd9fdc6f760\",\"type\":\"in\"}}"
+            }
+          ]
+        },
+        "p-render-mode": "Manual layout"
+      }
+    },
+    {
+      "id": "7319e93c-bbae-4bec-92fd-8c72eb5347a3",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "2",
+        "visual": {
+          "x": 160,
+          "y": -120
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "CHOOSE TYPE OF CONTENT YOU WANT TO MAKE:\n\nF. INSTAGRAM COLDCASE\nG. INSTAGRAM QUOTES\nH. THREAD STORY\nI. THREAD QUOTES\nJ. PINTEREST MUSIC FACTS\nK. PINTEREST MOODBOARD"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "5450cad0-668e-4627-961e-9a617a3821bd",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "CONTENT BRAIN",
+        "visual": {
+          "x": 840,
+          "y": -120
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "parts": [
+            {
+              "text": " {{\"type\":\"in\",\"path\":\"7319e93c-bbae-4bec-92fd-8c72eb5347a3\",\"title\":\"2\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"23a38a87-c12b-4325-94bc-14052a6566d0\",\"title\":\"F\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"7feb0890-0cad-42e8-89e0-774dd509c816\",\"title\":\"G\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"36873639-579b-406e-b57c-062a5b8d7d05\",\"title\":\"H\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"388cc071-6c62-42e4-ad98-6d15da0afa67\",\"title\":\"I\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"14ebb467-6d00-4f4f-9b01-efb32d3046aa\",\"title\":\"J\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"05824898-f034-4253-a40f-49619181165d\",\"title\":\"K PROMPT\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "generation-mode": "agent"
+      }
+    },
+    {
+      "id": "914ac8c4-f1f4-47ab-8890-80571c9abbeb",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "SCRIPT BRAIN",
+        "visual": {
+          "x": 580,
+          "y": 860
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"f2e9d7dc-b395-4d21-a884-fafcb589deba\",\"title\":\"3\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"135abbfe-4341-4b71-9403-fb73ef707d4c\",\"title\":\"L\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"b1535b89-e9e9-49ea-a2b2-0e08b818afd5\",\"title\":\"M\"}}"
+            }
+          ]
+        },
+        "generation-mode": "agent"
+      }
+    },
+    {
+      "id": "52ae2ec9-667a-48c7-b103-2296544becc7",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "PODCAST DESCRIPTION BRAIN",
+        "visual": {
+          "x": 560,
+          "y": 1960
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": " {{\"type\":\"in\",\"path\":\"81a40aa3-632b-4ed2-9ae7-ca7072254e26\",\"title\":\"4\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"3cd6c09d-65d0-4777-b3ab-423d1559af87\",\"title\":\"N\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"4f0f46fc-06e4-424b-bb23-a841a0e882b9\",\"title\":\"O\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"e74512f6-54dd-4409-9441-dd03af146c6d\",\"title\":\"P\"}}"
+            }
+          ]
+        },
+        "generation-mode": "agent"
+      }
+    },
+    {
+      "id": "b9dfe9bc-e342-44c9-a195-fce9873bd250",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "P PROMPT",
+        "visual": {
+          "x": 1020,
+          "y": 2280
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Act as a professional podcast/audiobook copywriter. Write an engaging, atmospheric episode description for a horror/thriller story narration.\n\nEpisode Title: {{\"type\":\"in\",\"path\":\"e74512f6-54dd-4409-9441-dd03af146c6d\",\"title\":\"P\"}}\nNarrator Name: Tristan Davis\nNarrator Background: Former Cops\nVoice/Style: Stoic, calm, authentic British accent\nStory Plot: An unseen presence lingering outside a window pane, watching every move, waiting to enter.\n\nFormatting & Tone Requirements:\n\nStart with the line: Narrated by [Narrator Name]\n\nThe first sentence of the body must weave together the narrator's background, voice style, and the title of the story seamlessly.\n\nSummarize the core dread or conflict of the story in 1–2 chilling sentences.\n\nEnd with a subtle call-to-action that invites the listener into an immersive experience (e.g., dimming lights, using headphones).\n\nMatch the polished, sinister tone of this sample:\n\nSample Output:\n\n'Narrated by Tristan Davis\n\nFormer UK police officer Tristan Davis lends his stoic British cadence to one of the web's most paranoid tales: The Watcher. In this installment, Tristan reads the chilling account of an unseen presence that lingers just beyond the window pane—a silent force that observes every move, waiting for the perfect moment to step inside. Dim the lights, put on your headphones, and listen closely to a story that will make you look twice at the shadows outside your window.\n"
+            }
+          ]
+        },
+        "generation-mode": "text-3-pro",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "e74512f6-54dd-4409-9441-dd03af146c6d",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "P",
+        "visual": {
+          "x": 560,
+          "y": 2280
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Insert episode name"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": false
+      }
+    },
+    {
+      "id": "da55557a-202f-4afb-81d8-a9886ab55ebc",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "P OUTPUT",
+        "visual": {
+          "x": 1820,
+          "y": 2280
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "{{\"title\":\"P PROMPT\",\"path\":\"b9dfe9bc-e342-44c9-a195-fce9873bd250\",\"type\":\"in\"}}"
+            }
+          ]
+        },
+        "p-render-mode": "Manual layout"
+      }
+    },
+    {
+      "id": "3cd6c09d-65d0-4777-b3ab-423d1559af87",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "N",
+        "visual": {
+          "x": 560,
+          "y": 1760
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Masukan episode"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": false
+      }
+    },
+    {
+      "id": "16cf7131-589c-46fc-94c6-af3163a91b19",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "N PROMPT",
+        "visual": {
+          "x": 1120,
+          "y": 1760
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Bertindaklah sebagai penulis naskah (copywriter) profesional untuk podcast dan buku audio misteri/true crime. Tuliskan deskripsi episode yang menarik, penuh atmosfer, dan mencekam.\n\nInput Data Kasus:\n- Judul Episode: {{\"type\":\"in\",\"path\":\"3cd6c09d-65d0-4777-b3ab-423d1559af87\",\"title\":\"N\"}}\n- Nama Narator: Drax\n- Latar Belakang Narator: Voice Over (VO)\n- Gaya/Karakter Suara: Tenang, dingin, dengan aksen Indonesia yang otentik\n\nPersyaratan Format & Struktur Deskripsi:\n\n1. Baris Pertama (Header):\n   Wajib dimulai dengan teks: \"Dinarasikan oleh Drax\"\n2. Kalimat Pembuka Deskripsi:\n   Padukan latar belakang Drax sebagai VO, karakter suaranya yang tenang dan dingin, serta Judul Episode secara halus dan mengalir ke dalam 1 kalimat pengantar yang sinister.\n\n3. Isi Narasi Teaser (Gunakan Pola 4-Line Hook):\n   - Baris 1: \"[Catchphrase pendek bahasa Inggris 3-5 kata]\" \n   - Baris 2: [Nama korban], [Usia] tahun, [kronologi singkat kejadian] pada [waktu/tahun]. [Jumlah hari/waktu] kemudian, [kondisi akhir/fakta tragis].\n   - Baris 3: Pelakunya? [Latar belakang singkat pelaku yang mencengangkan] (ATAU jika belum terungkap: Misterinya? [Fakta aneh dari kasus ini]).\n\n4. Kalimat Penutup (Call-to-Action):\n   Akhiri dengan ajakan halus yang mengundang pendengar untuk merasakan pengalaman mendalam (misalnya: meredupkan lampu, memakai headphone, dan bersiap merinding).\n\nNada & Tone Bahasa:\nRapi, gelap, dingin, dan mengintimidasi. Jangan memberikan kata pengantar tambahan, langsung hasilkan teks deskripsinya saja."
+            }
+          ]
+        },
+        "generation-mode": "agent"
+      }
+    },
+    {
+      "id": "a0431024-5d18-4470-bc89-6afce4a03e2c",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "N OUTPUT",
+        "visual": {
+          "x": 1600,
+          "y": 1760
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "p-render-mode": "Manual layout",
+        "text": {
+          "role": "user",
+          "parts": [
+            {
+              "text": " {{\"title\":\"N PROMPT\",\"path\":\"16cf7131-589c-46fc-94c6-af3163a91b19\",\"type\":\"in\"}}"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "4f0f46fc-06e4-424b-bb23-a841a0e882b9",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "O",
+        "visual": {
+          "x": 1020,
+          "y": 1960
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Input episode name"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": false
+      }
+    },
+    {
+      "id": "2d12bd9f-6532-4367-8c38-88cea4a74061",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "O PROMPT",
+        "visual": {
+          "x": 1420,
+          "y": 1960
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Act as a professional podcast/audiobook copywriter. Write an engaging, atmospheric episode description for a horror/thriller story narration.\n\nEpisode Title: {{\"type\":\"in\",\"path\":\"4f0f46fc-06e4-424b-bb23-a841a0e882b9\",\"title\":\"O\"}}\nNarrator Name: Andrew Jackson\nNarrator Background: Historian\nVoice/Style: Stoic, calm, authentic American accent\nStory Plot: An unseen presence lingering outside a window pane, watching every move, waiting to enter.\n\nFormatting & Tone Requirements:\n\nStart with the line: Narrated by [Narrator Name]\n\nThe first sentence of the body must weave together the narrator's background, voice style, and the title of the story seamlessly.\n\nSummarize the core dread or conflict of the story in 1–2 chilling sentences.\n\nEnd with a subtle call-to-action that invites the listener into an immersive experience (e.g., dimming lights, using headphones).\n\nMatch the polished, sinister tone of this sample:\n\nSample Output:\n\n'Narrated by Tristan Davis\n\nFormer UK police officer Tristan Davis lends his stoic British cadence to one of the web's most paranoid tales: The Watcher. In this installment, Tristan reads the chilling account of an unseen presence that lingers just beyond the window pane—a silent force that observes every move, waiting for the perfect moment to step inside. Dim the lights, put on your headphones, and listen closely to a story that will make you look twice at the shadows outside your window.\n"
+            }
+          ]
+        },
+        "generation-mode": "agent"
+      }
+    },
+    {
+      "id": "9ba0d39b-d3fa-4846-897f-fc1b37ed21f1",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "O OUTPUT",
+        "visual": {
+          "x": 1820,
+          "y": 1960
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "p-render-mode": "Manual layout",
+        "text": {
+          "role": "user",
+          "parts": [
+            {
+              "text": " {{\"title\":\"O PROMPT\",\"path\":\"2d12bd9f-6532-4367-8c38-88cea4a74061\",\"type\":\"in\"}}"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "295b8fa9-b5c4-4764-8118-36b38852cb3c",
+      "to": "a864ffcb-f7fd-434d-93ca-bcf259d96868",
+      "out": "context",
+      "in": "p-z-295b8fa9-b5c4-4764-8118-36b38852cb3c"
+    },
+    {
+      "from": "a864ffcb-f7fd-434d-93ca-bcf259d96868",
+      "to": "3244dae5-5685-4954-937d-34384d849e99",
+      "out": "3244dae5-5685-4954-937d-34384d849e99",
+      "in": "context"
+    },
+    {
+      "from": "a864ffcb-f7fd-434d-93ca-bcf259d96868",
+      "to": "f2e9d7dc-b395-4d21-a884-fafcb589deba",
+      "out": "f2e9d7dc-b395-4d21-a884-fafcb589deba",
+      "in": "context"
+    },
+    {
+      "from": "a864ffcb-f7fd-434d-93ca-bcf259d96868",
+      "to": "81a40aa3-632b-4ed2-9ae7-ca7072254e26",
+      "out": "81a40aa3-632b-4ed2-9ae7-ca7072254e26",
+      "in": "context"
+    },
+    {
+      "from": "3244dae5-5685-4954-937d-34384d849e99",
+      "to": "6ae9c927-ffd0-41c1-ae88-75b54d7ebb5f",
+      "out": "context",
+      "in": "p-z-3244dae5-5685-4954-937d-34384d849e99"
+    },
+    {
+      "from": "6ae9c927-ffd0-41c1-ae88-75b54d7ebb5f",
+      "to": "f9ae146f-1ba5-49f3-b965-e114176a2154",
+      "out": "f9ae146f-1ba5-49f3-b965-e114176a2154",
+      "in": "context"
+    },
+    {
+      "from": "f9ae146f-1ba5-49f3-b965-e114176a2154",
+      "to": "868ee2f4-106c-4b70-a0fa-cd788660c3ee",
+      "out": "context",
+      "in": "p-z-f9ae146f-1ba5-49f3-b965-e114176a2154"
+    },
+    {
+      "from": "f9ae146f-1ba5-49f3-b965-e114176a2154",
+      "to": "8e8bc082-05b2-4597-862f-2ff44468623a",
+      "out": "context",
+      "in": "p-z-f9ae146f-1ba5-49f3-b965-e114176a2154"
+    },
+    {
+      "from": "8e8bc082-05b2-4597-862f-2ff44468623a",
+      "to": "f93ec7d2-ce5d-4e8e-adc1-db1e07b059ca",
+      "out": "context",
+      "in": "p-z-8e8bc082-05b2-4597-862f-2ff44468623a"
+    },
+    {
+      "from": "868ee2f4-106c-4b70-a0fa-cd788660c3ee",
+      "to": "f93ec7d2-ce5d-4e8e-adc1-db1e07b059ca",
+      "out": "context",
+      "in": "p-z-868ee2f4-106c-4b70-a0fa-cd788660c3ee"
+    },
+    {
+      "from": "135abbfe-4341-4b71-9403-fb73ef707d4c",
+      "to": "4af38f8a-25e3-437c-b77e-f2823b92857d",
+      "out": "context",
+      "in": "p-z-135abbfe-4341-4b71-9403-fb73ef707d4c"
+    },
+    {
+      "from": "4af38f8a-25e3-437c-b77e-f2823b92857d",
+      "to": "77b9dcbb-fe2c-4395-ad77-920675e7098f",
+      "out": "context",
+      "in": "p-z-4af38f8a-25e3-437c-b77e-f2823b92857d"
+    },
+    {
+      "from": "c9f3d073-5b96-4433-a380-a207bba10f13",
+      "to": "8486deab-97bd-4b06-9019-e6a4ab3f29bc",
+      "out": "context",
+      "in": "p-z-c9f3d073-5b96-4433-a380-a207bba10f13"
+    },
+    {
+      "from": "23a38a87-c12b-4325-94bc-14052a6566d0",
+      "to": "42c72aec-e6de-4d8f-992b-f143c2d98720",
+      "out": "context",
+      "in": "p-z-23a38a87-c12b-4325-94bc-14052a6566d0"
+    },
+    {
+      "from": "23a38a87-c12b-4325-94bc-14052a6566d0",
+      "to": "8df8ae56-ee6d-4af6-bdaa-a361c83d3a75",
+      "out": "context",
+      "in": "p-z-23a38a87-c12b-4325-94bc-14052a6566d0"
+    },
+    {
+      "from": "42c72aec-e6de-4d8f-992b-f143c2d98720",
+      "to": "d9df6f4d-fd2f-409d-a99f-032a4c0d3c22",
+      "out": "context",
+      "in": "p-z-42c72aec-e6de-4d8f-992b-f143c2d98720"
+    },
+    {
+      "from": "8df8ae56-ee6d-4af6-bdaa-a361c83d3a75",
+      "to": "d9df6f4d-fd2f-409d-a99f-032a4c0d3c22",
+      "out": "context",
+      "in": "p-z-8df8ae56-ee6d-4af6-bdaa-a361c83d3a75"
+    },
+    {
+      "from": "388cc071-6c62-42e4-ad98-6d15da0afa67",
+      "to": "c9f3d073-5b96-4433-a380-a207bba10f13",
+      "out": "context",
+      "in": "p-z-388cc071-6c62-42e4-ad98-6d15da0afa67"
+    },
+    {
+      "from": "36873639-579b-406e-b57c-062a5b8d7d05",
+      "to": "266549fa-e628-4257-8a37-60124597f8b7",
+      "out": "context",
+      "in": "p-z-36873639-579b-406e-b57c-062a5b8d7d05"
+    },
+    {
+      "from": "266549fa-e628-4257-8a37-60124597f8b7",
+      "to": "dafb0f8f-2650-4090-8ce9-15924f9f8ba5",
+      "out": "context",
+      "in": "p-z-266549fa-e628-4257-8a37-60124597f8b7"
+    },
+    {
+      "from": "e08716d5-e343-46dc-837d-12b856a7dce3",
+      "to": "f67d5ab6-c6f4-4337-9fc0-3de9c39894f0",
+      "out": "context",
+      "in": "p-z-e08716d5-e343-46dc-837d-12b856a7dce3"
+    },
+    {
+      "from": "14ebb467-6d00-4f4f-9b01-efb32d3046aa",
+      "to": "e08716d5-e343-46dc-837d-12b856a7dce3",
+      "out": "context",
+      "in": "p-z-14ebb467-6d00-4f4f-9b01-efb32d3046aa"
+    },
+    {
+      "from": "05824898-f034-4253-a40f-49619181165d",
+      "to": "19d017e9-963b-48ef-aa3d-1ce059bd8699",
+      "out": "context",
+      "in": "p-z-05824898-f034-4253-a40f-49619181165d"
+    },
+    {
+      "from": "7feb0890-0cad-42e8-89e0-774dd509c816",
+      "to": "da226242-52f6-4406-a164-572329a65d33",
+      "out": "context",
+      "in": "p-z-7feb0890-0cad-42e8-89e0-774dd509c816"
+    },
+    {
+      "from": "da226242-52f6-4406-a164-572329a65d33",
+      "to": "acdd3da1-ee7a-46de-9ce1-c4818754dbb0",
+      "out": "context",
+      "in": "p-z-da226242-52f6-4406-a164-572329a65d33"
+    },
+    {
+      "from": "4c85216b-d967-46b3-9ab3-364bcdb21e40",
+      "to": "9907506e-bc9d-4aa0-9c02-44e18a25ff56",
+      "out": "context",
+      "in": "p-z-4c85216b-d967-46b3-9ab3-364bcdb21e40"
+    },
+    {
+      "from": "9907506e-bc9d-4aa0-9c02-44e18a25ff56",
+      "to": "37701863-68b5-4e41-a7f4-44a9f58bbe74",
+      "out": "context",
+      "in": "p-z-9907506e-bc9d-4aa0-9c02-44e18a25ff56"
+    },
+    {
+      "from": "6ae9c927-ffd0-41c1-ae88-75b54d7ebb5f",
+      "to": "4c85216b-d967-46b3-9ab3-364bcdb21e40",
+      "out": "4c85216b-d967-46b3-9ab3-364bcdb21e40",
+      "in": "context"
+    },
+    {
+      "from": "b1535b89-e9e9-49ea-a2b2-0e08b818afd5",
+      "to": "1b7aa362-0f9c-4be3-a504-7f56b28a40a8",
+      "out": "context",
+      "in": "p-z-b1535b89-e9e9-49ea-a2b2-0e08b818afd5"
+    },
+    {
+      "from": "b1535b89-e9e9-49ea-a2b2-0e08b818afd5",
+      "to": "9e6b66f1-1168-4519-8034-fd9d12577df2",
+      "out": "context",
+      "in": "p-z-b1535b89-e9e9-49ea-a2b2-0e08b818afd5"
+    },
+    {
+      "from": "b1535b89-e9e9-49ea-a2b2-0e08b818afd5",
+      "to": "e9d09284-193b-4c74-82d7-26e8d74ece61",
+      "out": "context",
+      "in": "p-z-b1535b89-e9e9-49ea-a2b2-0e08b818afd5"
+    },
+    {
+      "from": "1b7aa362-0f9c-4be3-a504-7f56b28a40a8",
+      "to": "9e0fd19d-08d7-4caa-9c97-97d175e0e4f1",
+      "out": "context",
+      "in": "p-z-1b7aa362-0f9c-4be3-a504-7f56b28a40a8"
+    },
+    {
+      "from": "9e6b66f1-1168-4519-8034-fd9d12577df2",
+      "to": "9e0fd19d-08d7-4caa-9c97-97d175e0e4f1",
+      "out": "context",
+      "in": "p-z-9e6b66f1-1168-4519-8034-fd9d12577df2"
+    },
+    {
+      "from": "e9d09284-193b-4c74-82d7-26e8d74ece61",
+      "to": "9e0fd19d-08d7-4caa-9c97-97d175e0e4f1",
+      "out": "context",
+      "in": "p-z-e9d09284-193b-4c74-82d7-26e8d74ece61"
+    },
+    {
+      "from": "a7ee6763-f4b7-43fb-ad70-8cd06b9a0027",
+      "to": "2a043ad4-53e3-40cd-9409-b48c0f73f5e2",
+      "out": "context",
+      "in": "p-z-a7ee6763-f4b7-43fb-ad70-8cd06b9a0027"
+    },
+    {
+      "from": "2a043ad4-53e3-40cd-9409-b48c0f73f5e2",
+      "to": "f25c92a5-fe2f-40e7-930a-35a67e79d9da",
+      "out": "context",
+      "in": "p-z-2a043ad4-53e3-40cd-9409-b48c0f73f5e2"
+    },
+    {
+      "from": "6ae9c927-ffd0-41c1-ae88-75b54d7ebb5f",
+      "to": "a7ee6763-f4b7-43fb-ad70-8cd06b9a0027",
+      "out": "a7ee6763-f4b7-43fb-ad70-8cd06b9a0027",
+      "in": "context"
+    },
+    {
+      "from": "e2976abb-9434-4970-b3f0-aef2ec90a376",
+      "to": "f8196578-fad0-4922-931e-a267a93604c0",
+      "out": "context",
+      "in": "p-z-e2976abb-9434-4970-b3f0-aef2ec90a376"
+    },
+    {
+      "from": "e38475d1-121d-4560-9761-7300f917983f",
+      "to": "e2976abb-9434-4970-b3f0-aef2ec90a376",
+      "out": "context",
+      "in": "p-z-e38475d1-121d-4560-9761-7300f917983f"
+    },
+    {
+      "from": "6ae9c927-ffd0-41c1-ae88-75b54d7ebb5f",
+      "to": "e38475d1-121d-4560-9761-7300f917983f",
+      "out": "e38475d1-121d-4560-9761-7300f917983f",
+      "in": "context"
+    },
+    {
+      "from": "daf9e507-2646-46be-b537-32e82c9ce1bb",
+      "to": "455be24a-fb79-41ae-a841-441dce720d48",
+      "out": "context",
+      "in": "p-z-daf9e507-2646-46be-b537-32e82c9ce1bb"
+    },
+    {
+      "from": "4492cd0b-bce7-4526-b5ad-3ad21f3006d9",
+      "to": "ff27cbdf-4c05-4f90-8faf-0e6a957b05e4",
+      "out": "context",
+      "in": "p-z-4492cd0b-bce7-4526-b5ad-3ad21f3006d9"
+    },
+    {
+      "from": "455be24a-fb79-41ae-a841-441dce720d48",
+      "to": "4492cd0b-bce7-4526-b5ad-3ad21f3006d9",
+      "out": "4492cd0b-bce7-4526-b5ad-3ad21f3006d9",
+      "in": "context"
+    },
+    {
+      "from": "ff27cbdf-4c05-4f90-8faf-0e6a957b05e4",
+      "to": "4dce1852-7a2a-4c67-801c-a3a1d777c840",
+      "out": "context",
+      "in": "p-z-ff27cbdf-4c05-4f90-8faf-0e6a957b05e4"
+    },
+    {
+      "from": "978da348-2934-43ca-a5b8-fb3564b295bf",
+      "to": "66fe4626-ff63-4b03-8fb8-b0ac06e3e238",
+      "out": "context",
+      "in": "p-z-978da348-2934-43ca-a5b8-fb3564b295bf"
+    },
+    {
+      "from": "66fe4626-ff63-4b03-8fb8-b0ac06e3e238",
+      "to": "769aa57b-d3d9-464b-8e02-d4bd6d9e23ea",
+      "out": "context",
+      "in": "p-z-66fe4626-ff63-4b03-8fb8-b0ac06e3e238"
+    },
+    {
+      "from": "455be24a-fb79-41ae-a841-441dce720d48",
+      "to": "978da348-2934-43ca-a5b8-fb3564b295bf",
+      "out": "978da348-2934-43ca-a5b8-fb3564b295bf",
+      "in": "context"
+    },
+    {
+      "from": "13ed4d08-f62d-4927-9bf0-2a8c3b53402a",
+      "to": "965ba242-71a7-41b5-87bd-55f2c603f7ce",
+      "out": "context",
+      "in": "p-z-13ed4d08-f62d-4927-9bf0-2a8c3b53402a"
+    },
+    {
+      "from": "965ba242-71a7-41b5-87bd-55f2c603f7ce",
+      "to": "0050ad1b-daf3-4b1c-ac02-c9fa6d66e6fd",
+      "out": "context",
+      "in": "p-z-965ba242-71a7-41b5-87bd-55f2c603f7ce"
+    },
+    {
+      "from": "8726e0d8-21a3-4abe-8836-0626f6585618",
+      "to": "66539e7c-0332-41ca-a775-2e6b792fc469",
+      "out": "context",
+      "in": "p-z-8726e0d8-21a3-4abe-8836-0626f6585618"
+    },
+    {
+      "from": "66539e7c-0332-41ca-a775-2e6b792fc469",
+      "to": "ca379e85-27cc-4deb-8fb2-869955edcb08",
+      "out": "context",
+      "in": "p-z-66539e7c-0332-41ca-a775-2e6b792fc469"
+    },
+    {
+      "from": "455be24a-fb79-41ae-a841-441dce720d48",
+      "to": "13ed4d08-f62d-4927-9bf0-2a8c3b53402a",
+      "out": "13ed4d08-f62d-4927-9bf0-2a8c3b53402a",
+      "in": "context"
+    },
+    {
+      "from": "455be24a-fb79-41ae-a841-441dce720d48",
+      "to": "8726e0d8-21a3-4abe-8836-0626f6585618",
+      "out": "8726e0d8-21a3-4abe-8836-0626f6585618",
+      "in": "context"
+    },
+    {
+      "from": "6ae9c927-ffd0-41c1-ae88-75b54d7ebb5f",
+      "to": "daf9e507-2646-46be-b537-32e82c9ce1bb",
+      "out": "daf9e507-2646-46be-b537-32e82c9ce1bb",
+      "in": "context"
+    },
+    {
+      "from": "455be24a-fb79-41ae-a841-441dce720d48",
+      "to": "5051f549-f1d4-4578-858b-ba2996b0bbe9",
+      "out": "5051f549-f1d4-4578-858b-ba2996b0bbe9",
+      "in": "context"
+    },
+    {
+      "from": "455be24a-fb79-41ae-a841-441dce720d48",
+      "to": "bcfd4111-59d0-44f5-b548-6c5371b8538f",
+      "out": "bcfd4111-59d0-44f5-b548-6c5371b8538f",
+      "in": "context"
+    },
+    {
+      "from": "92312de9-03b3-4023-9677-55c3008a63ea",
+      "to": "d43ded67-c6df-47f2-9884-dc8919dcfea5",
+      "out": "context",
+      "in": "p-z-92312de9-03b3-4023-9677-55c3008a63ea"
+    },
+    {
+      "from": "5051f549-f1d4-4578-858b-ba2996b0bbe9",
+      "to": "92312de9-03b3-4023-9677-55c3008a63ea",
+      "out": "context",
+      "in": "p-z-5051f549-f1d4-4578-858b-ba2996b0bbe9"
+    },
+    {
+      "from": "bcfd4111-59d0-44f5-b548-6c5371b8538f",
+      "to": "e8a1ac9c-76c7-4e33-8a93-dfd9fdc6f760",
+      "out": "context",
+      "in": "p-z-bcfd4111-59d0-44f5-b548-6c5371b8538f"
+    },
+    {
+      "from": "e8a1ac9c-76c7-4e33-8a93-dfd9fdc6f760",
+      "to": "37e38d85-b5b6-4dc3-9038-a548c153de9b",
+      "out": "context",
+      "in": "p-z-e8a1ac9c-76c7-4e33-8a93-dfd9fdc6f760"
+    },
+    {
+      "from": "7319e93c-bbae-4bec-92fd-8c72eb5347a3",
+      "to": "5450cad0-668e-4627-961e-9a617a3821bd",
+      "out": "context",
+      "in": "p-z-7319e93c-bbae-4bec-92fd-8c72eb5347a3"
+    },
+    {
+      "from": "5450cad0-668e-4627-961e-9a617a3821bd",
+      "to": "23a38a87-c12b-4325-94bc-14052a6566d0",
+      "out": "23a38a87-c12b-4325-94bc-14052a6566d0",
+      "in": "context"
+    },
+    {
+      "from": "5450cad0-668e-4627-961e-9a617a3821bd",
+      "to": "7feb0890-0cad-42e8-89e0-774dd509c816",
+      "out": "7feb0890-0cad-42e8-89e0-774dd509c816",
+      "in": "context"
+    },
+    {
+      "from": "a864ffcb-f7fd-434d-93ca-bcf259d96868",
+      "to": "7319e93c-bbae-4bec-92fd-8c72eb5347a3",
+      "out": "7319e93c-bbae-4bec-92fd-8c72eb5347a3",
+      "in": "context"
+    },
+    {
+      "from": "5450cad0-668e-4627-961e-9a617a3821bd",
+      "to": "36873639-579b-406e-b57c-062a5b8d7d05",
+      "out": "36873639-579b-406e-b57c-062a5b8d7d05",
+      "in": "context"
+    },
+    {
+      "from": "5450cad0-668e-4627-961e-9a617a3821bd",
+      "to": "388cc071-6c62-42e4-ad98-6d15da0afa67",
+      "out": "388cc071-6c62-42e4-ad98-6d15da0afa67",
+      "in": "context"
+    },
+    {
+      "from": "5450cad0-668e-4627-961e-9a617a3821bd",
+      "to": "14ebb467-6d00-4f4f-9b01-efb32d3046aa",
+      "out": "14ebb467-6d00-4f4f-9b01-efb32d3046aa",
+      "in": "context"
+    },
+    {
+      "from": "5450cad0-668e-4627-961e-9a617a3821bd",
+      "to": "05824898-f034-4253-a40f-49619181165d",
+      "out": "05824898-f034-4253-a40f-49619181165d",
+      "in": "context"
+    },
+    {
+      "from": "f2e9d7dc-b395-4d21-a884-fafcb589deba",
+      "to": "914ac8c4-f1f4-47ab-8890-80571c9abbeb",
+      "out": "context",
+      "in": "p-z-f2e9d7dc-b395-4d21-a884-fafcb589deba"
+    },
+    {
+      "from": "914ac8c4-f1f4-47ab-8890-80571c9abbeb",
+      "to": "135abbfe-4341-4b71-9403-fb73ef707d4c",
+      "out": "135abbfe-4341-4b71-9403-fb73ef707d4c",
+      "in": "context"
+    },
+    {
+      "from": "914ac8c4-f1f4-47ab-8890-80571c9abbeb",
+      "to": "b1535b89-e9e9-49ea-a2b2-0e08b818afd5",
+      "out": "b1535b89-e9e9-49ea-a2b2-0e08b818afd5",
+      "in": "context"
+    },
+    {
+      "from": "81a40aa3-632b-4ed2-9ae7-ca7072254e26",
+      "to": "52ae2ec9-667a-48c7-b103-2296544becc7",
+      "out": "context",
+      "in": "p-z-81a40aa3-632b-4ed2-9ae7-ca7072254e26"
+    },
+    {
+      "from": "e74512f6-54dd-4409-9441-dd03af146c6d",
+      "to": "b9dfe9bc-e342-44c9-a195-fce9873bd250",
+      "out": "context",
+      "in": "p-z-e74512f6-54dd-4409-9441-dd03af146c6d"
+    },
+    {
+      "from": "b9dfe9bc-e342-44c9-a195-fce9873bd250",
+      "to": "da55557a-202f-4afb-81d8-a9886ab55ebc",
+      "out": "context",
+      "in": "p-z-b9dfe9bc-e342-44c9-a195-fce9873bd250"
+    },
+    {
+      "from": "52ae2ec9-667a-48c7-b103-2296544becc7",
+      "to": "e74512f6-54dd-4409-9441-dd03af146c6d",
+      "out": "e74512f6-54dd-4409-9441-dd03af146c6d",
+      "in": "context"
+    },
+    {
+      "from": "3cd6c09d-65d0-4777-b3ab-423d1559af87",
+      "to": "16cf7131-589c-46fc-94c6-af3163a91b19",
+      "out": "context",
+      "in": "p-z-3cd6c09d-65d0-4777-b3ab-423d1559af87"
+    },
+    {
+      "from": "16cf7131-589c-46fc-94c6-af3163a91b19",
+      "to": "a0431024-5d18-4470-bc89-6afce4a03e2c",
+      "out": "context",
+      "in": "p-z-16cf7131-589c-46fc-94c6-af3163a91b19"
+    },
+    {
+      "from": "52ae2ec9-667a-48c7-b103-2296544becc7",
+      "to": "3cd6c09d-65d0-4777-b3ab-423d1559af87",
+      "out": "3cd6c09d-65d0-4777-b3ab-423d1559af87",
+      "in": "context"
+    },
+    {
+      "from": "4f0f46fc-06e4-424b-bb23-a841a0e882b9",
+      "to": "2d12bd9f-6532-4367-8c38-88cea4a74061",
+      "out": "context",
+      "in": "p-z-4f0f46fc-06e4-424b-bb23-a841a0e882b9"
+    },
+    {
+      "from": "2d12bd9f-6532-4367-8c38-88cea4a74061",
+      "to": "9ba0d39b-d3fa-4846-897f-fc1b37ed21f1",
+      "out": "context",
+      "in": "p-z-2d12bd9f-6532-4367-8c38-88cea4a74061"
+    },
+    {
+      "from": "52ae2ec9-667a-48c7-b103-2296544becc7",
+      "to": "4f0f46fc-06e4-424b-bb23-a841a0e882b9",
+      "out": "4f0f46fc-06e4-424b-bb23-a841a0e882b9",
+      "in": "context"
+    }
+  ],
+  "metadata": {
+    "visual": {
+      "presentation": {
+        "themes": {
+          "831de021-1d56-4545-ba82-57f3d1478de8": {
+            "themeColors": {
+              "primaryColor": "#1a1a1a",
+              "secondaryColor": "#7a7a7a",
+              "backgroundColor": "#ffffff",
+              "textColor": "#1a1a1a",
+              "primaryTextColor": "#ffffff"
+            },
+            "template": "basic",
+            "isDefaultTheme": true,
+            "palette": {
+              "primary": {
+                "0": "#000000",
+                "5": "#001417",
+                "10": "#001f24",
+                "15": "#002b30",
+                "20": "#00363d",
+                "25": "#00424a",
+                "30": "#004f58",
+                "35": "#005b66",
+                "40": "#006874",
+                "50": "#008391",
+                "60": "#00a0b0",
+                "70": "#22bccf",
+                "80": "#4fd8eb",
+                "90": "#97f0ff",
+                "95": "#d0f8ff",
+                "98": "#edfcff",
+                "99": "#f6feff",
+                "100": "#ffffff"
+              },
+              "secondary": {
+                "0": "#000000",
+                "5": "#001417",
+                "10": "#051f23",
+                "15": "#10292d",
+                "20": "#1c3438",
+                "25": "#273f43",
+                "30": "#334b4f",
+                "35": "#3e565b",
+                "40": "#4a6267",
+                "50": "#637b80",
+                "60": "#7c959a",
+                "70": "#96b0b4",
+                "80": "#b1cbd0",
+                "90": "#cde7ec",
+                "95": "#dbf6fa",
+                "98": "#edfcff",
+                "99": "#f6feff",
+                "100": "#ffffff"
+              },
+              "tertiary": {
+                "0": "#000000",
+                "5": "#030f2c",
+                "10": "#0e1b37",
+                "15": "#192541",
+                "20": "#24304d",
+                "25": "#2f3b58",
+                "30": "#3b4664",
+                "35": "#465271",
+                "40": "#525e7d",
+                "50": "#6b7697",
+                "60": "#8490b2",
+                "70": "#9faace",
+                "80": "#bac6ea",
+                "90": "#dae2ff",
+                "95": "#eef0ff",
+                "98": "#faf8ff",
+                "99": "#fefbff",
+                "100": "#ffffff"
+              },
+              "neutral": {
+                "0": "#000000",
+                "5": "#0e1212",
+                "10": "#191c1d",
+                "15": "#232627",
+                "20": "#2e3132",
+                "25": "#393c3d",
+                "30": "#444748",
+                "35": "#505354",
+                "40": "#5c5f5f",
+                "50": "#747878",
+                "60": "#8e9192",
+                "70": "#a9acac",
+                "80": "#c4c7c7",
+                "90": "#e1e3e3",
+                "95": "#eff1f1",
+                "98": "#f8fafa",
+                "99": "#fafdfd",
+                "100": "#ffffff"
+              },
+              "neutralVariant": {
+                "0": "#000000",
+                "5": "#091214",
+                "10": "#141d1f",
+                "15": "#1e2729",
+                "20": "#293234",
+                "25": "#343d3f",
+                "30": "#3f484a",
+                "35": "#4b5456",
+                "40": "#576062",
+                "50": "#6f797a",
+                "60": "#899294",
+                "70": "#a3adaf",
+                "80": "#bfc8ca",
+                "90": "#dbe4e6",
+                "95": "#e9f2f4",
+                "98": "#f2fbfd",
+                "99": "#f6feff",
+                "100": "#ffffff"
+              },
+              "error": {
+                "0": "#000000",
+                "5": "#2d0001",
+                "10": "#410002",
+                "15": "#540003",
+                "20": "#690005",
+                "25": "#7e0007",
+                "30": "#93000a",
+                "35": "#a80710",
+                "40": "#ba1a1a",
+                "50": "#de3730",
+                "60": "#ff5449",
+                "70": "#ff897d",
+                "80": "#ffb4ab",
+                "90": "#ffdad6",
+                "95": "#ffedea",
+                "98": "#fff8f7",
+                "99": "#fffbff",
+                "100": "#ffffff"
+              }
+            }
+          },
+          "8dd4c65c-0e1b-4d6f-a556-41bf8b58c959": {
+            "template": "basic",
+            "templateAdditionalOptions": {},
+            "palette": {
+              "primary": {
+                "0": "#000000",
+                "5": "#00102d",
+                "10": "#001a41",
+                "15": "#002455",
+                "20": "#002e69",
+                "25": "#00397e",
+                "30": "#0f448e",
+                "35": "#22509b",
+                "40": "#315da8",
+                "50": "#4d76c3",
+                "60": "#6890df",
+                "70": "#83abfb",
+                "80": "#adc6ff",
+                "90": "#d8e2ff",
+                "95": "#edf0ff",
+                "98": "#f9f9ff",
+                "99": "#fefbff",
+                "100": "#ffffff"
+              },
+              "secondary": {
+                "0": "#000000",
+                "5": "#091120",
+                "10": "#141b2c",
+                "15": "#1e2636",
+                "20": "#293041",
+                "25": "#343b4d",
+                "30": "#3f4759",
+                "35": "#4b5265",
+                "40": "#575e71",
+                "50": "#6f778b",
+                "60": "#8991a5",
+                "70": "#a3abc0",
+                "80": "#bfc6dc",
+                "90": "#dbe2f9",
+                "95": "#edf0ff",
+                "98": "#f9f9ff",
+                "99": "#fefbff",
+                "100": "#ffffff"
+              },
+              "tertiary": "",
+              "error": {
+                "0": "#000000",
+                "5": "#2d0001",
+                "10": "#410002",
+                "15": "#540003",
+                "20": "#690005",
+                "25": "#7e0007",
+                "30": "#93000a",
+                "35": "#a80710",
+                "40": "#ba1a1a",
+                "50": "#de3730",
+                "60": "#ff5449",
+                "70": "#ff897d",
+                "80": "#ffb4ab",
+                "90": "#ffdad6",
+                "95": "#ffedea",
+                "98": "#fff8f7",
+                "99": "#fffbff",
+                "100": "#ffffff"
+              },
+              "neutral": {
+                "0": "#000000",
+                "5": "#101114",
+                "10": "#1b1b1f",
+                "15": "#252629",
+                "20": "#303033",
+                "25": "#3b3b3f",
+                "30": "#46464a",
+                "35": "#525256",
+                "40": "#5e5e62",
+                "50": "#77777a",
+                "60": "#919094",
+                "70": "#ababaf",
+                "80": "#c7c6ca",
+                "90": "#e3e2e6",
+                "95": "#f2f0f4",
+                "98": "#faf9fd",
+                "99": "#fefbff",
+                "100": "#ffffff"
+              },
+              "neutralVariant": {
+                "0": "#000000",
+                "5": "#0e1118",
+                "10": "#191b22",
+                "15": "#23262d",
+                "20": "#2e3038",
+                "25": "#393b43",
+                "30": "#44474f",
+                "35": "#50525a",
+                "40": "#5c5e66",
+                "50": "#74777f",
+                "60": "#8e9099",
+                "70": "#a9abb4",
+                "80": "#c4c6d0",
+                "90": "#e1e2ec",
+                "95": "#eff0fa",
+                "98": "#f9f9ff",
+                "99": "#fefbff",
+                "100": "#ffffff"
+              }
+            },
+            "themeColors": {
+              "primaryColor": "",
+              "secondaryColor": "",
+              "backgroundColor": "",
+              "primaryTextColor": "",
+              "textColor": ""
+            },
+            "splashScreen": {
+              "storedData": {
+                "handle": "drive:/1fiBc62IGMlMQU4s0CZT4MuW3qFFfiQ1W",
+                "mimeType": "image/png",
+                "contentLength": 1568868
+              }
+            }
+          }
+        },
+        "theme": "8dd4c65c-0e1b-4d6f-a556-41bf8b58c959"
+      }
+    },
+    "parameters": {}
+  },
+  "url": "drive:/1Egc9rm0BVlkycn1oof5v0CthsDU87-9L"
+}

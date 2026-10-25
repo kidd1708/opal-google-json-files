@@ -1,0 +1,855 @@
+{
+  "title": "PRODUCT FACTORY MACHINE 2.0",
+  "description": "Mass production of digital products",
+  "version": "0.0.1",
+  "nodes": [
+    {
+      "id": "7004cf35-9226-4fe5-b0f3-6cbecd7e8207",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "2",
+        "visual": {
+          "x": 340,
+          "y": -120
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "INSERT PRODUCT NAME YOU WANT TO MAKE"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "ae97f732-e89d-496b-9532-dec9e057527d",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "PRODUCT PROMPT",
+        "visual": {
+          "x": 800,
+          "y": -120
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "parts": [
+            {
+              "text": "Act as an expert prompt engineer and product creation strategist. Generate a complete, ready-to-use set of mega-prompts designed to build a full digital product kit from scratch for {{\"type\":\"in\",\"path\":\"7004cf35-9226-4fe5-b0f3-6cbecd7e8207\",\"title\":\"2\"}}.\n\nStructure the output into 3 distinct phases following this exact breakdown:\n\nPHASE 1: THE CORE DOCUMENTS (The Product Itself)\nGenerate 4 highly detailed AI prompts to create the primary digital assets:\n\n- Prompt 1: The Main Master Guide (Actionable, step-by-step instruction manual with zero fluff).\n- Prompt 2: The Core Operational Feature / Worksheet (A structured template, table, or printable tracker).\n- Prompt 3: The Continuity / Emergency / Hand-Off Document (A template for long-term management, delegating, or contingency planning).\n- Prompt 4: The Safety & Execution Checklist (A zero-risk verification system to prevent costly user mistakes).\n\nPHASE 2: THE MARKETING & SALES ASSETS (To Sell It)\nGenerate 2 AI prompts for the conversion engine:\n\n- Prompt 5: The High-Converting Sales Page Copy (Full sales page outline using classic copywriting formulas like PAS/AIDA, addressing objections, audience callouts, and guarantee).\n- Prompt 6: The Automated Email Sequence (A 5-day post-purchase/lead-nurture email sequence driving onboarding, retention, and reviews/cross-sells).\n\nPHASE 3: THE VALUE-ADD BONUS MATERIALS (To Increase Perceived Value)\nGenerate 4 AI prompts for bonuses and traffic generation:\n\n- Prompt 7: The \"Red Flag / Pitfalls\" Bonus Document (A high-value guide detailing major mistakes to avoid).\n- Prompt 8: The Buyer's / Tool Comparison Guide (A comparison asset highlighting top tools/resources, formatted with affiliate opportunities).\n- Prompt 9: The Long-Term Maintenance Tracker (A recurring audit/habit tracker for ongoing success).\n- Prompt 10: The Viral Social Media Campaign (A multi-post or long-form thread script designed to drive organic traffic directly to the offer).\n\nFor every prompt generated (1 through 10), make sure to:\n1. Assign a clear Role/Persona (e.g., \"Act as a top-tier copywriter\", \"Act as a senior expert...\").\n2. Define the exact tone, structure, page/word length, and formatting rules.\n3. Include specific placeholders, examples, and rules tailored to [INSERT PRODUCT PROJECT].\n"
+            }
+          ],
+          "role": "user"
+        },
+        "generation-mode": "text-3-pro",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "0fc33e1d-d99a-4834-8930-03e937a812f3",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "PRODUCT PROMPT OUTPUT",
+        "visual": {
+          "x": 1420,
+          "y": -120
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "{{\"title\":\"PRODUCT PROMPT\",\"path\":\"ae97f732-e89d-496b-9532-dec9e057527d\",\"type\":\"in\"}}"
+            }
+          ]
+        },
+        "p-render-mode": "Manual layout"
+      }
+    },
+    {
+      "id": "daf4486e-9274-4c30-bee6-8b384f273aa2",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "MENU SELECT",
+        "visual": {
+          "x": -580,
+          "y": 80
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "CHOOSE YOUR MODE:\n1. PRODUCT FROM SCRATCH\n2. PRODUCT PROMPT\n3. MEGA PROMPT\n4. AI DIGITAL PAINTING"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "409f8719-fe95-4302-a8f2-14510a2fe7ee",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "CORE BRAIN",
+        "visual": {
+          "x": -80,
+          "y": 80
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"daf4486e-9274-4c30-bee6-8b384f273aa2\",\"title\":\"MENU SELECT\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"f775d631-1600-4d33-8432-037891a8e1f0\",\"title\":\"1\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"7004cf35-9226-4fe5-b0f3-6cbecd7e8207\",\"title\":\"2\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"7ac39139-9360-4ffc-989f-799d948fcd1f\",\"title\":\"3\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"f1449024-3c3b-4b62-ac84-7603a651ecfb\",\"title\":\"4\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "generation-mode": "agent"
+      }
+    },
+    {
+      "id": "f775d631-1600-4d33-8432-037891a8e1f0",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "1",
+        "visual": {
+          "x": -80,
+          "y": -440
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "SELECT NICHE (TOPIC) TO MAKE YOUR OWN PRODUCT\n\n"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "41b6cba0-fc7f-45e3-9ddb-5659ad1ad3f5",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "RAW PRODUCT PROMPT",
+        "visual": {
+          "x": 800,
+          "y": -440
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "parts": [
+            {
+              "text": "give me detailed blueprint of 10 simple, timeless digital product ideas that i can create once and sell forever, based on my interest in {{\"type\":\"in\",\"path\":\"f775d631-1600-4d33-8432-037891a8e1f0\",\"title\":\"1\"}}. prioritize low effort and high demand."
+            }
+          ],
+          "role": "user"
+        },
+        "generation-mode": "text-3-pro",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "928e232d-7c1f-4113-87f1-befbf331571b",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "RAW PRODUCT OUTPUT",
+        "visual": {
+          "x": 1420,
+          "y": -440
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"41b6cba0-fc7f-45e3-9ddb-5659ad1ad3f5\",\"title\":\"RAW PRODUCT PROMPT\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "p-render-mode": "Manual layout"
+      }
+    },
+    {
+      "id": "7ac39139-9360-4ffc-989f-799d948fcd1f",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "3",
+        "visual": {
+          "x": 340,
+          "y": 260
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "CHOOSE WHAT TYPE OF PROMPT YOU WANT TO BUILD:\n\nA. HIGH-YIELD + CHEATSHEET PROMPT\nB. ULTIMATE MEGA PROMPT"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "9936c4a6-055b-4ee0-95d7-82156349a46d",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "A PROMPTS",
+        "visual": {
+          "x": 1640,
+          "y": 120
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "parts": [
+            {
+              "text": "Generates 10 High-Yield Prompts about {{\"type\":\"in\",\"path\":\"2d76f1b7-0a81-4dca-926f-7da549129ae8\",\"title\":\"A\"}} + Starter Cheat Sheet"
+            }
+          ],
+          "role": "user"
+        },
+        "generation-mode": "text-3-pro",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "b0a377fe-beb5-4fc6-b508-b5cb882bc922",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "Output",
+        "visual": {
+          "x": 2140,
+          "y": 120
+        }
+      },
+      "configuration": {
+        "text": {
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"9936c4a6-055b-4ee0-95d7-82156349a46d\",\"title\":\"A PROMPTS\"}}"
+            }
+          ],
+          "role": "user"
+        }
+      }
+    },
+    {
+      "id": "f1449024-3c3b-4b62-ac84-7603a651ecfb",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "4",
+        "visual": {
+          "x": -80,
+          "y": 800
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "INSERT GENRES"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "312a591d-023b-4960-9f34-fc1ba4c876e3",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "AI PAINTING",
+        "visual": {
+          "x": 1620,
+          "y": 800
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "parts": [
+            {
+              "text": "Generate a cohesive collection of 20 distinct abstract paintings inspired by {{\"type\":\"in\",\"path\":\"f1449024-3c3b-4b62-ac84-7603a651ecfb\",\"title\":\"4\"}}. Each painting must be unique in composition, color palette, and texture. Style: abstract expressionism mixed with {{\"type\":\"in\",\"path\":\"f1449024-3c3b-4b62-ac84-7603a651ecfb\",\"title\":\"4\"}} energy, acrylic on textured canvas, bold brushstrokes, layered geometric and organic shapes, dynamic movement, gallery lighting, ultra-detailed, 8k"
+            }
+          ],
+          "role": "user"
+        },
+        "generation-mode": "image-pro",
+        "p-aspect-ratio": "16:9"
+      }
+    },
+    {
+      "id": "a69848d4-4301-434a-b593-7bdee34d34ff",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "Output 1",
+        "visual": {
+          "x": 2140,
+          "y": 800
+        }
+      },
+      "configuration": {
+        "text": {
+          "parts": [
+            {
+              "text": "{{\"title\":\"AI PAINTING\",\"path\":\"312a591d-023b-4960-9f34-fc1ba4c876e3\",\"type\":\"in\"}}"
+            }
+          ],
+          "role": "user"
+        }
+      }
+    },
+    {
+      "id": "8a5cd108-101d-48f2-b4d0-22a7bfa0f231",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "PROMPT BRAIN",
+        "visual": {
+          "x": 760,
+          "y": 260
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"7ac39139-9360-4ffc-989f-799d948fcd1f\",\"title\":\"3\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"2d76f1b7-0a81-4dca-926f-7da549129ae8\",\"title\":\"A\"}}\n{{\"type\":\"tool\",\"path\":\"control-flow/routing\",\"instance\":\"107200f7-7656-41fe-b235-7f9f03b7c1b1\",\"title\":\"B2\"}}\n"
+            }
+          ]
+        },
+        "generation-mode": "agent"
+      }
+    },
+    {
+      "id": "2d76f1b7-0a81-4dca-926f-7da549129ae8",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "A",
+        "visual": {
+          "x": 1200,
+          "y": 120
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Input your niche"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "107200f7-7656-41fe-b235-7f9f03b7c1b1",
+      "type": "embed://a2/a2.bgl.json#21ee02e7-83fa-49d0-964c-0cab10eafc2c",
+      "metadata": {
+        "title": "B2",
+        "visual": {
+          "x": 1180,
+          "y": 360
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "description": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Input sub-niche"
+            }
+          ]
+        },
+        "p-modality": "Any",
+        "p-required": true
+      }
+    },
+    {
+      "id": "6d5a0340-6652-4635-a150-63bee6b65704",
+      "type": "embed://a2/generate.bgl.json#module:main",
+      "metadata": {
+        "title": "B PROMPT",
+        "visual": {
+          "x": 1640,
+          "y": 360
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "config$prompt": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "Act as an expert AI prompt engineer specializing in {{\"type\":\"in\",\"path\":\"107200f7-7656-41fe-b235-7f9f03b7c1b1\",\"title\":\"B2\"}}. Generate 150 battle-tested, highly detailed mega-prompts designed to create. Categorize them into 5 distinct modules. Format each prompt with clear conversion value from low to high or low to high engagement"
+            }
+          ]
+        },
+        "generation-mode": "text-3-pro",
+        "b-system-instruction": {
+          "role": "user",
+          "parts": [
+            {
+              "text": "You are working as part of an AI system, so no chit-chat and no explaining what you're doing and why.\nDO NOT start with \"Okay\", or \"Alright\" or any preambles. Just the output, please."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "4c07a47f-482a-44d5-bfd4-37d4a108e965",
+      "type": "embed://a2/a2.bgl.json#module:render-outputs",
+      "metadata": {
+        "title": "B OUTPUT",
+        "visual": {
+          "x": 2140,
+          "y": 360
+        },
+        "userModified": true
+      },
+      "configuration": {
+        "text": {
+          "parts": [
+            {
+              "text": "{{\"type\":\"in\",\"path\":\"6d5a0340-6652-4635-a150-63bee6b65704\",\"title\":\"B PROMPT\"}}"
+            }
+          ],
+          "role": "user"
+        },
+        "p-render-mode": "Manual layout"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "7004cf35-9226-4fe5-b0f3-6cbecd7e8207",
+      "to": "ae97f732-e89d-496b-9532-dec9e057527d",
+      "out": "context",
+      "in": "p-z-7004cf35-9226-4fe5-b0f3-6cbecd7e8207"
+    },
+    {
+      "from": "ae97f732-e89d-496b-9532-dec9e057527d",
+      "to": "0fc33e1d-d99a-4834-8930-03e937a812f3",
+      "out": "context",
+      "in": "p-z-ae97f732-e89d-496b-9532-dec9e057527d"
+    },
+    {
+      "from": "daf4486e-9274-4c30-bee6-8b384f273aa2",
+      "to": "409f8719-fe95-4302-a8f2-14510a2fe7ee",
+      "out": "context",
+      "in": "p-z-daf4486e-9274-4c30-bee6-8b384f273aa2"
+    },
+    {
+      "from": "409f8719-fe95-4302-a8f2-14510a2fe7ee",
+      "to": "f775d631-1600-4d33-8432-037891a8e1f0",
+      "out": "f775d631-1600-4d33-8432-037891a8e1f0",
+      "in": "context"
+    },
+    {
+      "from": "409f8719-fe95-4302-a8f2-14510a2fe7ee",
+      "to": "7004cf35-9226-4fe5-b0f3-6cbecd7e8207",
+      "out": "7004cf35-9226-4fe5-b0f3-6cbecd7e8207",
+      "in": "context"
+    },
+    {
+      "from": "f775d631-1600-4d33-8432-037891a8e1f0",
+      "to": "41b6cba0-fc7f-45e3-9ddb-5659ad1ad3f5",
+      "out": "context",
+      "in": "p-z-f775d631-1600-4d33-8432-037891a8e1f0"
+    },
+    {
+      "from": "41b6cba0-fc7f-45e3-9ddb-5659ad1ad3f5",
+      "to": "928e232d-7c1f-4113-87f1-befbf331571b",
+      "out": "context",
+      "in": "p-z-41b6cba0-fc7f-45e3-9ddb-5659ad1ad3f5"
+    },
+    {
+      "from": "409f8719-fe95-4302-a8f2-14510a2fe7ee",
+      "to": "7ac39139-9360-4ffc-989f-799d948fcd1f",
+      "out": "7ac39139-9360-4ffc-989f-799d948fcd1f",
+      "in": "context"
+    },
+    {
+      "from": "9936c4a6-055b-4ee0-95d7-82156349a46d",
+      "to": "b0a377fe-beb5-4fc6-b508-b5cb882bc922",
+      "out": "context",
+      "in": "p-z-9936c4a6-055b-4ee0-95d7-82156349a46d"
+    },
+    {
+      "from": "f1449024-3c3b-4b62-ac84-7603a651ecfb",
+      "to": "312a591d-023b-4960-9f34-fc1ba4c876e3",
+      "out": "context",
+      "in": "p-z-f1449024-3c3b-4b62-ac84-7603a651ecfb"
+    },
+    {
+      "from": "312a591d-023b-4960-9f34-fc1ba4c876e3",
+      "to": "a69848d4-4301-434a-b593-7bdee34d34ff",
+      "out": "context",
+      "in": "p-z-312a591d-023b-4960-9f34-fc1ba4c876e3"
+    },
+    {
+      "from": "409f8719-fe95-4302-a8f2-14510a2fe7ee",
+      "to": "f1449024-3c3b-4b62-ac84-7603a651ecfb",
+      "out": "f1449024-3c3b-4b62-ac84-7603a651ecfb",
+      "in": "context"
+    },
+    {
+      "from": "2d76f1b7-0a81-4dca-926f-7da549129ae8",
+      "to": "9936c4a6-055b-4ee0-95d7-82156349a46d",
+      "out": "context",
+      "in": "p-z-2d76f1b7-0a81-4dca-926f-7da549129ae8"
+    },
+    {
+      "from": "7ac39139-9360-4ffc-989f-799d948fcd1f",
+      "to": "8a5cd108-101d-48f2-b4d0-22a7bfa0f231",
+      "out": "context",
+      "in": "p-z-7ac39139-9360-4ffc-989f-799d948fcd1f"
+    },
+    {
+      "from": "8a5cd108-101d-48f2-b4d0-22a7bfa0f231",
+      "to": "2d76f1b7-0a81-4dca-926f-7da549129ae8",
+      "out": "2d76f1b7-0a81-4dca-926f-7da549129ae8",
+      "in": "context"
+    },
+    {
+      "from": "107200f7-7656-41fe-b235-7f9f03b7c1b1",
+      "to": "6d5a0340-6652-4635-a150-63bee6b65704",
+      "out": "context",
+      "in": "p-z-107200f7-7656-41fe-b235-7f9f03b7c1b1"
+    },
+    {
+      "from": "6d5a0340-6652-4635-a150-63bee6b65704",
+      "to": "4c07a47f-482a-44d5-bfd4-37d4a108e965",
+      "out": "context",
+      "in": "p-z-6d5a0340-6652-4635-a150-63bee6b65704"
+    },
+    {
+      "from": "8a5cd108-101d-48f2-b4d0-22a7bfa0f231",
+      "to": "107200f7-7656-41fe-b235-7f9f03b7c1b1",
+      "out": "107200f7-7656-41fe-b235-7f9f03b7c1b1",
+      "in": "context"
+    }
+  ],
+  "metadata": {
+    "visual": {
+      "presentation": {
+        "themes": {
+          "364c22e8-9b70-4ad1-8a69-ef0b5b823810": {
+            "themeColors": {
+              "primaryColor": "#1a1a1a",
+              "secondaryColor": "#7a7a7a",
+              "backgroundColor": "#ffffff",
+              "textColor": "#1a1a1a",
+              "primaryTextColor": "#ffffff"
+            },
+            "template": "basic",
+            "isDefaultTheme": true,
+            "palette": {
+              "primary": {
+                "0": "#000000",
+                "5": "#001417",
+                "10": "#001f24",
+                "15": "#002b30",
+                "20": "#00363d",
+                "25": "#00424a",
+                "30": "#004f58",
+                "35": "#005b66",
+                "40": "#006874",
+                "50": "#008391",
+                "60": "#00a0b0",
+                "70": "#22bccf",
+                "80": "#4fd8eb",
+                "90": "#97f0ff",
+                "95": "#d0f8ff",
+                "98": "#edfcff",
+                "99": "#f6feff",
+                "100": "#ffffff"
+              },
+              "secondary": {
+                "0": "#000000",
+                "5": "#001417",
+                "10": "#051f23",
+                "15": "#10292d",
+                "20": "#1c3438",
+                "25": "#273f43",
+                "30": "#334b4f",
+                "35": "#3e565b",
+                "40": "#4a6267",
+                "50": "#637b80",
+                "60": "#7c959a",
+                "70": "#96b0b4",
+                "80": "#b1cbd0",
+                "90": "#cde7ec",
+                "95": "#dbf6fa",
+                "98": "#edfcff",
+                "99": "#f6feff",
+                "100": "#ffffff"
+              },
+              "tertiary": {
+                "0": "#000000",
+                "5": "#030f2c",
+                "10": "#0e1b37",
+                "15": "#192541",
+                "20": "#24304d",
+                "25": "#2f3b58",
+                "30": "#3b4664",
+                "35": "#465271",
+                "40": "#525e7d",
+                "50": "#6b7697",
+                "60": "#8490b2",
+                "70": "#9faace",
+                "80": "#bac6ea",
+                "90": "#dae2ff",
+                "95": "#eef0ff",
+                "98": "#faf8ff",
+                "99": "#fefbff",
+                "100": "#ffffff"
+              },
+              "neutral": {
+                "0": "#000000",
+                "5": "#0e1212",
+                "10": "#191c1d",
+                "15": "#232627",
+                "20": "#2e3132",
+                "25": "#393c3d",
+                "30": "#444748",
+                "35": "#505354",
+                "40": "#5c5f5f",
+                "50": "#747878",
+                "60": "#8e9192",
+                "70": "#a9acac",
+                "80": "#c4c7c7",
+                "90": "#e1e3e3",
+                "95": "#eff1f1",
+                "98": "#f8fafa",
+                "99": "#fafdfd",
+                "100": "#ffffff"
+              },
+              "neutralVariant": {
+                "0": "#000000",
+                "5": "#091214",
+                "10": "#141d1f",
+                "15": "#1e2729",
+                "20": "#293234",
+                "25": "#343d3f",
+                "30": "#3f484a",
+                "35": "#4b5456",
+                "40": "#576062",
+                "50": "#6f797a",
+                "60": "#899294",
+                "70": "#a3adaf",
+                "80": "#bfc8ca",
+                "90": "#dbe4e6",
+                "95": "#e9f2f4",
+                "98": "#f2fbfd",
+                "99": "#f6feff",
+                "100": "#ffffff"
+              },
+              "error": {
+                "0": "#000000",
+                "5": "#2d0001",
+                "10": "#410002",
+                "15": "#540003",
+                "20": "#690005",
+                "25": "#7e0007",
+                "30": "#93000a",
+                "35": "#a80710",
+                "40": "#ba1a1a",
+                "50": "#de3730",
+                "60": "#ff5449",
+                "70": "#ff897d",
+                "80": "#ffb4ab",
+                "90": "#ffdad6",
+                "95": "#ffedea",
+                "98": "#fff8f7",
+                "99": "#fffbff",
+                "100": "#ffffff"
+              }
+            }
+          },
+          "39ace765-1f6f-475d-832c-0b92e874dfdf": {
+            "template": "basic",
+            "templateAdditionalOptions": {},
+            "palette": {
+              "primary": {
+                "0": "#000000",
+                "5": "#1f0c00",
+                "10": "#2e1500",
+                "15": "#3d1e00",
+                "20": "#4c2700",
+                "25": "#5c3000",
+                "30": "#6d3a00",
+                "35": "#7e4400",
+                "40": "#8f4e00",
+                "50": "#b06412",
+                "60": "#cf7d2c",
+                "70": "#ee9744",
+                "80": "#ffb77a",
+                "90": "#ffdcc2",
+                "95": "#ffeee2",
+                "98": "#fff8f5",
+                "99": "#fffbff",
+                "100": "#ffffff"
+              },
+              "secondary": {
+                "0": "#000000",
+                "5": "#1d0d01",
+                "10": "#2a1707",
+                "15": "#352110",
+                "20": "#412c19",
+                "25": "#4d3723",
+                "30": "#5a422e",
+                "35": "#674d38",
+                "40": "#745943",
+                "50": "#8e715a",
+                "60": "#aa8b72",
+                "70": "#c6a58b",
+                "80": "#e3c0a5",
+                "90": "#ffdcc2",
+                "95": "#ffeee2",
+                "98": "#fff8f5",
+                "99": "#fffbff",
+                "100": "#ffffff"
+              },
+              "tertiary": "",
+              "error": {
+                "0": "#000000",
+                "5": "#2d0001",
+                "10": "#410002",
+                "15": "#540003",
+                "20": "#690005",
+                "25": "#7e0007",
+                "30": "#93000a",
+                "35": "#a80710",
+                "40": "#ba1a1a",
+                "50": "#de3730",
+                "60": "#ff5449",
+                "70": "#ff897d",
+                "80": "#ffb4ab",
+                "90": "#ffdad6",
+                "95": "#ffedea",
+                "98": "#fff8f7",
+                "99": "#fffbff",
+                "100": "#ffffff"
+              },
+              "neutral": {
+                "0": "#000000",
+                "5": "#15100c",
+                "10": "#201b17",
+                "15": "#2a2521",
+                "20": "#352f2b",
+                "25": "#413a36",
+                "30": "#4c4541",
+                "35": "#58514c",
+                "40": "#655d58",
+                "50": "#7e7570",
+                "60": "#988f89",
+                "70": "#b3a9a3",
+                "80": "#cfc4be",
+                "90": "#ece0da",
+                "95": "#faeee8",
+                "98": "#fff8f5",
+                "99": "#fffbff",
+                "100": "#ffffff"
+              },
+              "neutralVariant": {
+                "0": "#000000",
+                "5": "#180f08",
+                "10": "#231a12",
+                "15": "#2e241b",
+                "20": "#3a2e25",
+                "25": "#453930",
+                "30": "#51443b",
+                "35": "#5d5046",
+                "40": "#6a5c51",
+                "50": "#847469",
+                "60": "#9e8e82",
+                "70": "#baa89c",
+                "80": "#d6c3b6",
+                "90": "#f3dfd1",
+                "95": "#ffeee2",
+                "98": "#fff8f5",
+                "99": "#fffbff",
+                "100": "#ffffff"
+              }
+            },
+            "themeColors": {
+              "primaryColor": "",
+              "secondaryColor": "",
+              "backgroundColor": "",
+              "primaryTextColor": "",
+              "textColor": ""
+            },
+            "splashScreen": {
+              "storedData": {
+                "handle": "drive:/1pKzFrPgE5kxJueKux8L2DKgzaSEKhY0Y",
+                "mimeType": "image/png",
+                "contentLength": 2067500
+              }
+            }
+          }
+        },
+        "theme": "39ace765-1f6f-475d-832c-0b92e874dfdf"
+      }
+    },
+    "parameters": {}
+  },
+  "url": "drive:/1MfD8-UGT818-33XJ7Zm9AvfnSk2hhnZQ"
+}
